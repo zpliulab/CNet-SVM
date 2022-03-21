@@ -22,7 +22,7 @@ Li, Lingyu, and Zhi-Ping Liu. "**Biomarker discovery from high-dimensional omics
 <!--START_SECTION:news-->
 * In the **CNet-SVM**, **NSLR_example** and **matlab_example** files, we give all **R/Matlab/Python** codes used in our work. 
 * In the **Data** file, we give some necessary input/output files by the **R/Matlab/Python** codes. 
-* Some of these input files only give the first few lines, but this does not affect the results of the work (**CNet-RLR**).
+* Some of these input files only give the first few lines, but this does not affect the results of the work (**CNet-SVM**).
 * In the **Supplementary file** file, we present the necessary **Additional files** contained in our work. 
 <!--END_SECTION:news-->
 
