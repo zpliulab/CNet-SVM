@@ -15,7 +15,7 @@ In this work, a **connected network-constrained support vector machine (CNet-SVM
 
 
 ## Citation
-Li, Lingyu, and Zhi-Ping Liu. "**Biomarker discovery from high-dimensional omics data by connected network-constrained support vector machine**." Submit to Journal. 
+Li, Lingyu, and Zhi-Ping Liu. "**Biomarker discovery from high-dimensional omics data by connected network-constrained support vector machine**." Submit to [EXPERT SYSTEMS WITH APPLICATIONS](https://www.journals.elsevier.com/expert-systems-with-applications/).  
 
 
 ## Data
