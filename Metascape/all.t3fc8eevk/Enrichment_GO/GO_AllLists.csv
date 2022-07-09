@@ -1,0 +1,858 @@
+Category,CategoryID,GO,Description,PARENT_GO,LogP,Enrichment,Z-score,#TotalGeneInLibrary,#GeneInGO,#GeneInHitList,#GeneInGOAndHitList,%InGO,STDV %InGO,GeneID,Hits,Log(q-value),GeneList
+KEGG Pathway,24,hsa05224,Breast cancer,,-12,51,20,30198,147,32,8,25,7.7,2246|2253|3725|3845|7480|26508|28514|54361,FGF1|FGF8|JUN|KRAS|WNT10B|HEYL|DLL1|WNT4,-8,CNet-SVM
+WikiPathways,27,WP4262,Breast cancer pathway,,-11,48,19,30198,157,32,8,25,7.7,2246|2253|3725|3845|7480|26508|28514|54361,FGF1|FGF8|JUN|KRAS|WNT10B|HEYL|DLL1|WNT4,-7.9,CNet-SVM
+WikiPathways,27,WP3931,Embryonic stem cell pluripotency pathways,,-10,56,19,30198,119,32,7,22,7.3,2002|2246|2253|3725|6927|7480|54361,ELK1|FGF1|FGF8|JUN|HNF1A|WNT10B|WNT4,-7,CNet-SVM
+KEGG Pathway,24,hsa05200,Pathways in cancer,,-8.5,16,11,30198,531,32,9,28,7.9,2002|2246|2253|3725|3845|7480|26508|28514|54361,ELK1|FGF1|FGF8|JUN|KRAS|WNT10B|HEYL|DLL1|WNT4,-5.4,CNet-SVM
+GO Biological Processes,19,GO:0072080,nephron tubule development,19_GO:0032502 developmental process,-7.8,62,17,30198,76,32,5,16,6.4,2246|2253|26508|28514|54361,FGF1|FGF8|HEYL|DLL1|WNT4,-4.8,CNet-SVM
+GO Biological Processes,19,GO:0061326,renal tubule development,19_GO:0032502 developmental process,-7.7,59,17,30198,80,32,5,16,6.4,2246|2253|26508|28514|54361,FGF1|FGF8|HEYL|DLL1|WNT4,-4.7,CNet-SVM
+GO Biological Processes,19,GO:0061061,muscle structure development,19_GO:0032502 developmental process,-7.5,16,11,30198,484,32,8,25,7.7,1311|1959|3845|5307|7480|26508|28514|54361,COMP|EGR2|KRAS|PITX1|WNT10B|HEYL|DLL1|WNT4,-4.6,CNet-SVM
+GO Biological Processes,19,GO:0070848,response to growth factor,19_GO:0050896 response to stimulus,-7.4,15,10,30198,498,32,8,25,7.7,1311|2002|2246|2253|3725|5179|26508|54361,COMP|ELK1|FGF1|FGF8|JUN|PENK|HEYL|WNT4,-4.6,CNet-SVM
+Canonical Pathways,11,M5883,NABA SECRETED FACTORS,,-7.2,19,11,30198,343,32,7,22,7.3,2246|2253|2920|3624|7480|54361|147381,FGF1|FGF8|CXCL2|INHBA|WNT10B|WNT4|CBLN2,-4.4,CNet-SVM
+GO Biological Processes,19,GO:0072009,nephron epithelium development,19_GO:0032502 developmental process,-7.2,48,15,30198,99,32,5,16,6.4,2246|2253|26508|28514|54361,FGF1|FGF8|HEYL|DLL1|WNT4,-4.4,CNet-SVM
+WikiPathways,27,WP4787,Osteoblast differentiation and related diseases,,-6.8,39,14,30198,120,32,5,16,6.4,2246|2253|7480|28514|54361,FGF1|FGF8|WNT10B|DLL1|WNT4,-4,CNet-SVM
+GO Biological Processes,19,GO:0048732,gland development,19_GO:0032502 developmental process,-6.8,16,10,30198,402,32,7,22,7.3,2002|2253|3725|5021|5307|6927|54361,ELK1|FGF8|JUN|OXTR|PITX1|HNF1A|WNT4,-4,CNet-SVM
+GO Biological Processes,19,GO:0007519,skeletal muscle tissue development,19_GO:0032502 developmental process,-6.7,39,14,30198,122,32,5,16,6.4,1959|5307|7480|26508|28514,EGR2|PITX1|WNT10B|HEYL|DLL1,-4,CNet-SVM
+GO Biological Processes,19,GO:0072006,nephron development,19_GO:0032502 developmental process,-6.6,37,13,30198,128,32,5,16,6.4,2246|2253|26508|28514|54361,FGF1|FGF8|HEYL|DLL1|WNT4,-3.9,CNet-SVM
+GO Biological Processes,19,GO:0072073,kidney epithelium development,19_GO:0032502 developmental process,-6.6,37,13,30198,128,32,5,16,6.4,2246|2253|26508|28514|54361,FGF1|FGF8|HEYL|DLL1|WNT4,-3.9,CNet-SVM
+GO Biological Processes,19,GO:0060538,skeletal muscle organ development,19_GO:0032502 developmental process,-6.5,35,13,30198,134,32,5,16,6.4,1959|5307|7480|26508|28514,EGR2|PITX1|WNT10B|HEYL|DLL1,-3.9,CNet-SVM
+GO Biological Processes,19,GO:0071363,cellular response to growth factor stimulus,19_GO:0050896 response to stimulus,-6.3,14,9.3,30198,468,32,7,22,7.3,1311|2246|2253|3725|5179|26508|54361,COMP|FGF1|FGF8|JUN|PENK|HEYL|WNT4,-3.7,CNet-SVM
+KEGG Pathway,24,hsa05226,Gastric cancer,,-6.3,32,12,30198,149,32,5,16,6.4,2246|2253|3845|7480|54361,FGF1|FGF8|KRAS|WNT10B|WNT4,-3.7,CNet-SVM
+GO Biological Processes,19,GO:0001822,kidney development,19_GO:0032502 developmental process,-6.3,20,10,30198,287,32,6,19,6.9,2246|2253|26508|28514|54361|168002,FGF1|FGF8|HEYL|DLL1|WNT4|DACT2,-3.7,CNet-SVM
+WikiPathways,27,WP4928,MAPK pathway in congenital thyroid cancer,,-6.2,1.8e+02,23,30198,16,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-3.7,CNet-SVM
+GO Biological Processes,19,GO:0072001,renal system development,19_GO:0032502 developmental process,-6.2,19,10,30198,296,32,6,19,6.9,2246|2253|26508|28514|54361|168002,FGF1|FGF8|HEYL|DLL1|WNT4|DACT2,-3.7,CNet-SVM
+GO Biological Processes,19,GO:0007420,brain development,19_GO:0032502 developmental process,-6.1,10,8.2,30198,744,32,8,25,7.7,1959|2253|3624|3845|5021|5307|28514|54361,EGR2|FGF8|INHBA|KRAS|OXTR|PITX1|DLL1|WNT4,-3.6,CNet-SVM
+WikiPathways,27,WP4239,Epithelial to mesenchymal transition in colorectal cancer,,-6.1,29,12,30198,165,32,5,16,6.4,3845|7480|8788|28514|54361,KRAS|WNT10B|DLK1|DLL1|WNT4,-3.6,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654704,SHC-mediated cascade:FGFR3,,-6.1,1.6e+02,22,30198,18,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.5,CNet-SVM
+Canonical Pathways,11,M5885,NABA MATRISOME ASSOCIATED,,-6.1,10,8.2,30198,751,32,8,25,7.7,1472|2246|2253|2920|3624|7480|54361|147381,CST4|FGF1|FGF8|CXCL2|INHBA|WNT10B|WNT4|CBLN2,-3.5,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654719,SHC-mediated cascade:FGFR4,,-5.9,1.4e+02,20,30198,20,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.5,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654706,FRS-mediated FGFR3 signaling,,-5.9,1.4e+02,20,30198,20,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.5,CNet-SVM
+GO Biological Processes,19,GO:0001655,urogenital system development,19_GO:0032502 developmental process,-5.9,17,9.5,30198,334,32,6,19,6.9,2246|2253|26508|28514|54361|168002,FGF1|FGF8|HEYL|DLL1|WNT4|DACT2,-3.5,CNet-SVM
+GO Biological Processes,19,GO:0060322,head development,19_GO:0032502 developmental process,-5.9,9.6,7.9,30198,789,32,8,25,7.7,1959|2253|3624|3845|5021|5307|28514|54361,EGR2|FGF8|INHBA|KRAS|OXTR|PITX1|DLL1|WNT4,-3.5,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654688,SHC-mediated cascade:FGFR1,,-5.8,1.3e+02,20,30198,21,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.4,CNet-SVM
+GO Biological Processes,19,GO:0048729,tissue morphogenesis,19_GO:0032502 developmental process,-5.8,12,8.4,30198,557,32,7,22,7.3,2246|2253|3624|3845|26508|28514|54361,FGF1|FGF8|INHBA|KRAS|HEYL|DLL1|WNT4,-3.4,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654712,FRS-mediated FGFR4 signaling,,-5.8,1.3e+02,20,30198,22,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.4,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5655332,Signaling by FGFR3 in disease,,-5.8,1.3e+02,20,30198,22,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.4,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654699,SHC-mediated cascade:FGFR2,,-5.7,1.2e+02,19,30198,23,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654693,FRS-mediated FGFR1 signaling,,-5.7,1.2e+02,19,30198,23,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.3,CNet-SVM
+GO Biological Processes,19,GO:0030900,forebrain development,19_GO:0032502 developmental process,-5.6,15,9,30198,374,32,6,19,6.9,2253|3624|3845|5021|5307|54361,FGF8|INHBA|KRAS|OXTR|PITX1|WNT4,-3.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654700,FRS-mediated FGFR2 signaling,,-5.6,1.1e+02,18,30198,25,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.3,CNet-SVM
+GO Biological Processes,19,GO:0031128,developmental induction,19_GO:0032502 developmental process,-5.6,1.1e+02,18,30198,25,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-3.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654708,Downstream signaling of activated FGFR3,,-5.6,1.1e+02,18,30198,25,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654716,Downstream signaling of activated FGFR4,,-5.5,1e+02,18,30198,27,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.2,CNet-SVM
+WikiPathways,27,WP3845,Canonical and non-canonical Notch signaling,,-5.5,1e+02,18,30198,27,32,3,9.4,5.2,8788|28514|65989,DLK1|DLL1|DLK2,-3.2,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654696,Downstream signaling of activated FGFR2,,-5.4,94,17,30198,30,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.1,CNet-SVM
+GO Biological Processes,19,GO:0110110,positive regulation of animal organ morphogenesis,19_GO:0032502 developmental process,-5.4,94,17,30198,30,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-3.1,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654687,Downstream signaling of activated FGFR1,,-5.3,91,16,30198,31,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-3.1,CNet-SVM
+WikiPathways,27,WP399,Wnt signaling pathway and pluripotency,,-5.3,35,12,30198,107,32,4,12,5.8,3725|7480|10009|54361,JUN|WNT10B|ZBTB33|WNT4,-3.1,CNet-SVM
+GO Biological Processes,19,GO:0035239,tube morphogenesis,19_GO:0032502 developmental process,-5.3,10,7.6,30198,663,32,7,22,7.3,1311|2246|2253|3725|3845|28514|54361,COMP|FGF1|FGF8|JUN|KRAS|DLL1|WNT4,-3.1,CNet-SVM
+GO Biological Processes,19,GO:0045165,cell fate commitment,19_GO:0032502 developmental process,-5.3,19,9.4,30198,244,32,5,16,6.4,2253|5307|7480|28514|54361,FGF8|PITX1|WNT10B|DLL1|WNT4,-3,CNet-SVM
+WikiPathways,27,WP422,MAPK cascade,,-5.2,86,16,30198,33,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-3,CNet-SVM
+WikiPathways,27,WP382,MAPK signaling pathway,,-5.2,19,9.3,30198,249,32,5,16,6.4,2002|2246|2253|3725|3845,ELK1|FGF1|FGF8|JUN|KRAS,-3,CNet-SVM
+WikiPathways,27,WP710,DNA damage response (only ATM dependent),,-5.2,33,11,30198,115,32,4,12,5.8,3725|3845|7480|54361,JUN|KRAS|WNT10B|WNT4,-3,CNet-SVM
+WikiPathways,27,WP5087,Malignant pleural mesothelioma,,-5.2,13,8.1,30198,447,32,6,19,6.9,2002|2246|2253|3725|7480|54361,ELK1|FGF1|FGF8|JUN|WNT10B|WNT4,-3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-372790,Signaling by GPCR,,-5.1,9.3,7.3,30198,708,32,7,22,7.3,2920|3845|5021|5137|5179|7480|54361,CXCL2|KRAS|OXTR|PDE1C|PENK|WNT10B|WNT4,-2.9,CNet-SVM
+GO Biological Processes,19,GO:0030278,regulation of ossification,19_GO:0032501 multicellular organismal process,-5.1,31,11,30198,121,32,4,12,5.8,1311|1959|7480|54361,COMP|EGR2|WNT10B|WNT4,-2.9,CNet-SVM
+GO Biological Processes,19,GO:0001889,liver development,19_GO:0032502 developmental process,-5.1,31,11,30198,122,32,4,12,5.8,2002|3725|6927|54361,ELK1|JUN|HNF1A|WNT4,-2.9,CNet-SVM
+GO Biological Processes,19,GO:0045746,negative regulation of Notch signaling pathway,19_GO:0023052 signaling,-5.1,75,15,30198,38,32,3,9.4,5.2,8788|28514|65989,DLK1|DLL1|DLK2,-2.9,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5655302,Signaling by FGFR1 in disease,,-5.1,75,15,30198,38,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.9,CNet-SVM
+GO Biological Processes,19,GO:0035270,endocrine system development,19_GO:0032502 developmental process,-5.1,30,11,30198,124,32,4,12,5.8,2253|5307|28514|54361,FGF8|PITX1|DLL1|WNT4,-2.9,CNet-SVM
+GO Biological Processes,19,GO:0061008,hepaticobiliary system development,19_GO:0032502 developmental process,-5,30,11,30198,125,32,4,12,5.8,2002|3725|6927|54361,ELK1|JUN|HNF1A|WNT4,-2.9,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654741,Signaling by FGFR3,,-5,71,14,30198,40,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.9,CNet-SVM
+WikiPathways,27,WP127,IL-5 signaling pathway,,-5,71,14,30198,40,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-2.9,CNet-SVM
+WikiPathways,27,WP236,Adipogenesis,,-5,29,10,30198,131,32,4,12,5.8,1959|6927|7480|8788,EGR2|HNF1A|WNT10B|DLK1,-2.8,CNet-SVM
+GO Biological Processes,19,GO:0021983,pituitary gland development,19_GO:0032502 developmental process,-5,69,14,30198,41,32,3,9.4,5.2,2253|5307|54361,FGF8|PITX1|WNT4,-2.8,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654743,Signaling by FGFR4,,-5,69,14,30198,41,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.8,CNet-SVM
+GO Biological Processes,19,GO:0048754,branching morphogenesis of an epithelial tube,19_GO:0032502 developmental process,-4.9,28,10,30198,133,32,4,12,5.8,2246|2253|3845|54361,FGF1|FGF8|KRAS|WNT4,-2.8,CNet-SVM
+GO Biological Processes,19,GO:0001658,branching involved in ureteric bud morphogenesis,19_GO:0032502 developmental process,-4.9,67,14,30198,42,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.8,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5655253,Signaling by FGFR2 in disease,,-4.9,66,14,30198,43,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.8,CNet-SVM
+GO Biological Processes,19,GO:0001568,blood vessel development,19_GO:0032502 developmental process,-4.9,11,7.5,30198,505,32,6,19,6.9,1311|1959|2246|2253|3725|28514,COMP|EGR2|FGF1|FGF8|JUN|DLL1,-2.8,CNet-SVM
+GO Biological Processes,19,GO:0007517,muscle organ development,19_GO:0032502 developmental process,-4.9,16,8.5,30198,293,32,5,16,6.4,1959|5307|7480|26508|28514,EGR2|PITX1|WNT10B|HEYL|DLL1,-2.8,CNet-SVM
+KEGG Pathway,24,hsa04010,MAPK signaling pathway,,-4.9,16,8.4,30198,294,32,5,16,6.4,2002|2246|2253|3725|3845,ELK1|FGF1|FGF8|JUN|KRAS,-2.8,CNet-SVM
+KEGG Pathway,24,hsa04550,Signaling pathways regulating pluripotency of stem cells,,-4.8,26,9.9,30198,143,32,4,12,5.8,3624|3845|7480|54361,INHBA|KRAS|WNT10B|WNT4,-2.7,CNet-SVM
+GO Biological Processes,19,GO:0002067,glandular epithelial cell differentiation,19_GO:0032502 developmental process,-4.8,62,13,30198,46,32,3,9.4,5.2,2253|28514|54361,FGF8|DLL1|WNT4,-2.7,CNet-SVM
+Canonical Pathways,11,M70,PID PS1 PATHWAY,,-4.8,62,13,30198,46,32,3,9.4,5.2,3725|6927|28514,JUN|HNF1A|DLL1,-2.7,CNet-SVM
+GO Biological Processes,19,GO:1901861,regulation of muscle tissue development,19_GO:0032502 developmental process,-4.8,62,13,30198,46,32,3,9.4,5.2,2253|7480|28514,FGF8|WNT10B|DLL1,-2.7,CNet-SVM
+GO Biological Processes,19,GO:0001944,vasculature development,19_GO:0032502 developmental process,-4.8,11,7.4,30198,526,32,6,19,6.9,1311|1959|2246|2253|3725|28514,COMP|EGR2|FGF1|FGF8|JUN|DLL1,-2.7,CNet-SVM
+GO Biological Processes,19,GO:0060562,epithelial tube morphogenesis,19_GO:0032502 developmental process,-4.8,15,8.2,30198,307,32,5,16,6.4,2246|2253|3845|28514|54361,FGF1|FGF8|KRAS|DLL1|WNT4,-2.7,CNet-SVM
+GO Biological Processes,19,GO:0060537,muscle tissue development,19_GO:0032502 developmental process,-4.8,15,8.2,30198,309,32,5,16,6.4,1959|5307|7480|26508|28514,EGR2|PITX1|WNT10B|HEYL|DLL1,-2.7,CNet-SVM
+Reactome Gene Sets,6,R-HSA-112399,IRS-mediated signalling,,-4.7,59,13,30198,48,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.7,CNet-SVM
+WikiPathways,27,WP2848,Pluripotent stem cell differentiation pathway,,-4.7,59,13,30198,48,32,3,9.4,5.2,2246|2253|3624,FGF1|FGF8|INHBA,-2.7,CNet-SVM
+GO Biological Processes,19,GO:0050886,endocrine process,19_GO:0032501 multicellular organismal process,-4.7,58,13,30198,49,32,3,9.4,5.2,3624|3845|5021,INHBA|KRAS|OXTR,-2.7,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654736,Signaling by FGFR1,,-4.7,57,13,30198,50,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.7,CNet-SVM
+KEGG Pathway,24,hsa04921,Oxytocin signaling pathway,,-4.7,25,9.5,30198,154,32,4,12,5.8,2002|3725|3845|5021,ELK1|JUN|KRAS|OXTR,-2.7,CNet-SVM
+WikiPathways,27,WP4666,Hepatitis B infection,,-4.7,25,9.5,30198,154,32,4,12,5.8,1959|2002|3725|3845,EGR2|ELK1|JUN|KRAS,-2.7,CNet-SVM
+Reactome Gene Sets,6,R-HSA-2428928,IRS-related events triggered by IGF1R,,-4.6,54,13,30198,52,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.6,CNet-SVM
+GO Biological Processes,19,GO:0060675,ureteric bud morphogenesis,19_GO:0032502 developmental process,-4.6,54,13,30198,52,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.6,CNet-SVM
+KEGG Pathway,24,hsa05165,Human papillomavirus infection,,-4.6,14,7.9,30198,331,32,5,16,6.4,1311|3845|7480|26508|54361,COMP|KRAS|WNT10B|HEYL|WNT4,-2.6,CNet-SVM
+GO Biological Processes,19,GO:0072171,mesonephric tubule morphogenesis,19_GO:0032502 developmental process,-4.6,53,12,30198,53,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.6,CNet-SVM
+Reactome Gene Sets,6,R-HSA-2428924,IGF1R signaling cascade,,-4.6,53,12,30198,53,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.6,CNet-SVM
+KEGG Pathway,24,hsa05161,Hepatitis B,,-4.6,23,9.3,30198,162,32,4,12,5.8,1959|2002|3725|3845,EGR2|ELK1|JUN|KRAS,-2.6,CNet-SVM
+GO Biological Processes,19,GO:0061138,morphogenesis of a branching epithelium,19_GO:0032502 developmental process,-4.6,23,9.3,30198,162,32,4,12,5.8,2246|2253|3845|54361,FGF1|FGF8|KRAS|WNT4,-2.6,CNet-SVM
+Reactome Gene Sets,6,R-HSA-2404192,Signaling by Type 1 Insulin-like Growth Factor 1 Receptor (IGF1R),,-4.6,52,12,30198,54,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.6,CNet-SVM
+Reactome Gene Sets,6,R-HSA-74751,Insulin receptor signalling cascade,,-4.6,52,12,30198,54,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.6,CNet-SVM
+Canonical Pathways,11,M276,PID FGF PATHWAY,,-4.6,51,12,30198,55,32,3,9.4,5.2,2246|2253|3725,FGF1|FGF8|JUN,-2.6,CNet-SVM
+KEGG Pathway,24,hsa05225,Hepatocellular carcinoma,,-4.5,22,9.1,30198,168,32,4,12,5.8,2002|3845|7480|54361,ELK1|KRAS|WNT10B|WNT4,-2.6,CNet-SVM
+GO Biological Processes,19,GO:0001763,morphogenesis of a branching structure,19_GO:0032502 developmental process,-4.5,22,9,30198,171,32,4,12,5.8,2246|2253|3845|54361,FGF1|FGF8|KRAS|WNT4,-2.5,CNet-SVM
+GO Biological Processes,19,GO:0030324,lung development,19_GO:0032502 developmental process,-4.5,22,8.9,30198,174,32,4,12,5.8,2002|2246|2253|3845,ELK1|FGF1|FGF8|KRAS,-2.5,CNet-SVM
+GO Biological Processes,19,GO:0030323,respiratory tube development,19_GO:0032502 developmental process,-4.4,21,8.8,30198,178,32,4,12,5.8,2002|2246|2253|3845,ELK1|FGF1|FGF8|KRAS,-2.5,CNet-SVM
+GO Biological Processes,19,GO:0030097,hemopoiesis,19_GO:0002376 immune system process,-4.4,9.3,6.8,30198,606,32,6,19,6.9,3624|3725|7480|28514|54361|168002,INHBA|JUN|WNT10B|DLL1|WNT4|DACT2,-2.5,CNet-SVM
+WikiPathways,27,WP4155,Endometrial cancer,,-4.4,45,11,30198,63,32,3,9.4,5.2,2002|2246|3845,ELK1|FGF1|KRAS,-2.5,CNet-SVM
+Reactome Gene Sets,6,R-HSA-1226099,Signaling by FGFR in disease,,-4.4,45,11,30198,63,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.5,CNet-SVM
+GO Biological Processes,19,GO:0072078,nephron tubule morphogenesis,19_GO:0032502 developmental process,-4.4,45,11,30198,63,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.5,CNet-SVM
+GO Biological Processes,19,GO:2000144,"positive regulation of DNA-templated transcription, initiation",19_GO:0048518 positive regulation of biological process,-4.3,44,11,30198,65,32,3,9.4,5.2,3725|6927|7480,JUN|HNF1A|WNT10B,-2.4,CNet-SVM
+GO Biological Processes,19,GO:0072088,nephron epithelium morphogenesis,19_GO:0032502 developmental process,-4.3,44,11,30198,65,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.4,CNet-SVM
+Canonical Pathways,11,M272,PID CD8 TCR DOWNSTREAM PATHWAY,,-4.3,44,11,30198,65,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-2.4,CNet-SVM
+GO Biological Processes,19,GO:0072028,nephron morphogenesis,19_GO:0032502 developmental process,-4.3,42,11,30198,67,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.4,CNet-SVM
+GO Biological Processes,19,GO:0061333,renal tubule morphogenesis,19_GO:0032502 developmental process,-4.3,42,11,30198,67,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.4,CNet-SVM
+GO Biological Processes,19,GO:0060541,respiratory system development,19_GO:0032502 developmental process,-4.3,19,8.3,30198,198,32,4,12,5.8,2002|2246|2253|3845,ELK1|FGF1|FGF8|KRAS,-2.4,CNet-SVM
+GO Biological Processes,19,GO:0048534,hematopoietic or lymphoid organ development,19_GO:0002376 immune system process,-4.2,8.6,6.4,30198,655,32,6,19,6.9,3624|3725|7480|28514|54361|168002,INHBA|JUN|WNT10B|DLL1|WNT4|DACT2,-2.4,CNet-SVM
+KEGG Pathway,24,hsa05218,Melanoma,,-4.2,39,11,30198,72,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.3,CNet-SVM
+KEGG Pathway,24,hsa05205,Proteoglycans in cancer,,-4.2,18,8.1,30198,205,32,4,12,5.8,2002|3845|7480|54361,ELK1|KRAS|WNT10B|WNT4,-2.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5654738,Signaling by FGFR2,,-4.2,39,11,30198,73,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-1980143,Signaling by NOTCH1,,-4.2,38,10,30198,74,32,3,9.4,5.2,8788|26508|28514,DLK1|HEYL|DLL1,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0021536,diencephalon development,19_GO:0032502 developmental process,-4.2,38,10,30198,74,32,3,9.4,5.2,2253|5307|54361,FGF8|PITX1|WNT4,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0003151,outflow tract morphogenesis,19_GO:0032502 developmental process,-4.1,37,10,30198,76,32,3,9.4,5.2,2253|3725|26508,FGF8|JUN|HEYL,-2.3,CNet-SVM
+GO Biological Processes,19,GO:2000142,"regulation of DNA-templated transcription, initiation",19_GO:0008152 metabolic process,-4.1,37,10,30198,76,32,3,9.4,5.2,3725|6927|7480,JUN|HNF1A|WNT10B,-2.3,CNet-SVM
+KEGG Pathway,24,hsa05207,Chemical carcinogenesis - receptor activation,,-4.1,18,8,30198,212,32,4,12,5.8,2253|3725|3845|28514,FGF8|JUN|KRAS|DLL1,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0042063,gliogenesis,19_GO:0032502 developmental process,-4.1,18,8,30198,213,32,4,12,5.8,1959|3845|5179|28514,EGR2|KRAS|PENK|DLL1,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0048514,blood vessel morphogenesis,19_GO:0032502 developmental process,-4.1,11,6.9,30198,421,32,5,16,6.4,1311|2246|2253|3725|28514,COMP|FGF1|FGF8|JUN|DLL1,-2.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-74752,Signaling by Insulin receptor,,-4.1,36,10,30198,78,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0001837,epithelial to mesenchymal transition,19_GO:0032502 developmental process,-4.1,36,10,30198,78,32,3,9.4,5.2,2253|26508|54361,FGF8|HEYL|WNT4,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0002520,immune system development,19_GO:0002376 immune system process,-4.1,8.1,6.2,30198,699,32,6,19,6.9,3624|3725|7480|28514|54361|168002,INHBA|JUN|WNT10B|DLL1|WNT4|DACT2,-2.3,CNet-SVM
+GO Biological Processes,19,GO:0002065,columnar/cuboidal epithelial cell differentiation,19_GO:0032502 developmental process,-4.1,35,10,30198,80,32,3,9.4,5.2,2253|28514|54361,FGF8|DLL1|WNT4,-2.2,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,,-4.1,11,6.8,30198,433,32,5,16,6.4,2246|2253|3845|26508|28514,FGF1|FGF8|KRAS|HEYL|DLL1,-2.2,CNet-SVM
+KEGG Pathway,24,hsa05166,Human T-cell leukemia virus 1 infection,,-4.1,17,7.8,30198,222,32,4,12,5.8,1959|2002|3725|3845,EGR2|ELK1|JUN|KRAS,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0001657,ureteric bud development,19_GO:0032502 developmental process,-4,35,9.9,30198,82,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0072164,mesonephric tubule development,19_GO:0032502 developmental process,-4,34,9.8,30198,83,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0072163,mesonephric epithelium development,19_GO:0032502 developmental process,-4,34,9.8,30198,83,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0051960,regulation of nervous system development,19_GO:0032502 developmental process,-4,11,6.7,30198,443,32,5,16,6.4,1959|5021|26508|28514|147381,EGR2|OXTR|HEYL|DLL1|CBLN2,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0030500,regulation of bone mineralization,19_GO:0110148 biomineralization,-4,34,9.8,30198,84,32,3,9.4,5.2,1311|7480|54361,COMP|WNT10B|WNT4,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0071774,response to fibroblast growth factor,19_GO:0050896 response to stimulus,-4,34,9.8,30198,84,32,3,9.4,5.2,2002|2246|2253,ELK1|FGF1|FGF8,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0060993,kidney morphogenesis,19_GO:0032502 developmental process,-4,34,9.8,30198,84,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.2,CNet-SVM
+GO Biological Processes,19,GO:2000243,positive regulation of reproductive process,19_GO:0022414 reproductive process,-4,33,9.7,30198,85,32,3,9.4,5.2,3624|5021|54361,INHBA|OXTR|WNT4,-2.2,CNet-SVM
+KEGG Pathway,24,hsa04012,ErbB signaling pathway,,-4,33,9.7,30198,85,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0002009,morphogenesis of an epithelium,19_GO:0032502 developmental process,-4,11,6.6,30198,447,32,5,16,6.4,2246|2253|3845|28514|54361,FGF1|FGF8|KRAS|DLL1|WNT4,-2.2,CNet-SVM
+KEGG Pathway,24,hsa04014,Ras signaling pathway,,-4,16,7.6,30198,232,32,4,12,5.8,2002|2246|2253|3845,ELK1|FGF1|FGF8|KRAS,-2.2,CNet-SVM
+GO Biological Processes,19,GO:0001823,mesonephros development,19_GO:0032502 developmental process,-4,33,9.6,30198,87,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-2.2,CNet-SVM
+Reactome Gene Sets,6,R-HSA-190236,Signaling by FGFR,,-4,33,9.6,30198,87,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-2.2,CNet-SVM
+Reactome Gene Sets,6,R-HSA-157118,Signaling by NOTCH,,-4,16,7.5,30198,236,32,4,12,5.8,3725|8788|26508|28514,JUN|DLK1|HEYL|DLL1,-2.2,CNet-SVM
+KEGG Pathway,24,hsa04020,Calcium signaling pathway,,-3.9,16,7.5,30198,240,32,4,12,5.8,2246|2253|5021|5137,FGF1|FGF8|OXTR|PDE1C,-2.1,CNet-SVM
+WikiPathways,27,WP673,ErbB signaling pathway,,-3.9,31,9.4,30198,91,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-2.1,CNet-SVM
+WikiPathways,27,WP4336,ncRNAs involved in Wnt signaling in hepatocellular carcinoma,,-3.9,31,9.4,30198,91,32,3,9.4,5.2,3725|7480|54361,JUN|WNT10B|WNT4,-2.1,CNet-SVM
+Reactome Gene Sets,6,R-HSA-500792,GPCR ligand binding,,-3.9,10,6.5,30198,467,32,5,16,6.4,2920|5021|5179|7480|54361,CXCL2|OXTR|PENK|WNT10B|WNT4,-2.1,CNet-SVM
+KEGG Pathway,24,hsa04912,GnRH signaling pathway,,-3.9,30,9.3,30198,93,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0003007,heart morphogenesis,19_GO:0032502 developmental process,-3.9,15,7.3,30198,250,32,4,12,5.8,2253|3725|26508|28514,FGF8|JUN|HEYL|DLL1,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0060840,artery development,19_GO:0032502 developmental process,-3.8,29,9.1,30198,97,32,3,9.4,5.2,1311|1959|2253,COMP|EGR2|FGF8,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0008593,regulation of Notch signaling pathway,19_GO:0023052 signaling,-3.8,29,9.1,30198,97,32,3,9.4,5.2,8788|28514|65989,DLK1|DLL1|DLK2,-2.1,CNet-SVM
+KEGG Pathway,24,hsa01522,Endocrine resistance,,-3.8,29,9,30198,98,32,3,9.4,5.2,3725|3845|28514,JUN|KRAS|DLL1,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0008285,negative regulation of cell population proliferation,19_GO:0048519 negative regulation of biological process,-3.8,7.2,5.7,30198,786,32,6,19,6.9,1264|3624|3725|7480|10664|28514,CNN1|INHBA|JUN|WNT10B|CTCF|DLL1,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0043588,skin development,19_GO:0032502 developmental process,-3.8,15,7.1,30198,259,32,4,12,5.8,1311|3624|28514|168002,COMP|INHBA|DLL1|DACT2,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0008283,cell population proliferation,19_GO:0009987 cellular process,-3.8,9.6,6.3,30198,492,32,5,16,6.4,1311|2253|5179|7480|54361,COMP|FGF8|PENK|WNT10B|WNT4,-2.1,CNet-SVM
+GO Biological Processes,19,GO:0042692,muscle cell differentiation,19_GO:0032502 developmental process,-3.8,14,7.1,30198,261,32,4,12,5.8,1311|3845|7480|54361,COMP|KRAS|WNT10B|WNT4,-2,CNet-SVM
+KEGG Pathway,24,hsa04916,Melanogenesis,,-3.8,28,8.9,30198,101,32,3,9.4,5.2,3845|7480|54361,KRAS|WNT10B|WNT4,-2,CNet-SVM
+GO Biological Processes,19,GO:0007611,learning or memory,19_GO:0032501 multicellular organismal process,-3.8,14,7.1,30198,265,32,4,12,5.8,1959|3845|5021|25769,EGR2|KRAS|OXTR|SLC24A2,-2,CNet-SVM
+GO Biological Processes,19,GO:0071396,cellular response to lipid,19_GO:0050896 response to stimulus,-3.8,9.4,6.2,30198,503,32,5,16,6.4,2002|2920|3624|5179|7480,ELK1|CXCL2|INHBA|PENK|WNT10B,-2,CNet-SVM
+KEGG Pathway,24,hsa04625,C-type lectin receptor signaling pathway,,-3.7,27,8.7,30198,104,32,3,9.4,5.2,1959|3725|3845,EGR2|JUN|KRAS,-2,CNet-SVM
+WikiPathways,27,WP4258,lncRNA in canonical Wnt signaling and colorectal cancer,,-3.7,27,8.7,30198,104,32,3,9.4,5.2,3725|7480|54361,JUN|WNT10B|WNT4,-2,CNet-SVM
+GO Biological Processes,19,GO:0070167,regulation of biomineral tissue development,19_GO:0110148 biomineralization,-3.7,27,8.7,30198,104,32,3,9.4,5.2,1311|7480|54361,COMP|WNT10B|WNT4,-2,CNet-SVM
+Canonical Pathways,11,M164,PID ERBB1 DOWNSTREAM PATHWAY,,-3.7,27,8.7,30198,105,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-2,CNet-SVM
+GO Biological Processes,19,GO:1901890,positive regulation of cell junction assembly,19_GO:0048518 positive regulation of biological process,-3.7,27,8.7,30198,105,32,3,9.4,5.2,5021|54361|147381,OXTR|WNT4|CBLN2,-2,CNet-SVM
+GO Biological Processes,19,GO:0110149,regulation of biomineralization,19_GO:0110148 biomineralization,-3.7,27,8.6,30198,106,32,3,9.4,5.2,1311|7480|54361,COMP|WNT10B|WNT4,-2,CNet-SVM
+Reactome Gene Sets,6,R-HSA-9006934,Signaling by Receptor Tyrosine Kinases,,-3.7,9.1,6,30198,521,32,5,16,6.4,1959|2002|2246|2253|3845,EGR2|ELK1|FGF1|FGF8|KRAS,-2,CNet-SVM
+WikiPathways,27,WP4659,Gastrin signaling pathway,,-3.6,25,8.3,30198,114,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-1.9,CNet-SVM
+GO Biological Processes,19,GO:0007507,heart development,19_GO:0032502 developmental process,-3.6,8.7,5.9,30198,541,32,5,16,6.4,2253|3725|5021|26508|28514,FGF8|JUN|OXTR|HEYL|DLL1,-1.9,CNet-SVM
+Reactome Gene Sets,6,R-HSA-187037,Signaling by NTRK1 (TRKA),,-3.6,25,8.3,30198,115,32,3,9.4,5.2,1959|2002|3845,EGR2|ELK1|KRAS,-1.9,CNet-SVM
+WikiPathways,27,WP428,Wnt signaling,,-3.6,24,8.2,30198,118,32,3,9.4,5.2,3725|7480|54361,JUN|WNT10B|WNT4,-1.9,CNet-SVM
+GO Biological Processes,19,GO:0007423,sensory organ development,19_GO:0032502 developmental process,-3.6,8.5,5.8,30198,555,32,5,16,6.4,2253|3624|3725|7480|28514,FGF8|INHBA|JUN|WNT10B|DLL1,-1.9,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5617472,Activation of anterior HOX genes in hindbrain development during early embryogenesis,,-3.5,23,8,30198,121,32,3,9.4,5.2,1959|3725|10664,EGR2|JUN|CTCF,-1.9,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5619507,Activation of HOX genes during differentiation,,-3.5,23,8,30198,121,32,3,9.4,5.2,1959|3725|10664,EGR2|JUN|CTCF,-1.9,CNet-SVM
+GO Biological Processes,19,GO:0050890,cognition,19_GO:0032501 multicellular organismal process,-3.5,12,6.5,30198,307,32,4,12,5.8,1959|3845|5021|25769,EGR2|KRAS|OXTR|SLC24A2,-1.8,CNet-SVM
+WikiPathways,27,WP3932,Focal adhesion: PI3K-Akt-mTOR-signaling pathway,,-3.5,12,6.5,30198,309,32,4,12,5.8,1311|2246|2253|3845,COMP|FGF1|FGF8|KRAS,-1.8,CNet-SVM
+Reactome Gene Sets,6,R-HSA-9006925,Intracellular signaling by second messengers,,-3.5,12,6.5,30198,309,32,4,12,5.8,2246|2253|3725|5137,FGF1|FGF8|JUN|PDE1C,-1.8,CNet-SVM
+GO Biological Processes,19,GO:0007610,behavior,19_GO:0032501 multicellular organismal process,-3.5,8.2,5.7,30198,572,32,5,16,6.4,1959|3845|5021|5179|25769,EGR2|KRAS|OXTR|PENK|SLC24A2,-1.8,CNet-SVM
+GO Biological Processes,19,GO:2000027,regulation of animal organ morphogenesis,19_GO:0032502 developmental process,-3.5,22,7.9,30198,126,32,3,9.4,5.2,2246|2253|54361,FGF1|FGF8|WNT4,-1.8,CNet-SVM
+GO Biological Processes,19,GO:0048598,embryonic morphogenesis,19_GO:0032502 developmental process,-3.5,8.2,5.7,30198,576,32,5,16,6.4,2253|3624|5307|28514|54361,FGF8|INHBA|PITX1|DLL1|WNT4,-1.8,CNet-SVM
+GO Biological Processes,19,GO:0030855,epithelial cell differentiation,19_GO:0032502 developmental process,-3.5,8.2,5.7,30198,576,32,5,16,6.4,2253|3725|28514|54361|168002,FGF8|JUN|DLL1|WNT4|DACT2,-1.8,CNet-SVM
+GO Biological Processes,19,GO:1901214,regulation of neuron death,19_GO:0050789 regulation of biological process,-3.5,12,6.4,30198,314,32,4,12,5.8,2002|2253|3725|3845,ELK1|FGF8|JUN|KRAS,-1.8,CNet-SVM
+Canonical Pathways,11,M186,PID PDGFRB PATHWAY,,-3.5,22,7.8,30198,129,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-1.8,CNet-SVM
+GO Biological Processes,19,GO:0001525,angiogenesis,19_GO:0032502 developmental process,-3.4,12,6.3,30198,323,32,4,12,5.8,2246|2253|3725|28514,FGF1|FGF8|JUN|DLL1,-1.8,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5683057,MAPK family signaling cascades,,-3.4,12,6.3,30198,325,32,4,12,5.8,2246|2253|3725|3845,FGF1|FGF8|JUN|KRAS,-1.8,CNet-SVM
+Reactome Gene Sets,6,R-HSA-166520,Signaling by NTRKs,,-3.4,21,7.6,30198,134,32,3,9.4,5.2,1959|2002|3845,EGR2|ELK1|KRAS,-1.8,CNet-SVM
+GO Biological Processes,19,GO:0007167,enzyme-linked receptor protein signaling pathway,19_GO:0023052 signaling,-3.4,7.8,5.5,30198,606,32,5,16,6.4,1311|2246|2253|3624|3725,COMP|FGF1|FGF8|INHBA|JUN,-1.7,CNet-SVM
+GO Biological Processes,19,GO:0003002,regionalization,19_GO:0032502 developmental process,-3.4,11,6.2,30198,335,32,4,12,5.8,1959|2253|26508|28514,EGR2|FGF8|HEYL|DLL1,-1.7,CNet-SVM
+WikiPathways,27,WP4172,PI3K-Akt signaling pathway,,-3.3,11,6,30198,345,32,4,12,5.8,1311|2246|2253|3845,COMP|FGF1|FGF8|KRAS,-1.7,CNet-SVM
+WikiPathways,27,WP2380,Brain-derived neurotrophic factor (BDNF) signaling pathway,,-3.3,20,7.3,30198,144,32,3,9.4,5.2,1959|2002|3725,EGR2|ELK1|JUN,-1.7,CNet-SVM
+GO Biological Processes,19,GO:0043524,negative regulation of neuron apoptotic process,19_GO:0048519 negative regulation of biological process,-3.3,20,7.3,30198,145,32,3,9.4,5.2,2253|3725|3845,FGF8|JUN|KRAS,-1.7,CNet-SVM
+Reactome Gene Sets,6,R-HSA-388396,GPCR downstream signalling,,-3.3,7.5,5.3,30198,633,32,5,16,6.4,2920|3845|5021|5137|5179,CXCL2|KRAS|OXTR|PDE1C|PENK,-1.7,CNet-SVM
+KEGG Pathway,24,hsa04151,PI3K-Akt signaling pathway,,-3.3,11,6,30198,354,32,4,12,5.8,1311|2246|2253|3845,COMP|FGF1|FGF8|KRAS,-1.7,CNet-SVM
+WikiPathways,27,WP51,Regulation of actin cytoskeleton,,-3.3,19,7.1,30198,150,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0071560,cellular response to transforming growth factor beta stimulus,19_GO:0050896 response to stimulus,-3.3,19,7.1,30198,151,32,3,9.4,5.2,3725|5179|54361,JUN|PENK|WNT4,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0048871,multicellular organismal homeostasis,19_GO:0032501 multicellular organismal process,-3.2,10,5.9,30198,363,32,4,12,5.8,1311|1472|3845|28514,COMP|CST4|KRAS|DLL1,-1.6,CNet-SVM
+WikiPathways,27,WP2857,Mesodermal commitment pathway,,-3.2,18,7,30198,156,32,3,9.4,5.2,2253|3624|28514,FGF8|INHBA|DLL1,-1.6,CNet-SVM
+KEGG Pathway,24,hsa04150,mTOR signaling pathway,,-3.2,18,7,30198,156,32,3,9.4,5.2,3845|7480|54361,KRAS|WNT10B|WNT4,-1.6,CNet-SVM
+KEGG Pathway,24,hsa04390,Hippo signaling pathway,,-3.2,18,7,30198,157,32,3,9.4,5.2,2246|7480|54361,FGF1|WNT10B|WNT4,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0051216,cartilage development,19_GO:0032502 developmental process,-3.2,18,7,30198,157,32,3,9.4,5.2,1311|5307|7480,COMP|PITX1|WNT10B,-1.6,CNet-SVM
+WikiPathways,27,WP289,Myometrial relaxation and contraction pathways,,-3.2,18,6.9,30198,158,32,3,9.4,5.2,1264|3725|5021,CNN1|JUN|OXTR,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0071559,response to transforming growth factor beta,19_GO:0050896 response to stimulus,-3.2,18,6.9,30198,158,32,3,9.4,5.2,3725|5179|54361,JUN|PENK|WNT4,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0040007,growth,19_GO:0040007 growth,-3.2,10,5.8,30198,373,32,4,12,5.8,1311|2246|7480|28514,COMP|FGF1|WNT10B|DLL1,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0048589,developmental growth,19_GO:0040007 growth,-3.2,10,5.8,30198,373,32,4,12,5.8,1311|2246|7480|28514,COMP|FGF1|WNT10B|DLL1,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0046661,male sex differentiation,19_GO:0022414 reproductive process,-3.2,18,6.9,30198,160,32,3,9.4,5.2,2253|3624|54361,FGF8|INHBA|WNT4,-1.6,CNet-SVM
+WikiPathways,27,WP437,EGF/EGFR signaling pathway,,-3.2,17,6.8,30198,163,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-1.6,CNet-SVM
+GO Biological Processes,19,GO:0010001,glial cell differentiation,19_GO:0032502 developmental process,-3.1,17,6.7,30198,167,32,3,9.4,5.2,1959|3845|28514,EGR2|KRAS|DLL1,-1.5,CNet-SVM
+KEGG Pathway,24,hsa04310,Wnt signaling pathway,,-3.1,17,6.7,30198,167,32,3,9.4,5.2,3725|7480|54361,JUN|WNT10B|WNT4,-1.5,CNet-SVM
+GO Biological Processes,19,GO:0048762,mesenchymal cell differentiation,19_GO:0032502 developmental process,-3.1,17,6.7,30198,168,32,3,9.4,5.2,2253|26508|54361,FGF8|HEYL|WNT4,-1.5,CNet-SVM
+GO Biological Processes,19,GO:0045596,negative regulation of cell differentiation,19_GO:0032502 developmental process,-3.1,6.8,5,30198,699,32,5,16,6.4,3624|3845|7480|28514|54361,INHBA|KRAS|WNT10B|DLL1|WNT4,-1.5,CNet-SVM
+GO Biological Processes,19,GO:0048736,appendage development,19_GO:0032502 developmental process,-3.1,16,6.5,30198,177,32,3,9.4,5.2,1311|2253|5307,COMP|FGF8|PITX1,-1.5,CNet-SVM
+GO Biological Processes,19,GO:0060173,limb development,19_GO:0032502 developmental process,-3.1,16,6.5,30198,177,32,3,9.4,5.2,1311|2253|5307,COMP|FGF8|PITX1,-1.5,CNet-SVM
+GO Biological Processes,19,GO:0000165,MAPK cascade,19_GO:0023052 signaling,-3,16,6.5,30198,180,32,3,9.4,5.2,2253|3845|5021,FGF8|KRAS|OXTR,-1.5,CNet-SVM
+GO Biological Processes,19,GO:0010564,regulation of cell cycle process,19_GO:0050789 regulation of biological process,-3,6.4,4.8,30198,734,32,5,16,6.4,2253|3624|7480|10664|54361,FGF8|INHBA|WNT10B|CTCF|WNT4,-1.4,CNet-SVM
+GO Biological Processes,19,GO:0051302,regulation of cell division,19_GO:0050789 regulation of biological process,-3,15,6.3,30198,189,32,3,9.4,5.2,2246|2253|28514,FGF1|FGF8|DLL1,-1.4,CNet-SVM
+GO Biological Processes,19,GO:0007178,transmembrane receptor protein serine/threonine kinase signaling pathway,19_GO:0023052 signaling,-3,15,6.3,30198,189,32,3,9.4,5.2,1311|3624|3725,COMP|INHBA|JUN,-1.4,CNet-SVM
+GO Biological Processes,19,GO:2000241,regulation of reproductive process,19_GO:0022414 reproductive process,-3,15,6.2,30198,191,32,3,9.4,5.2,3624|5021|54361,INHBA|OXTR|WNT4,-1.4,CNet-SVM
+GO Biological Processes,19,GO:0050804,modulation of chemical synaptic transmission,19_GO:0023052 signaling,-3,8.7,5.3,30198,435,32,4,12,5.8,1959|3845|5021|25769,EGR2|KRAS|OXTR|SLC24A2,-1.4,CNet-SVM
+GO Biological Processes,19,GO:0009314,response to radiation,19_GO:0050896 response to stimulus,-3,8.7,5.3,30198,435,32,4,12,5.8,2002|3845|5179|25769,ELK1|KRAS|PENK|SLC24A2,-1.4,CNet-SVM
+GO Biological Processes,19,GO:0099177,regulation of trans-synaptic signaling,19_GO:0023052 signaling,-3,8.7,5.2,30198,436,32,4,12,5.8,1959|3845|5021|25769,EGR2|KRAS|OXTR|SLC24A2,-1.4,CNet-SVM
+KEGG Pathway,24,hsa05167,Kaposi sarcoma-associated herpesvirus infection,,-2.9,15,6.2,30198,194,32,3,9.4,5.2,2920|3725|3845,CXCL2|JUN|KRAS,-1.4,CNet-SVM
+GO Biological Processes,19,GO:0007389,pattern specification process,19_GO:0032502 developmental process,-2.9,8.4,5.2,30198,447,32,4,12,5.8,1959|2253|26508|28514,EGR2|FGF8|HEYL|DLL1,-1.4,CNet-SVM
+KEGG Pathway,24,hsa04510,Focal adhesion,,-2.9,14,6.1,30198,201,32,3,9.4,5.2,1311|2002|3725,COMP|ELK1|JUN,-1.4,CNet-SVM
+Reactome Gene Sets,6,R-HSA-375276,Peptide ligand-binding receptors,,-2.9,14,6.1,30198,201,32,3,9.4,5.2,2920|5021|5179,CXCL2|OXTR|PENK,-1.4,CNet-SVM
+WikiPathways,27,WP306,Focal adhesion,,-2.9,14,6,30198,202,32,3,9.4,5.2,1311|2002|3725,COMP|ELK1|JUN,-1.3,CNet-SVM
+GO Biological Processes,19,GO:1901888,regulation of cell junction assembly,19_GO:0050789 regulation of biological process,-2.9,14,6,30198,202,32,3,9.4,5.2,5021|54361|147381,OXTR|WNT4|CBLN2,-1.3,CNet-SVM
+KEGG Pathway,24,hsa05203,Viral carcinogenesis,,-2.9,14,6,30198,204,32,3,9.4,5.2,1959|3725|3845,EGR2|JUN|KRAS,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0048167,regulation of synaptic plasticity,19_GO:0023052 signaling,-2.9,14,6,30198,204,32,3,9.4,5.2,1959|3845|25769,EGR2|KRAS|SLC24A2,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0043523,regulation of neuron apoptotic process,19_GO:0050789 regulation of biological process,-2.9,14,6,30198,207,32,3,9.4,5.2,2253|3725|3845,FGF8|JUN|KRAS,-1.3,CNet-SVM
+GO Biological Processes,19,GO:1901215,negative regulation of neuron death,19_GO:0048519 negative regulation of biological process,-2.9,14,5.9,30198,209,32,3,9.4,5.2,2253|3725|3845,FGF8|JUN|KRAS,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0009952,anterior/posterior pattern specification,19_GO:0032502 developmental process,-2.8,13,5.9,30198,210,32,3,9.4,5.2,2253|26508|28514,FGF8|HEYL|DLL1,-1.3,CNet-SVM
+KEGG Pathway,24,hsa04015,Rap1 signaling pathway,,-2.8,13,5.9,30198,210,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0061448,connective tissue development,19_GO:0032502 developmental process,-2.8,13,5.9,30198,211,32,3,9.4,5.2,1311|5307|7480,COMP|PITX1|WNT10B,-1.3,CNet-SVM
+KEGG Pathway,24,hsa05417,Lipid and atherosclerosis,,-2.8,13,5.8,30198,215,32,3,9.4,5.2,2920|3725|3845,CXCL2|JUN|KRAS,-1.3,CNet-SVM
+KEGG Pathway,24,hsa04810,Regulation of actin cytoskeleton,,-2.8,13,5.8,30198,218,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0008406,gonad development,19_GO:0022414 reproductive process,-2.8,13,5.8,30198,220,32,3,9.4,5.2,2253|3624|54361,FGF8|INHBA|WNT4,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0070374,positive regulation of ERK1 and ERK2 cascade,19_GO:0023052 signaling,-2.8,13,5.7,30198,221,32,3,9.4,5.2,2246|2253|3725,FGF1|FGF8|JUN,-1.3,CNet-SVM
+Reactome Gene Sets,6,R-HSA-8939211,ESR-mediated signaling,,-2.8,13,5.7,30198,223,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-1.3,CNet-SVM
+GO Biological Processes,19,GO:0046903,secretion,19_GO:0051179 localization,-2.8,7.7,4.9,30198,490,32,4,12,5.8,1311|3624|5021|6927,COMP|INHBA|OXTR|HNF1A,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0048705,skeletal system morphogenesis,19_GO:0032502 developmental process,-2.8,13,5.7,30198,225,32,3,9.4,5.2,1311|2253|7480,COMP|FGF8|WNT10B,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0045137,development of primary sexual characteristics,19_GO:0022414 reproductive process,-2.8,13,5.7,30198,225,32,3,9.4,5.2,2253|3624|54361,FGF8|INHBA|WNT4,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0044089,positive regulation of cellular component biogenesis,19_GO:0048518 positive regulation of biological process,-2.8,7.7,4.9,30198,492,32,4,12,5.8,5021|7480|54361|147381,OXTR|WNT10B|WNT4|CBLN2,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0010817,regulation of hormone levels,19_GO:0065007 biological regulation,-2.7,7.6,4.8,30198,498,32,4,12,5.8,3624|6927|8630|54361,INHBA|HNF1A|HSD17B6|WNT4,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0060485,mesenchyme development,19_GO:0032502 developmental process,-2.7,12,5.6,30198,231,32,3,9.4,5.2,2253|26508|54361,FGF8|HEYL|WNT4,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0071407,cellular response to organic cyclic compound,19_GO:0050896 response to stimulus,-2.7,7.5,4.8,30198,505,32,4,12,5.8,2002|3624|5179|7480,ELK1|INHBA|PENK|WNT10B,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0001501,skeletal system development,19_GO:0032502 developmental process,-2.7,7.5,4.8,30198,505,32,4,12,5.8,1311|2253|5307|7480,COMP|FGF8|PITX1|WNT10B,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0001894,tissue homeostasis,19_GO:0032501 multicellular organismal process,-2.7,12,5.5,30198,235,32,3,9.4,5.2,1311|1472|3845,COMP|CST4|KRAS,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0021537,telencephalon development,19_GO:0032502 developmental process,-2.7,12,5.4,30198,246,32,3,9.4,5.2,2253|3624|5021,FGF8|INHBA|OXTR,-1.2,CNet-SVM
+GO Biological Processes,19,GO:0090068,positive regulation of cell cycle process,19_GO:0048518 positive regulation of biological process,-2.6,11,5.2,30198,259,32,3,9.4,5.2,2253|7480|54361,FGF8|WNT10B|WNT4,-1.1,CNet-SVM
+GO Biological Processes,19,GO:0016055,Wnt signaling pathway,19_GO:0023052 signaling,-2.6,11,5.2,30198,262,32,3,9.4,5.2,7480|10009|54361,WNT10B|ZBTB33|WNT4,-1.1,CNet-SVM
+GO Biological Processes,19,GO:0198738,cell-cell signaling by wnt,19_GO:0023052 signaling,-2.6,11,5.2,30198,262,32,3,9.4,5.2,7480|10009|54361,WNT10B|ZBTB33|WNT4,-1.1,CNet-SVM
+Reactome Gene Sets,6,R-HSA-1257604,PIP3 activates AKT signaling,,-2.6,11,5.1,30198,267,32,3,9.4,5.2,2246|2253|3725,FGF1|FGF8|JUN,-1.1,CNet-SVM
+WikiPathways,27,WP5124,Alzheimer's disease,,-2.6,11,5.1,30198,267,32,3,9.4,5.2,3845|7480|54361,KRAS|WNT10B|WNT4,-1.1,CNet-SVM
+GO Biological Processes,19,GO:0051962,positive regulation of nervous system development,19_GO:0032502 developmental process,-2.5,10,5.1,30198,270,32,3,9.4,5.2,1959|5021|147381,EGR2|OXTR|CBLN2,-1.1,CNet-SVM
+GO Biological Processes,19,GO:0007548,sex differentiation,19_GO:0022414 reproductive process,-2.5,10,5,30198,276,32,3,9.4,5.2,2253|3624|54361,FGF8|INHBA|WNT4,-1,CNet-SVM
+GO Biological Processes,19,GO:0060249,anatomical structure homeostasis,19_GO:0065007 biological regulation,-2.5,10,5,30198,279,32,3,9.4,5.2,1311|1472|3845,COMP|CST4|KRAS,-1,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5673001,RAF/MAP kinase cascade,,-2.5,10,5,30198,280,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-1,CNet-SVM
+GO Biological Processes,19,GO:0044057,regulation of system process,19_GO:0032501 multicellular organismal process,-2.5,6.5,4.3,30198,583,32,4,12,5.8,1264|1959|3624|5021,CNN1|EGR2|INHBA|OXTR,-1,CNet-SVM
+Reactome Gene Sets,6,R-HSA-5684996,MAPK1/MAPK3 signaling,,-2.5,9.9,4.9,30198,286,32,3,9.4,5.2,2246|2253|3845,FGF1|FGF8|KRAS,-1,CNet-SVM
+GO Biological Processes,19,GO:0010942,positive regulation of cell death,19_GO:0048518 positive regulation of biological process,-2.4,6.2,4.2,30198,605,32,4,12,5.8,2002|3624|3725|7480,ELK1|INHBA|JUN|WNT10B,-0.97,CNet-SVM
+GO Biological Processes,19,GO:1903131,mononuclear cell differentiation,19_GO:0002376 immune system process,-2.4,9.6,4.8,30198,295,32,3,9.4,5.2,3725|28514|54361,JUN|DLL1|WNT4,-0.97,CNet-SVM
+Reactome Gene Sets,6,R-HSA-9006931,Signaling by Nuclear Receptors,,-2.4,9.5,4.8,30198,299,32,3,9.4,5.2,2002|3725|3845,ELK1|JUN|KRAS,-0.95,CNet-SVM
+GO Biological Processes,19,GO:0009416,response to light stimulus,19_GO:0050896 response to stimulus,-2.4,9.2,4.7,30198,308,32,3,9.4,5.2,2002|3845|25769,ELK1|KRAS|SLC24A2,-0.92,CNet-SVM
+GO Biological Processes,19,GO:0070372,regulation of ERK1 and ERK2 cascade,19_GO:0023052 signaling,-2.4,9.1,4.7,30198,312,32,3,9.4,5.2,2246|2253|3725,FGF1|FGF8|JUN,-0.91,CNet-SVM
+Reactome Gene Sets,6,R-HSA-418594,G alpha (i) signalling events,,-2.3,8.9,4.6,30198,318,32,3,9.4,5.2,2920|5137|5179,CXCL2|PDE1C|PENK,-0.89,CNet-SVM
+GO Biological Processes,19,GO:0043010,camera-type eye development,19_GO:0032502 developmental process,-2.3,8.8,4.6,30198,320,32,3,9.4,5.2,3624|3725|28514,INHBA|JUN|DLL1,-0.88,CNet-SVM
+GO Biological Processes,19,GO:0001775,cell activation,19_GO:0009987 cellular process,-2.3,5.8,4,30198,647,32,4,12,5.8,1311|3725|28514|54361,COMP|JUN|DLL1|WNT4,-0.88,CNet-SVM
+GO Biological Processes,19,GO:1905114,cell surface receptor signaling pathway involved in cell-cell signaling,19_GO:0023052 signaling,-2.3,8.7,4.5,30198,326,32,3,9.4,5.2,7480|10009|54361,WNT10B|ZBTB33|WNT4,-0.86,CNet-SVM
+GO Biological Processes,19,GO:0090287,regulation of cellular response to growth factor stimulus,19_GO:0050896 response to stimulus,-2.3,8.6,4.5,30198,331,32,3,9.4,5.2,2246|28514|54361,FGF1|DLL1|WNT4,-0.85,CNet-SVM
+Reactome Gene Sets,6,R-HSA-195721,Signaling by WNT,,-2.3,8.5,4.5,30198,332,32,3,9.4,5.2,3845|7480|54361,KRAS|WNT10B|WNT4,-0.84,CNet-SVM
+Reactome Gene Sets,6,R-HSA-373076,Class A/1 (Rhodopsin-like receptors),,-2.3,8.5,4.5,30198,335,32,3,9.4,5.2,2920|5021|5179,CXCL2|OXTR|PENK,-0.84,CNet-SVM
+WikiPathways,27,WP2059,Alzheimer's disease and miRNA effects,,-2.3,8.4,4.4,30198,337,32,3,9.4,5.2,3845|7480|54361,KRAS|WNT10B|WNT4,-0.83,CNet-SVM
+GO Biological Processes,19,GO:1901342,regulation of vasculature development,19_GO:0032502 developmental process,-2.2,8,4.3,30198,353,32,3,9.4,5.2,2246|28514|54361,FGF1|DLL1|WNT4,-0.78,CNet-SVM
+GO Biological Processes,19,GO:0045787,positive regulation of cell cycle,19_GO:0048518 positive regulation of biological process,-2.2,7.9,4.3,30198,358,32,3,9.4,5.2,2253|7480|54361,FGF8|WNT10B|WNT4,-0.77,CNet-SVM
+GO Biological Processes,19,GO:0002521,leukocyte differentiation,19_GO:0002376 immune system process,-2.2,7.9,4.3,30198,358,32,3,9.4,5.2,3725|28514|54361,JUN|DLL1|WNT4,-0.77,CNet-SVM
+Reactome Gene Sets,6,R-HSA-1280215,Cytokine Signaling in Immune system,,-2.2,5.3,3.8,30198,715,32,4,12,5.8,2002|2920|3725|3845,ELK1|CXCL2|JUN|KRAS,-0.75,CNet-SVM
+GO Biological Processes,19,GO:0050767,regulation of neurogenesis,19_GO:0032502 developmental process,-2.2,7.8,4.2,30198,364,32,3,9.4,5.2,1959|26508|28514,EGR2|HEYL|DLL1,-0.75,CNet-SVM
+GO Biological Processes,19,GO:0001654,eye development,19_GO:0032502 developmental process,-2.2,7.7,4.2,30198,368,32,3,9.4,5.2,3624|3725|28514,INHBA|JUN|DLL1,-0.73,CNet-SVM
+GO Biological Processes,19,GO:0150063,visual system development,19_GO:0032502 developmental process,-2.2,7.6,4.2,30198,372,32,3,9.4,5.2,3624|3725|28514,INHBA|JUN|DLL1,-0.72,CNet-SVM
+GO Biological Processes,19,GO:0032940,secretion by cell,19_GO:0051179 localization,-2.1,7.5,4.1,30198,378,32,3,9.4,5.2,1311|3624|6927,COMP|INHBA|HNF1A,-0.71,CNet-SVM
+GO Biological Processes,19,GO:0048880,sensory system development,19_GO:0032502 developmental process,-2.1,7.5,4.1,30198,378,32,3,9.4,5.2,3624|3725|28514,INHBA|JUN|DLL1,-0.71,CNet-SVM
+GO Biological Processes,19,GO:0001934,positive regulation of protein phosphorylation,19_GO:0048518 positive regulation of biological process,-2.1,5.1,3.7,30198,741,32,4,12,5.8,2246|2253|3624|3845,FGF1|FGF8|INHBA|KRAS,-0.7,CNet-SVM
+GO Biological Processes,19,GO:0050678,regulation of epithelial cell proliferation,19_GO:0050789 regulation of biological process,-2.1,7.4,4.1,30198,382,32,3,9.4,5.2,2246|3725|7480,FGF1|JUN|WNT10B,-0.69,CNet-SVM
+KEGG Pathway,24,hsa05010,Alzheimer disease,,-2.1,7.4,4.1,30198,384,32,3,9.4,5.2,3845|7480|54361,KRAS|WNT10B|WNT4,-0.69,CNet-SVM
+GO Biological Processes,19,GO:0009725,response to hormone,19_GO:0050896 response to stimulus,-2.1,5,3.6,30198,753,32,4,12,5.8,1959|3624|5021|7480,EGR2|INHBA|OXTR|WNT10B,-0.68,CNet-SVM
+GO Biological Processes,19,GO:0009410,response to xenobiotic stimulus,19_GO:0050896 response to stimulus,-2.1,7.1,4,30198,401,32,3,9.4,5.2,3624|3725|5021,INHBA|JUN|OXTR,-0.64,CNet-SVM
+GO Biological Processes,19,GO:0008015,blood circulation,19_GO:0032501 multicellular organismal process,-2,7,3.9,30198,406,32,3,9.4,5.2,1311|5021|28514,COMP|OXTR|DLL1,-0.63,CNet-SVM
+Canonical Pathways,11,M5885,NABA MATRISOME ASSOCIATED,,-3.3,17,6.9,30198,751,7,3,43,19,2246|4320|25891,FGF1|MMP11|PAMR1,-1.7,Enet-SVM
+GO Biological Processes,19,GO:0030198,extracellular matrix organization,19_GO:0009987 cellular process,-4.6,22,9.1,30198,271,20,4,20,8.9,1300|3381|4319|60495,COL10A1|IBSP|MMP10|HPSE2,-2.6,L2SCAD-SVM
+GO Biological Processes,19,GO:0043062,extracellular structure organization,19_GO:0009987 cellular process,-4.6,22,9,30198,272,20,4,20,8.9,1300|3381|4319|60495,COL10A1|IBSP|MMP10|HPSE2,-2.6,L2SCAD-SVM
+GO Biological Processes,19,GO:0045229,external encapsulating structure organization,19_GO:0009987 cellular process,-4.5,22,9,30198,274,20,4,20,8.9,1300|3381|4319|60495,COL10A1|IBSP|MMP10|HPSE2,-2.6,L2SCAD-SVM
+Reactome Gene Sets,6,R-HSA-1474244,Extracellular matrix organization,,-4.4,20,8.6,30198,301,20,4,20,8.9,1300|3381|4319|4680,COL10A1|IBSP|MMP10|CEACAM6,-2.5,L2SCAD-SVM
+Reactome Gene Sets,6,R-HSA-373076,Class A/1 (Rhodopsin-like receptors),,-4.2,18,8.1,30198,335,20,4,20,8.9,148|2920|5179|6354,ADRA1A|CXCL2|PENK|CCL7,-2.3,L2SCAD-SVM
+GO Biological Processes,19,GO:0001649,osteoblast differentiation,19_GO:0032502 developmental process,-4.1,34,9.9,30198,132,20,3,15,8,3381|5179|8840,IBSP|PENK|CCN4,-2.2,L2SCAD-SVM
+Canonical Pathways,11,M5885,NABA MATRISOME ASSOCIATED,,-4,10,6.5,30198,751,20,5,25,9.7,2246|2920|4319|6354|60495,FGF1|CXCL2|MMP10|CCL7|HPSE2,-2.2,L2SCAD-SVM
+Reactome Gene Sets,6,R-HSA-500792,GPCR ligand binding,,-3.6,13,6.7,30198,467,20,4,20,8.9,148|2920|5179|6354,ADRA1A|CXCL2|PENK|CCL7,-1.9,L2SCAD-SVM
+Reactome Gene Sets,6,R-HSA-375276,Peptide ligand-binding receptors,,-3.5,23,7.9,30198,201,20,3,15,8,2920|5179|6354,CXCL2|PENK|CCL7,-1.8,L2SCAD-SVM
+GO Biological Processes,19,GO:0070374,positive regulation of ERK1 and ERK2 cascade,19_GO:0023052 signaling,-3.4,20,7.5,30198,221,20,3,15,8,148|2246|6354,ADRA1A|FGF1|CCL7,-1.7,L2SCAD-SVM
+GO Biological Processes,19,GO:0030335,positive regulation of cell migration,19_GO:0040011 locomotion,-3.3,11,6,30198,560,20,4,20,8.9,2246|4680|6354|8840,FGF1|CEACAM6|CCL7|CCN4,-1.7,L2SCAD-SVM
+KEGG Pathway,24,hsa04020,Calcium signaling pathway,,-3.3,19,7.2,30198,240,20,3,15,8,148|2246|9127,ADRA1A|FGF1|P2RX6,-1.7,L2SCAD-SVM
+GO Biological Processes,19,GO:2000147,positive regulation of cell motility,19_GO:0040011 locomotion,-3.3,10,5.9,30198,584,20,4,20,8.9,2246|4680|6354|8840,FGF1|CEACAM6|CCL7|CCN4,-1.6,L2SCAD-SVM
+GO Biological Processes,19,GO:0051272,positive regulation of cellular component movement,19_GO:0051179 localization,-3.2,10,5.8,30198,597,20,4,20,8.9,2246|4680|6354|8840,FGF1|CEACAM6|CCL7|CCN4,-1.6,L2SCAD-SVM
+GO Biological Processes,19,GO:0040017,positive regulation of locomotion,19_GO:0040011 locomotion,-3.2,10,5.8,30198,599,20,4,20,8.9,2246|4680|6354|8840,FGF1|CEACAM6|CCL7|CCN4,-1.6,L2SCAD-SVM
+GO Biological Processes,19,GO:0001503,ossification,19_GO:0032501 multicellular organismal process,-3.1,17,6.7,30198,273,20,3,15,8,3381|5179|8840,IBSP|PENK|CCN4,-1.5,L2SCAD-SVM
+Canonical Pathways,11,M5884,NABA CORE MATRISOME,,-3.1,16,6.6,30198,275,20,3,15,8,1300|3381|8840,COL10A1|IBSP|CCN4,-1.5,L2SCAD-SVM
+GO Biological Processes,19,GO:0043408,regulation of MAPK cascade,19_GO:0023052 signaling,-3,8.8,5.3,30198,688,20,4,20,8.9,148|2246|6354|401265,ADRA1A|FGF1|CCL7|KLHL31,-1.4,L2SCAD-SVM
+Reactome Gene Sets,6,R-HSA-372790,Signaling by GPCR,,-3,8.5,5.2,30198,708,20,4,20,8.9,148|2920|5179|6354,ADRA1A|CXCL2|PENK|CCL7,-1.4,L2SCAD-SVM
+GO Biological Processes,19,GO:0070372,regulation of ERK1 and ERK2 cascade,19_GO:0023052 signaling,-3,15,6.2,30198,312,20,3,15,8,148|2246|6354,ADRA1A|FGF1|CCL7,-1.4,L2SCAD-SVM
+Canonical Pathways,11,M5883,NABA SECRETED FACTORS,,-2.8,13,5.9,30198,343,20,3,15,8,2246|2920|6354,FGF1|CXCL2|CCL7,-1.3,L2SCAD-SVM
+KEGG Pathway,24,hsa04080,Neuroactive ligand-receptor interaction,,-2.8,13,5.7,30198,362,20,3,15,8,148|5179|9127,ADRA1A|PENK|P2RX6,-1.3,L2SCAD-SVM
+GO Biological Processes,19,GO:0040007,growth,19_GO:0040007 growth,-2.7,12,5.6,30198,373,20,3,15,8,148|2246|6722,ADRA1A|FGF1|SRF,-1.2,L2SCAD-SVM
+GO Biological Processes,19,GO:0048589,developmental growth,19_GO:0040007 growth,-2.7,12,5.6,30198,373,20,3,15,8,148|2246|6722,ADRA1A|FGF1|SRF,-1.2,L2SCAD-SVM
+GO Biological Processes,19,GO:0071363,cellular response to growth factor stimulus,19_GO:0050896 response to stimulus,-2.5,9.7,4.9,30198,468,20,3,15,8,2246|3381|5179,FGF1|IBSP|PENK,-0.99,L2SCAD-SVM
+GO Biological Processes,19,GO:0043410,positive regulation of MAPK cascade,19_GO:0023052 signaling,-2.4,9.2,4.7,30198,492,20,3,15,8,148|2246|6354,ADRA1A|FGF1|CCL7,-0.94,L2SCAD-SVM
+GO Biological Processes,19,GO:0070848,response to growth factor,19_GO:0050896 response to stimulus,-2.4,9.1,4.7,30198,498,20,3,15,8,2246|3381|5179,FGF1|IBSP|PENK,-0.93,L2SCAD-SVM
+GO Biological Processes,19,GO:0001501,skeletal system development,19_GO:0032502 developmental process,-2.4,9,4.6,30198,505,20,3,15,8,1300|6722|8840,COL10A1|SRF|CCN4,-0.91,L2SCAD-SVM
+GO Biological Processes,19,GO:0051347,positive regulation of transferase activity,19_GO:0065007 biological regulation,-2.2,7.9,4.3,30198,575,20,3,15,8,148|2246|4101,ADRA1A|FGF1|MAGEA2,-0.78,L2SCAD-SVM
+GO Biological Processes,19,GO:0019725,cellular homeostasis,19_GO:0065007 biological regulation,-2.1,7.3,4.1,30198,621,20,3,15,8,6354|6722|116085,CCL7|SRF|SLC22A12,-0.69,L2SCAD-SVM
+Reactome Gene Sets,6,R-HSA-388396,GPCR downstream signalling,,-2.1,7.2,4,30198,633,20,3,15,8,148|2920|5179,ADRA1A|CXCL2|PENK,-0.67,L2SCAD-SVM
+WikiPathways,27,WP4155,Endometrial cancer,,-5.7,1.2e+02,19,30198,63,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-3.3,SCAD-SVM
+GO Biological Processes,19,GO:0009314,response to radiation,19_GO:0050896 response to stimulus,-4.7,23,9.3,30198,435,12,4,33,14,2002|3845|5179|25769,ELK1|KRAS|PENK|SLC24A2,-2.7,SCAD-SVM
+KEGG Pathway,24,hsa05224,Breast cancer,,-4.6,51,12,30198,147,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-2.6,SCAD-SVM
+WikiPathways,27,WP4262,Breast cancer pathway,,-4.5,48,12,30198,157,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-2.6,SCAD-SVM
+GO Biological Processes,19,GO:0030324,lung development,19_GO:0032502 developmental process,-4.4,43,11,30198,174,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-2.5,SCAD-SVM
+KEGG Pathway,24,hsa05200,Pathways in cancer,,-4.4,19,8.3,30198,531,12,4,33,14,2002|2246|3845|28514,ELK1|FGF1|KRAS|DLL1,-2.5,SCAD-SVM
+GO Biological Processes,19,GO:0030323,respiratory tube development,19_GO:0032502 developmental process,-4.4,42,11,30198,178,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-2.5,SCAD-SVM
+GO Biological Processes,19,GO:0060541,respiratory system development,19_GO:0032502 developmental process,-4.2,38,10,30198,198,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-2.4,SCAD-SVM
+KEGG Pathway,24,hsa05205,Proteoglycans in cancer,,-4.2,37,10,30198,205,12,3,25,12,2002|3845|60495,ELK1|KRAS|HPSE2,-2.3,SCAD-SVM
+GO Biological Processes,19,GO:0042063,gliogenesis,19_GO:0032502 developmental process,-4.1,35,10,30198,213,12,3,25,12,3845|5179|28514,KRAS|PENK|DLL1,-2.3,SCAD-SVM
+KEGG Pathway,24,hsa04014,Ras signaling pathway,,-4,33,9.6,30198,232,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-2.2,SCAD-SVM
+WikiPathways,27,WP382,MAPK signaling pathway,,-3.9,30,9.3,30198,249,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-2.2,SCAD-SVM
+Canonical Pathways,11,M5885,NABA MATRISOME ASSOCIATED,,-3.8,13,6.9,30198,751,12,4,33,14,2246|2920|25891|60495,FGF1|CXCL2|PAMR1|HPSE2,-2.1,SCAD-SVM
+KEGG Pathway,24,hsa04010,MAPK signaling pathway,,-3.7,26,8.5,30198,294,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-2,SCAD-SVM
+GO Biological Processes,19,GO:0060562,epithelial tube morphogenesis,19_GO:0032502 developmental process,-3.7,25,8.3,30198,307,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-2,SCAD-SVM
+GO Biological Processes,19,GO:0009416,response to light stimulus,19_GO:0050896 response to stimulus,-3.7,25,8.3,30198,308,12,3,25,12,2002|3845|25769,ELK1|KRAS|SLC24A2,-2,SCAD-SVM
+Reactome Gene Sets,6,R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,,-3.2,17,6.9,30198,433,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-1.6,SCAD-SVM
+GO Biological Processes,19,GO:0002009,morphogenesis of an epithelium,19_GO:0032502 developmental process,-3.2,17,6.7,30198,447,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-1.6,SCAD-SVM
+GO Biological Processes,19,GO:0070848,response to growth factor,19_GO:0050896 response to stimulus,-3.1,15,6.4,30198,498,12,3,25,12,2002|2246|5179,ELK1|FGF1|PENK,-1.5,SCAD-SVM
+GO Biological Processes,19,GO:0071396,cellular response to lipid,19_GO:0050896 response to stimulus,-3,15,6.3,30198,503,12,3,25,12,2002|2920|5179,ELK1|CXCL2|PENK,-1.5,SCAD-SVM
+Reactome Gene Sets,6,R-HSA-9006934,Signaling by Receptor Tyrosine Kinases,,-3,14,6.2,30198,521,12,3,25,12,2002|2246|3845,ELK1|FGF1|KRAS,-1.4,SCAD-SVM
+GO Biological Processes,19,GO:0048729,tissue morphogenesis,19_GO:0032502 developmental process,-2.9,14,6,30198,557,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-1.4,SCAD-SVM
+GO Biological Processes,19,GO:0007610,behavior,19_GO:0032501 multicellular organismal process,-2.9,13,5.9,30198,572,12,3,25,12,3845|5179|25769,KRAS|PENK|SLC24A2,-1.3,SCAD-SVM
+Reactome Gene Sets,6,R-HSA-388396,GPCR downstream signalling,,-2.8,12,5.5,30198,633,12,3,25,12,2920|3845|5179,CXCL2|KRAS|PENK,-1.2,SCAD-SVM
+GO Biological Processes,19,GO:0035239,tube morphogenesis,19_GO:0032502 developmental process,-2.7,11,5.4,30198,663,12,3,25,12,2246|3845|28514,FGF1|KRAS|DLL1,-1.2,SCAD-SVM
+GO Biological Processes,19,GO:0045596,negative regulation of cell differentiation,19_GO:0032502 developmental process,-2.6,11,5.2,30198,699,12,3,25,12,3845|8840|28514,KRAS|CCN4|DLL1,-1.1,SCAD-SVM
+Reactome Gene Sets,6,R-HSA-372790,Signaling by GPCR,,-2.6,11,5.2,30198,708,12,3,25,12,2920|3845|5179,CXCL2|KRAS|PENK,-1.1,SCAD-SVM
+Reactome Gene Sets,6,R-HSA-1280215,Cytokine Signaling in Immune system,,-2.6,11,5.2,30198,715,12,3,25,12,2002|2920|3845,ELK1|CXCL2|KRAS,-1.1,SCAD-SVM
+GO Biological Processes,19,GO:1903047,mitotic cell cycle process,19_GO:0009987 cellular process,-9.2,19,12,30198,514,28,9,32,8.8,699|1063|4751|9833|22974|24137|55165|83540|128239,BUB1|CENPF|NEK2|MELK|TPX2|KIF4A|CEP55|NUF2|IQGAP3,-6,SGLasso-SVM
+GO Biological Processes,19,GO:0000278,mitotic cell cycle,19_GO:0009987 cellular process,-8.6,16,11,30198,605,28,9,32,8.8,699|1063|4751|9833|22974|24137|55165|83540|128239,BUB1|CENPF|NEK2|MELK|TPX2|KIF4A|CEP55|NUF2|IQGAP3,-5.4,SGLasso-SVM
+GO Biological Processes,19,GO:0051301,cell division,19_GO:0009987 cellular process,-6.5,15,9.7,30198,503,28,7,25,8.2,699|1063|4751|22974|24137|55165|83540,BUB1|CENPF|NEK2|TPX2|KIF4A|CEP55|NUF2,-3.9,SGLasso-SVM
+GO Biological Processes,19,GO:0007052,mitotic spindle organization,19_GO:0009987 cellular process,-5.8,46,13,30198,94,28,4,14,6.6,4751|22974|24137|83540,NEK2|TPX2|KIF4A|NUF2,-3.4,SGLasso-SVM
+GO Biological Processes,19,GO:0098813,nuclear chromosome segregation,19_GO:0009987 cellular process,-5.7,24,10,30198,228,28,5,18,7.2,699|1063|4751|24137|83540,BUB1|CENPF|NEK2|KIF4A|NUF2,-3.3,SGLasso-SVM
+GO Biological Processes,19,GO:0071173,spindle assembly checkpoint signaling,19_GO:0023052 signaling,-5.6,1.1e+02,18,30198,29,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.3,SGLasso-SVM
+GO Biological Processes,19,GO:0007094,mitotic spindle assembly checkpoint signaling,19_GO:0023052 signaling,-5.6,1.1e+02,18,30198,29,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.3,SGLasso-SVM
+GO Biological Processes,19,GO:0071174,mitotic spindle checkpoint signaling,19_GO:0023052 signaling,-5.6,1.1e+02,18,30198,29,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.3,SGLasso-SVM
+GO Biological Processes,19,GO:0031577,spindle checkpoint signaling,19_GO:0023052 signaling,-5.5,1.1e+02,18,30198,30,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.2,SGLasso-SVM
+GO Biological Processes,19,GO:0045841,negative regulation of mitotic metaphase/anaphase transition,19_GO:0048519 negative regulation of biological process,-5.5,1e+02,18,30198,31,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.2,SGLasso-SVM
+GO Biological Processes,19,GO:1902100,negative regulation of metaphase/anaphase transition of cell cycle,19_GO:0048519 negative regulation of biological process,-5.4,98,17,30198,33,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:0033046,negative regulation of sister chromatid segregation,19_GO:0048519 negative regulation of biological process,-5.4,95,17,30198,34,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:2000816,negative regulation of mitotic sister chromatid separation,19_GO:0048519 negative regulation of biological process,-5.4,95,17,30198,34,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:0033048,negative regulation of mitotic sister chromatid segregation,19_GO:0048519 negative regulation of biological process,-5.4,95,17,30198,34,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:0007088,regulation of mitotic nuclear division,19_GO:0050789 regulation of biological process,-5.4,37,12,30198,118,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:1905819,negative regulation of chromosome separation,19_GO:0048519 negative regulation of biological process,-5.3,90,16,30198,36,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:0051985,negative regulation of chromosome segregation,19_GO:0048519 negative regulation of biological process,-5.3,90,16,30198,36,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3.1,SGLasso-SVM
+GO Biological Processes,19,GO:1902850,microtubule cytoskeleton organization involved in mitosis,19_GO:0009987 cellular process,-5.3,35,11,30198,125,28,4,14,6.6,4751|22974|24137|83540,NEK2|TPX2|KIF4A|NUF2,-3,SGLasso-SVM
+GO Biological Processes,19,GO:0007059,chromosome segregation,19_GO:0009987 cellular process,-5.2,19,9.3,30198,285,28,5,18,7.2,699|1063|4751|24137|83540,BUB1|CENPF|NEK2|KIF4A|NUF2,-3,SGLasso-SVM
+GO Biological Processes,19,GO:0045839,negative regulation of mitotic nuclear division,19_GO:0048519 negative regulation of biological process,-5.2,83,16,30198,39,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-3,SGLasso-SVM
+GO Biological Processes,19,GO:0000280,nuclear division,19_GO:0009987 cellular process,-5,17,8.8,30198,310,28,5,18,7.2,699|4751|22974|24137|83540,BUB1|NEK2|TPX2|KIF4A|NUF2,-2.9,SGLasso-SVM
+GO Biological Processes,19,GO:0051783,regulation of nuclear division,19_GO:0050789 regulation of biological process,-5,30,11,30198,145,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-2.9,SGLasso-SVM
+GO Biological Processes,19,GO:0000819,sister chromatid segregation,19_GO:0009987 cellular process,-5,30,11,30198,146,28,4,14,6.6,699|4751|24137|83540,BUB1|NEK2|KIF4A|NUF2,-2.9,SGLasso-SVM
+GO Biological Processes,19,GO:0051784,negative regulation of nuclear division,19_GO:0048519 negative regulation of biological process,-5,70,14,30198,46,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.9,SGLasso-SVM
+GO Biological Processes,19,GO:0007051,spindle organization,19_GO:0009987 cellular process,-4.9,28,10,30198,155,28,4,14,6.6,4751|22974|24137|83540,NEK2|TPX2|KIF4A|NUF2,-2.8,SGLasso-SVM
+GO Biological Processes,19,GO:0048285,organelle fission,19_GO:0009987 cellular process,-4.9,16,8.5,30198,335,28,5,18,7.2,699|4751|22974|24137|83540,BUB1|NEK2|TPX2|KIF4A|NUF2,-2.8,SGLasso-SVM
+GO Biological Processes,19,GO:0090307,mitotic spindle assembly,19_GO:0009987 cellular process,-4.9,65,14,30198,50,28,3,11,5.8,4751|22974|24137,NEK2|TPX2|KIF4A,-2.8,SGLasso-SVM
+GO Biological Processes,19,GO:0140014,mitotic nuclear division,19_GO:0009987 cellular process,-4.8,26,9.7,30198,169,28,4,14,6.6,4751|22974|24137|83540,NEK2|TPX2|KIF4A|NUF2,-2.7,SGLasso-SVM
+GO Biological Processes,19,GO:0033047,regulation of mitotic sister chromatid segregation,19_GO:0050789 regulation of biological process,-4.7,59,13,30198,55,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.7,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-68877,Mitotic Prometaphase,,-4.4,21,8.8,30198,204,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-2.5,SGLasso-SVM
+GO Biological Processes,19,GO:2001251,negative regulation of chromosome organization,19_GO:0048519 negative regulation of biological process,-4.3,40,11,30198,80,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.4,SGLasso-SVM
+GO Biological Processes,19,GO:0033044,regulation of chromosome organization,19_GO:0050789 regulation of biological process,-4.1,17,7.9,30198,250,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-2.3,SGLasso-SVM
+GO Biological Processes,19,GO:0030071,regulation of mitotic metaphase/anaphase transition,19_GO:0050789 regulation of biological process,-4.1,36,10,30198,91,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.3,SGLasso-SVM
+GO Biological Processes,19,GO:1902099,regulation of metaphase/anaphase transition of cell cycle,19_GO:0050789 regulation of biological process,-4,34,9.9,30198,94,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.2,SGLasso-SVM
+GO Biological Processes,19,GO:0051225,spindle assembly,19_GO:0009987 cellular process,-4,34,9.8,30198,95,28,3,11,5.8,4751|22974|24137,NEK2|TPX2|KIF4A,-2.2,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-141424,Amplification of signal from the kinetochores,,-4,34,9.8,30198,96,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.2,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-141444,Amplification  of signal from unattached  kinetochores via a MAD2  inhibitory signal,,-4,34,9.8,30198,96,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.2,SGLasso-SVM
+GO Biological Processes,19,GO:0010965,regulation of mitotic sister chromatid separation,19_GO:0050789 regulation of biological process,-4,34,9.8,30198,96,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.2,SGLasso-SVM
+GO Biological Processes,19,GO:0033045,regulation of sister chromatid segregation,19_GO:0050789 regulation of biological process,-3.9,31,9.3,30198,105,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.1,SGLasso-SVM
+GO Biological Processes,19,GO:0010948,negative regulation of cell cycle process,19_GO:0048519 negative regulation of biological process,-3.9,15,7.3,30198,287,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-2.1,SGLasso-SVM
+GO Biological Processes,19,GO:1905818,regulation of chromosome separation,19_GO:0050789 regulation of biological process,-3.9,30,9.1,30198,109,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.1,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-69278,"Cell Cycle, Mitotic",,-3.8,9.6,6.3,30198,561,28,5,18,7.2,699|1063|4751|22974|83540,BUB1|CENPF|NEK2|TPX2|NUF2,-2.1,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-69618,Mitotic Spindle Checkpoint,,-3.8,29,9,30198,113,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2.1,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-9648025,EML4 and NUDC in mitotic spindle formation,,-3.8,28,8.8,30198,117,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2,SGLasso-SVM
+GO Biological Processes,19,GO:0000070,mitotic sister chromatid segregation,19_GO:0009987 cellular process,-3.7,27,8.7,30198,119,28,3,11,5.8,4751|24137|83540,NEK2|KIF4A|NUF2,-2,SGLasso-SVM
+GO Biological Processes,19,GO:0140694,non-membrane-bounded organelle assembly,19_GO:0009987 cellular process,-3.7,14,6.9,30198,312,28,4,14,6.6,1063|4751|22974|24137,CENPF|NEK2|TPX2|KIF4A,-2,SGLasso-SVM
+GO Biological Processes,19,GO:0007093,mitotic cell cycle checkpoint signaling,19_GO:0023052 signaling,-3.7,26,8.6,30198,123,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-2500257,Resolution of Sister Chromatid Cohesion,,-3.7,26,8.5,30198,126,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-2,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-195258,RHO GTPase Effectors,,-3.6,13,6.8,30198,327,28,4,14,6.6,699|1063|83540|128239,BUB1|CENPF|NUF2|IQGAP3,-1.9,SGLasso-SVM
+GO Biological Processes,19,GO:0051983,regulation of chromosome segregation,19_GO:0050789 regulation of biological process,-3.6,25,8.3,30198,130,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.9,SGLasso-SVM
+GO Biological Processes,19,GO:0010639,negative regulation of organelle organization,19_GO:0048519 negative regulation of biological process,-3.6,13,6.6,30198,342,28,4,14,6.6,699|1063|22974|83540,BUB1|CENPF|TPX2|NUF2,-1.9,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-5663220,RHO GTPases Activate Formins,,-3.5,23,8,30198,140,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.8,SGLasso-SVM
+GO Biological Processes,19,GO:0045786,negative regulation of cell cycle,19_GO:0048519 negative regulation of biological process,-3.4,12,6.2,30198,375,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-1.8,SGLasso-SVM
+GO Biological Processes,19,GO:0000075,cell cycle checkpoint signaling,19_GO:0023052 signaling,-3.4,21,7.6,30198,153,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.8,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-1640170,Cell Cycle,,-3.4,7.8,5.5,30198,692,28,5,18,7.2,699|1063|4751|22974|83540,BUB1|CENPF|NEK2|TPX2|NUF2,-1.7,SGLasso-SVM
+GO Biological Processes,19,GO:0010564,regulation of cell cycle process,19_GO:0050789 regulation of biological process,-3.3,7.3,5.3,30198,734,28,5,18,7.2,699|1063|4751|22974|83540,BUB1|CENPF|NEK2|TPX2|NUF2,-1.7,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-68886,M Phase,,-3.2,10,5.8,30198,418,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-1.6,SGLasso-SVM
+GO Biological Processes,19,GO:1901991,negative regulation of mitotic cell cycle phase transition,19_GO:0048519 negative regulation of biological process,-3.2,18,7,30198,178,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.6,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-2467813,Separation of Sister Chromatids,,-3.1,17,6.7,30198,191,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.5,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-69275,G2/M Transition,,-3.1,17,6.6,30198,196,28,3,11,5.8,1063|4751|22974,CENPF|NEK2|TPX2,-1.5,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-453274,Mitotic G2-G2/M phases,,-3.1,16,6.6,30198,198,28,3,11,5.8,1063|4751|22974,CENPF|NEK2|TPX2,-1.5,SGLasso-SVM
+GO Biological Processes,19,GO:0045930,negative regulation of mitotic cell cycle,19_GO:0048519 negative regulation of biological process,-2.9,14,6.1,30198,227,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.4,SGLasso-SVM
+GO Biological Processes,19,GO:0007346,regulation of mitotic cell cycle,19_GO:0050789 regulation of biological process,-2.9,8.3,5.1,30198,517,28,4,14,6.6,699|1063|4751|83540,BUB1|CENPF|NEK2|NUF2,-1.4,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-68882,Mitotic Anaphase,,-2.9,14,6,30198,236,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.3,SGLasso-SVM
+GO Biological Processes,19,GO:0000226,microtubule cytoskeleton organization,19_GO:0009987 cellular process,-2.9,8.2,5.1,30198,526,28,4,14,6.6,4751|22974|24137|83540,NEK2|TPX2|KIF4A|NUF2,-1.3,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-2555396,Mitotic Metaphase and Anaphase,,-2.9,14,6,30198,237,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.3,SGLasso-SVM
+GO Biological Processes,19,GO:1901988,negative regulation of cell cycle phase transition,19_GO:0048519 negative regulation of biological process,-2.9,14,5.9,30198,238,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.3,SGLasso-SVM
+GO Biological Processes,19,GO:0051321,meiotic cell cycle,19_GO:0022414 reproductive process,-2.8,13,5.9,30198,241,28,3,11,5.8,699|4751|83540,BUB1|NEK2|NUF2,-1.3,SGLasso-SVM
+Canonical Pathways,11,M5884,NABA CORE MATRISOME,,-2.7,12,5.5,30198,275,28,3,11,5.8,1300|3489|8840,COL10A1|IGFBP6|CCN4,-1.2,SGLasso-SVM
+GO Biological Processes,19,GO:0001822,kidney development,19_GO:0032502 developmental process,-2.6,11,5.3,30198,287,28,3,11,5.8,1063|2246|168002,CENPF|FGF1|DACT2,-1.1,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-69620,Cell Cycle Checkpoints,,-2.6,11,5.3,30198,293,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-1.1,SGLasso-SVM
+GO Biological Processes,19,GO:0072001,renal system development,19_GO:0032502 developmental process,-2.6,11,5.2,30198,296,28,3,11,5.8,1063|2246|168002,CENPF|FGF1|DACT2,-1.1,SGLasso-SVM
+GO Biological Processes,19,GO:0001655,urogenital system development,19_GO:0032502 developmental process,-2.4,9.7,4.9,30198,334,28,3,11,5.8,1063|2246|168002,CENPF|FGF1|DACT2,-0.98,SGLasso-SVM
+GO Biological Processes,19,GO:0051129,negative regulation of cellular component organization,19_GO:0048519 negative regulation of biological process,-2.4,6.2,4.2,30198,693,28,4,14,6.6,699|1063|22974|83540,BUB1|CENPF|TPX2|NUF2,-0.97,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-194315,Signaling by Rho GTPases,,-2.4,6.1,4.2,30198,707,28,4,14,6.6,699|1063|83540|128239,BUB1|CENPF|NUF2|IQGAP3,-0.95,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-9716542,"Signaling by Rho GTPases, Miro GTPases and RHOBTB3",,-2.4,6,4.1,30198,723,28,4,14,6.6,699|1063|83540|128239,BUB1|CENPF|NUF2|IQGAP3,-0.92,SGLasso-SVM
+GO Biological Processes,19,GO:1901990,regulation of mitotic cell cycle phase transition,19_GO:0050789 regulation of biological process,-2.4,9.1,4.7,30198,355,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-0.92,SGLasso-SVM
+Reactome Gene Sets,6,R-HSA-382551,Transport of small molecules,,-2.4,5.9,4.1,30198,729,28,4,14,6.6,762|5348|10349|338328,CA4|FXYD1|ABCA10|GPIHBP1,-0.91,SGLasso-SVM
+GO Biological Processes,19,GO:0001934,positive regulation of protein phosphorylation,19_GO:0048518 positive regulation of biological process,-2.3,5.8,4,30198,741,28,4,14,6.6,2246|22974|85480|128239,FGF1|TPX2|TSLP|IQGAP3,-0.89,SGLasso-SVM
+Canonical Pathways,11,M5885,NABA MATRISOME ASSOCIATED,,-2.3,5.7,4,30198,751,28,4,14,6.6,2246|2920|4320|25891,FGF1|CXCL2|MMP11|PAMR1,-0.87,SGLasso-SVM
+GO Biological Processes,19,GO:0070925,organelle assembly,19_GO:0009987 cellular process,-2.3,5.5,3.9,30198,783,28,4,14,6.6,1063|4751|22974|24137,CENPF|NEK2|TPX2|KIF4A,-0.81,SGLasso-SVM
+GO Biological Processes,19,GO:0007017,microtubule-based process,19_GO:0009987 cellular process,-2.2,5.5,3.9,30198,786,28,4,14,6.6,4751|22974|24137|83540,NEK2|TPX2|KIF4A|NUF2,-0.81,SGLasso-SVM
+GO Biological Processes,19,GO:1901987,regulation of cell cycle phase transition,19_GO:0050789 regulation of biological process,-2.1,7.1,4,30198,454,28,3,11,5.8,699|1063|83540,BUB1|CENPF|NUF2,-0.66,SGLasso-SVM
+Canonical Pathways,11,M5884,NABA CORE MATRISOME,,-6.6,22,11,30198,275,30,6,20,7.3,1300|1311|7148|8840|11082|148113,COL10A1|COMP|TNXB|CCN4|ESM1|CILP2,-3.9,SVM-RFE
+GO Biological Processes,19,GO:0030198,extracellular matrix organization,19_GO:0009987 cellular process,-5.2,19,9.2,30198,271,30,5,17,6.8,1300|1311|2295|4320|7148,COL10A1|COMP|FOXF2|MMP11|TNXB,-3,SVM-RFE
+GO Biological Processes,19,GO:0043062,extracellular structure organization,19_GO:0009987 cellular process,-5.2,19,9.1,30198,272,30,5,17,6.8,1300|1311|2295|4320|7148,COL10A1|COMP|FOXF2|MMP11|TNXB,-3,SVM-RFE
+GO Biological Processes,19,GO:0045229,external encapsulating structure organization,19_GO:0009987 cellular process,-5.2,18,9.1,30198,274,30,5,17,6.8,1300|1311|2295|4320|7148,COL10A1|COMP|FOXF2|MMP11|TNXB,-3,SVM-RFE
+GO Biological Processes,19,GO:0046683,response to organophosphorus,19_GO:0050896 response to stimulus,-5.1,32,11,30198,126,30,4,13,6.2,3753|5179|6532|9127,KCNE1|PENK|SLC6A4|P2RX6,-3,SVM-RFE
+GO Biological Processes,19,GO:0003012,muscle system process,19_GO:0032501 multicellular organismal process,-5.1,18,9,30198,282,30,5,17,6.8,1311|3753|5021|9127|23493,COMP|KCNE1|OXTR|P2RX6|HEY2,-2.9,SVM-RFE
+GO Biological Processes,19,GO:0014074,response to purine-containing compound,19_GO:0050896 response to stimulus,-5,29,10,30198,140,30,4,13,6.2,3753|5179|6532|9127,KCNE1|PENK|SLC6A4|P2RX6,-2.8,SVM-RFE
+Reactome Gene Sets,6,R-HSA-1474244,Extracellular matrix organization,,-5,17,8.6,30198,301,30,5,17,6.8,1300|1311|4320|4680|7148,COL10A1|COMP|MMP11|CEACAM6|TNXB,-2.8,SVM-RFE
+GO Biological Processes,19,GO:0030199,collagen fibril organization,19_GO:0009987 cellular process,-4.6,54,13,30198,56,30,3,10,5.5,1311|4320|7148,COMP|MMP11|TNXB,-2.6,SVM-RFE
+Canonical Pathways,11,M3008,NABA ECM GLYCOPROTEINS,,-4.4,21,8.7,30198,196,30,4,13,6.2,1311|7148|8840|148113,COMP|TNXB|CCN4|CILP2,-2.5,SVM-RFE
+GO Biological Processes,19,GO:0048844,artery morphogenesis,19_GO:0032502 developmental process,-4.4,44,11,30198,69,30,3,10,5.5,1311|2253|23493,COMP|FGF8|HEY2,-2.4,SVM-RFE
+GO Biological Processes,19,GO:0001837,epithelial to mesenchymal transition,19_GO:0032502 developmental process,-4.2,39,11,30198,78,30,3,10,5.5,2253|2295|23493,FGF8|FOXF2|HEY2,-2.3,SVM-RFE
+GO Biological Processes,19,GO:0006936,muscle contraction,19_GO:0032501 multicellular organismal process,-4.1,18,8,30198,228,30,4,13,6.2,1311|3753|5021|9127,COMP|KCNE1|OXTR|P2RX6,-2.3,SVM-RFE
+KEGG Pathway,24,hsa04020,Calcium signaling pathway,,-4,17,7.7,30198,240,30,4,13,6.2,2253|5021|5137|9127,FGF8|OXTR|PDE1C|P2RX6,-2.2,SVM-RFE
+GO Biological Processes,19,GO:0060840,artery development,19_GO:0032502 developmental process,-3.9,31,9.4,30198,97,30,3,10,5.5,1311|2253|23493,COMP|FGF8|HEY2,-2.1,SVM-RFE
+GO Biological Processes,19,GO:0071396,cellular response to lipid,19_GO:0050896 response to stimulus,-3.9,10,6.4,30198,503,30,5,17,6.8,1066|2002|2920|5179|6532,CES1|ELK1|CXCL2|PENK|SLC6A4,-2.1,SVM-RFE
+GO Biological Processes,19,GO:0071407,cellular response to organic cyclic compound,19_GO:0050896 response to stimulus,-3.9,10,6.4,30198,505,30,5,17,6.8,1066|2002|3753|5179|6532,CES1|ELK1|KCNE1|PENK|SLC6A4,-2.1,SVM-RFE
+GO Biological Processes,19,GO:0001501,skeletal system development,19_GO:0032502 developmental process,-3.9,10,6.4,30198,505,30,5,17,6.8,1300|1311|2253|5307|8840,COL10A1|COMP|FGF8|PITX1|CCN4,-2.1,SVM-RFE
+GO Biological Processes,19,GO:0007611,learning or memory,19_GO:0032501 multicellular organismal process,-3.9,15,7.3,30198,265,30,4,13,6.2,3845|5021|6532|25769,KRAS|OXTR|SLC6A4|SLC24A2,-2.1,SVM-RFE
+GO Biological Processes,19,GO:0046620,regulation of organ growth,19_GO:0040007 growth,-3.9,30,9.2,30198,101,30,3,10,5.5,2253|6532|23493,FGF8|SLC6A4|HEY2,-2.1,SVM-RFE
+GO Biological Processes,19,GO:0007610,behavior,19_GO:0032501 multicellular organismal process,-3.6,8.8,5.9,30198,572,30,5,17,6.8,3845|5021|5179|6532|25769,KRAS|OXTR|PENK|SLC6A4|SLC24A2,-1.9,SVM-RFE
+GO Biological Processes,19,GO:0050890,cognition,19_GO:0032501 multicellular organismal process,-3.6,13,6.7,30198,307,30,4,13,6.2,3845|5021|6532|25769,KRAS|OXTR|SLC6A4|SLC24A2,-1.9,SVM-RFE
+GO Biological Processes,19,GO:0007613,memory,19_GO:0032501 multicellular organismal process,-3.6,25,8.3,30198,121,30,3,10,5.5,5021|6532|25769,OXTR|SLC6A4|SLC24A2,-1.9,SVM-RFE
+WikiPathways,27,WP3932,Focal adhesion: PI3K-Akt-mTOR-signaling pathway,,-3.6,13,6.7,30198,309,30,4,13,6.2,1311|2253|3845|7148,COMP|FGF8|KRAS|TNXB,-1.9,SVM-RFE
+GO Biological Processes,19,GO:0032355,response to estradiol,19_GO:0050896 response to stimulus,-3.6,25,8.3,30198,123,30,3,10,5.5,5021|5179|6532,OXTR|PENK|SLC6A4,-1.9,SVM-RFE
+KEGG Pathway,24,hsa05165,Human papillomavirus infection,,-3.5,12,6.4,30198,331,30,4,13,6.2,1311|3845|7148|23493,COMP|KRAS|TNXB|HEY2,-1.8,SVM-RFE
+WikiPathways,27,WP4172,PI3K-Akt signaling pathway,,-3.4,12,6.3,30198,345,30,4,13,6.2,1311|2253|3845|7148,COMP|FGF8|KRAS|TNXB,-1.8,SVM-RFE
+Reactome Gene Sets,6,R-HSA-388396,GPCR downstream signalling,,-3.4,8,5.6,30198,633,30,5,17,6.8,2920|3845|5021|5137|5179,CXCL2|KRAS|OXTR|PDE1C|PENK,-1.8,SVM-RFE
+GO Biological Processes,19,GO:0035296,regulation of tube diameter,19_GO:0065007 biological regulation,-3.4,21,7.7,30198,141,30,3,10,5.5,1311|5021|6532,COMP|OXTR|SLC6A4,-1.8,SVM-RFE
+GO Biological Processes,19,GO:0097746,blood vessel diameter maintenance,19_GO:0032501 multicellular organismal process,-3.4,21,7.7,30198,141,30,3,10,5.5,1311|5021|6532,COMP|OXTR|SLC6A4,-1.8,SVM-RFE
+GO Biological Processes,19,GO:0035150,regulation of tube size,19_GO:0065007 biological regulation,-3.4,21,7.6,30198,142,30,3,10,5.5,1311|5021|6532,COMP|OXTR|SLC6A4,-1.8,SVM-RFE
+KEGG Pathway,24,hsa04151,PI3K-Akt signaling pathway,,-3.4,11,6.2,30198,354,30,4,13,6.2,1311|2253|3845|7148,COMP|FGF8|KRAS|TNXB,-1.7,SVM-RFE
+KEGG Pathway,24,hsa05224,Breast cancer,,-3.4,21,7.5,30198,147,30,3,10,5.5,2253|3845|23493,FGF8|KRAS|HEY2,-1.7,SVM-RFE
+GO Biological Processes,19,GO:0035239,tube morphogenesis,19_GO:0032502 developmental process,-3.3,7.6,5.4,30198,663,30,5,17,6.8,1311|2253|3845|11082|23493,COMP|FGF8|KRAS|ESM1|HEY2,-1.7,SVM-RFE
+KEGG Pathway,24,hsa04921,Oxytocin signaling pathway,,-3.3,20,7.3,30198,154,30,3,10,5.5,2002|3845|5021,ELK1|KRAS|OXTR,-1.7,SVM-RFE
+GO Biological Processes,19,GO:0030900,forebrain development,19_GO:0032502 developmental process,-3.3,11,6,30198,374,30,4,13,6.2,2253|3845|5021|5307,FGF8|KRAS|OXTR|PITX1,-1.7,SVM-RFE
+WikiPathways,27,WP4262,Breast cancer pathway,,-3.3,19,7.2,30198,157,30,3,10,5.5,2253|3845|23493,FGF8|KRAS|HEY2,-1.7,SVM-RFE
+GO Biological Processes,19,GO:0045596,negative regulation of cell differentiation,19_GO:0032502 developmental process,-3.2,7.2,5.2,30198,699,30,5,17,6.8,3845|4320|6532|8840|23493,KRAS|MMP11|SLC6A4|CCN4|HEY2,-1.6,SVM-RFE
+Reactome Gene Sets,6,R-HSA-372790,Signaling by GPCR,,-3.2,7.1,5.2,30198,708,30,5,17,6.8,2920|3845|5021|5137|5179,CXCL2|KRAS|OXTR|PDE1C|PENK,-1.6,SVM-RFE
+GO Biological Processes,19,GO:0048762,mesenchymal cell differentiation,19_GO:0032502 developmental process,-3.2,18,7,30198,168,30,3,10,5.5,2253|2295|23493,FGF8|FOXF2|HEY2,-1.6,SVM-RFE
+GO Biological Processes,19,GO:0048732,gland development,19_GO:0032502 developmental process,-3.2,10,5.7,30198,402,30,4,13,6.2,2002|2253|5021|5307,ELK1|FGF8|OXTR|PITX1,-1.6,SVM-RFE
+GO Biological Processes,19,GO:0008015,blood circulation,19_GO:0032501 multicellular organismal process,-3.2,9.9,5.7,30198,406,30,4,13,6.2,1311|3753|5021|6532,COMP|KCNE1|OXTR|SLC6A4,-1.6,SVM-RFE
+GO Biological Processes,19,GO:0030324,lung development,19_GO:0032502 developmental process,-3.2,17,6.8,30198,174,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-1.6,SVM-RFE
+GO Biological Processes,19,GO:0048736,appendage development,19_GO:0032502 developmental process,-3.1,17,6.8,30198,177,30,3,10,5.5,1311|2253|5307,COMP|FGF8|PITX1,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0060173,limb development,19_GO:0032502 developmental process,-3.1,17,6.8,30198,177,30,3,10,5.5,1311|2253|5307,COMP|FGF8|PITX1,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0030323,respiratory tube development,19_GO:0032502 developmental process,-3.1,17,6.7,30198,178,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0000165,MAPK cascade,19_GO:0023052 signaling,-3.1,17,6.7,30198,180,30,3,10,5.5,2253|3845|5021,FGF8|KRAS|OXTR,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0007420,brain development,19_GO:0032502 developmental process,-3.1,6.8,5,30198,744,30,5,17,6.8,2253|3845|5021|5307|6532,FGF8|KRAS|OXTR|PITX1|SLC6A4,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0048514,blood vessel morphogenesis,19_GO:0032502 developmental process,-3.1,9.6,5.6,30198,421,30,4,13,6.2,1311|2253|11082|23493,COMP|FGF8|ESM1|HEY2,-1.5,SVM-RFE
+Canonical Pathways,11,M5885,NABA MATRISOME ASSOCIATED,,-3.1,6.7,5,30198,751,30,5,17,6.8,2253|2920|4320|25891|27190,FGF8|CXCL2|MMP11|PAMR1|IL17B,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0050804,modulation of chemical synaptic transmission,19_GO:0023052 signaling,-3.1,9.3,5.5,30198,435,30,4,13,6.2,3845|5021|6532|25769,KRAS|OXTR|SLC6A4|SLC24A2,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0009314,response to radiation,19_GO:0050896 response to stimulus,-3.1,9.3,5.5,30198,435,30,4,13,6.2,2002|3845|5179|25769,ELK1|KRAS|PENK|SLC24A2,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0099177,regulation of trans-synaptic signaling,19_GO:0023052 signaling,-3.1,9.2,5.5,30198,436,30,4,13,6.2,3845|5021|6532|25769,KRAS|OXTR|SLC6A4|SLC24A2,-1.5,SVM-RFE
+GO Biological Processes,19,GO:0060541,respiratory system development,19_GO:0032502 developmental process,-3,15,6.3,30198,198,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-1.4,SVM-RFE
+GO Biological Processes,19,GO:0060322,head development,19_GO:0032502 developmental process,-3,6.4,4.8,30198,789,30,5,17,6.8,2253|3845|5021|5307|6532,FGF8|KRAS|OXTR|PITX1|SLC6A4,-1.4,SVM-RFE
+KEGG Pathway,24,hsa04510,Focal adhesion,,-3,15,6.3,30198,201,30,3,10,5.5,1311|2002|7148,COMP|ELK1|TNXB,-1.4,SVM-RFE
+Reactome Gene Sets,6,R-HSA-375276,Peptide ligand-binding receptors,,-3,15,6.3,30198,201,30,3,10,5.5,2920|5021|5179,CXCL2|OXTR|PENK,-1.4,SVM-RFE
+WikiPathways,27,WP306,Focal adhesion,,-3,15,6.3,30198,202,30,3,10,5.5,1311|2002|7148,COMP|ELK1|TNXB,-1.4,SVM-RFE
+GO Biological Processes,19,GO:0060348,bone development,19_GO:0032502 developmental process,-2.9,14,6.2,30198,209,30,3,10,5.5,1311|2253|8840,COMP|FGF8|CCN4,-1.4,SVM-RFE
+GO Biological Processes,19,GO:0061061,muscle structure development,19_GO:0032502 developmental process,-2.9,8.3,5.1,30198,484,30,4,13,6.2,1311|3845|5307|23493,COMP|KRAS|PITX1|HEY2,-1.3,SVM-RFE
+GO Biological Processes,19,GO:0003013,circulatory system process,19_GO:0032501 multicellular organismal process,-2.8,8.1,5,30198,497,30,4,13,6.2,1311|3753|5021|6532,COMP|KCNE1|OXTR|SLC6A4,-1.3,SVM-RFE
+GO Biological Processes,19,GO:0070848,response to growth factor,19_GO:0050896 response to stimulus,-2.8,8.1,5,30198,498,30,4,13,6.2,1311|2002|2253|5179,COMP|ELK1|FGF8|PENK,-1.3,SVM-RFE
+GO Biological Processes,19,GO:0001568,blood vessel development,19_GO:0032502 developmental process,-2.8,8,5,30198,505,30,4,13,6.2,1311|2253|11082|23493,COMP|FGF8|ESM1|HEY2,-1.3,SVM-RFE
+GO Biological Processes,19,GO:0009636,response to toxic substance,19_GO:0050896 response to stimulus,-2.8,13,5.8,30198,229,30,3,10,5.5,1066|5179|6532,CES1|PENK|SLC6A4,-1.3,SVM-RFE
+GO Biological Processes,19,GO:0060485,mesenchyme development,19_GO:0032502 developmental process,-2.8,13,5.8,30198,231,30,3,10,5.5,2253|2295|23493,FGF8|FOXF2|HEY2,-1.3,SVM-RFE
+KEGG Pathway,24,hsa04014,Ras signaling pathway,,-2.8,13,5.8,30198,232,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-1.3,SVM-RFE
+GO Biological Processes,19,GO:0001944,vasculature development,19_GO:0032502 developmental process,-2.8,7.7,4.9,30198,526,30,4,13,6.2,1311|2253|11082|23493,COMP|FGF8|ESM1|HEY2,-1.2,SVM-RFE
+GO Biological Processes,19,GO:0045165,cell fate commitment,19_GO:0032502 developmental process,-2.7,12,5.6,30198,244,30,3,10,5.5,2253|5307|23493,FGF8|PITX1|HEY2,-1.2,SVM-RFE
+KEGG Pathway,24,hsa05200,Pathways in cancer,,-2.7,7.6,4.8,30198,531,30,4,13,6.2,2002|2253|3845|23493,ELK1|FGF8|KRAS|HEY2,-1.2,SVM-RFE
+WikiPathways,27,WP382,MAPK signaling pathway,,-2.7,12,5.6,30198,249,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-1.2,SVM-RFE
+GO Biological Processes,19,GO:1903522,regulation of blood circulation,19_GO:0032501 multicellular organismal process,-2.7,12,5.4,30198,259,30,3,10,5.5,3753|5021|23493,KCNE1|OXTR|HEY2,-1.2,SVM-RFE
+GO Biological Processes,19,GO:0048729,tissue morphogenesis,19_GO:0032502 developmental process,-2.7,7.2,4.7,30198,557,30,4,13,6.2,2253|2295|3845|23493,FGF8|FOXF2|KRAS|HEY2,-1.2,SVM-RFE
+GO Biological Processes,19,GO:0042692,muscle cell differentiation,19_GO:0032502 developmental process,-2.7,12,5.4,30198,261,30,3,10,5.5,1311|3845|23493,COMP|KRAS|HEY2,-1.2,SVM-RFE
+GO Biological Processes,19,GO:0030335,positive regulation of cell migration,19_GO:0040011 locomotion,-2.7,7.2,4.7,30198,560,30,4,13,6.2,4680|8840|10894|131578,CEACAM6|CCN4|LYVE1|LRRC15,-1.2,SVM-RFE
+GO Biological Processes,19,GO:0003018,vascular process in circulatory system,19_GO:0032501 multicellular organismal process,-2.7,11,5.4,30198,263,30,3,10,5.5,1311|5021|6532,COMP|OXTR|SLC6A4,-1.2,SVM-RFE
+GO Biological Processes,19,GO:0030855,epithelial cell differentiation,19_GO:0032502 developmental process,-2.6,7,4.6,30198,576,30,4,13,6.2,1066|2253|23493|168002,CES1|FGF8|HEY2|DACT2,-1.1,SVM-RFE
+GO Biological Processes,19,GO:0001503,ossification,19_GO:0032501 multicellular organismal process,-2.6,11,5.3,30198,273,30,3,10,5.5,1311|5179|8840,COMP|PENK|CCN4,-1.1,SVM-RFE
+GO Biological Processes,19,GO:2000147,positive regulation of cell motility,19_GO:0040011 locomotion,-2.6,6.9,4.5,30198,584,30,4,13,6.2,4680|8840|10894|131578,CEACAM6|CCN4|LYVE1|LRRC15,-1.1,SVM-RFE
+GO Biological Processes,19,GO:0051272,positive regulation of cellular component movement,19_GO:0051179 localization,-2.6,6.7,4.5,30198,597,30,4,13,6.2,4680|8840|10894|131578,CEACAM6|CCN4|LYVE1|LRRC15,-1.1,SVM-RFE
+GO Biological Processes,19,GO:0040017,positive regulation of locomotion,19_GO:0040011 locomotion,-2.6,6.7,4.5,30198,599,30,4,13,6.2,4680|8840|10894|131578,CEACAM6|CCN4|LYVE1|LRRC15,-1.1,SVM-RFE
+GO Biological Processes,19,GO:0036293,response to decreased oxygen levels,19_GO:0050896 response to stimulus,-2.5,10,5.1,30198,290,30,3,10,5.5,5021|5179|6532,OXTR|PENK|SLC6A4,-1.1,SVM-RFE
+KEGG Pathway,24,hsa04010,MAPK signaling pathway,,-2.5,10,5,30198,294,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-1,SVM-RFE
+GO Biological Processes,19,GO:0009416,response to light stimulus,19_GO:0050896 response to stimulus,-2.5,9.8,4.9,30198,308,30,3,10,5.5,2002|3845|25769,ELK1|KRAS|SLC24A2,-0.99,SVM-RFE
+GO Biological Processes,19,GO:0098655,cation transmembrane transport,19_GO:0051179 localization,-2.4,6.2,4.2,30198,645,30,4,13,6.2,3753|6532|9127|25769,KCNE1|SLC6A4|P2RX6|SLC24A2,-0.97,SVM-RFE
+GO Biological Processes,19,GO:1901214,regulation of neuron death,19_GO:0050789 regulation of biological process,-2.4,9.6,4.8,30198,314,30,3,10,5.5,2002|2253|3845,ELK1|FGF8|KRAS,-0.97,SVM-RFE
+GO Biological Processes,19,GO:0070482,response to oxygen levels,19_GO:0050896 response to stimulus,-2.4,9.6,4.8,30198,316,30,3,10,5.5,5021|5179|6532,OXTR|PENK|SLC6A4,-0.96,SVM-RFE
+Reactome Gene Sets,6,R-HSA-418594,G alpha (i) signalling events,,-2.4,9.5,4.8,30198,318,30,3,10,5.5,2920|5137|5179,CXCL2|PDE1C|PENK,-0.96,SVM-RFE
+WikiPathways,27,WP2882,Nuclear receptors meta-pathway,,-2.4,9.4,4.8,30198,322,30,3,10,5.5,1066|6532|27190,CES1|SLC6A4|IL17B,-0.94,SVM-RFE
+GO Biological Processes,19,GO:0048638,regulation of developmental growth,19_GO:0040007 growth,-2.4,9.2,4.7,30198,329,30,3,10,5.5,2253|6532|23493,FGF8|SLC6A4|HEY2,-0.92,SVM-RFE
+Reactome Gene Sets,6,R-HSA-373076,Class A/1 (Rhodopsin-like receptors),,-2.4,9,4.7,30198,335,30,3,10,5.5,2920|5021|5179,CXCL2|OXTR|PENK,-0.9,SVM-RFE
+Canonical Pathways,11,M5883,NABA SECRETED FACTORS,,-2.3,8.8,4.6,30198,343,30,3,10,5.5,2253|2920|27190,FGF8|CXCL2|IL17B,-0.88,SVM-RFE
+KEGG Pathway,24,hsa04080,Neuroactive ligand-receptor interaction,,-2.3,8.3,4.4,30198,362,30,3,10,5.5,5021|5179|9127,OXTR|PENK|P2RX6,-0.82,SVM-RFE
+GO Biological Processes,19,GO:0048608,reproductive structure development,19_GO:0022414 reproductive process,-2.1,7.1,4,30198,423,30,3,10,5.5,2253|2295|23493,FGF8|FOXF2|HEY2,-0.66,SVM-RFE
+GO Biological Processes,19,GO:0061458,reproductive system development,19_GO:0032502 developmental process,-2.1,7.1,4,30198,426,30,3,10,5.5,2253|2295|23493,FGF8|FOXF2|HEY2,-0.65,SVM-RFE
+Reactome Gene Sets,6,R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,,-2,7,3.9,30198,433,30,3,10,5.5,2253|3845|23493,FGF8|KRAS|HEY2,-0.63,SVM-RFE
+GO Biological Processes,19,GO:0048568,embryonic organ development,19_GO:0032502 developmental process,-2,6.8,3.9,30198,445,30,3,10,5.5,2253|2295|23493,FGF8|FOXF2|HEY2,-0.6,SVM-RFE
+GO Biological Processes,19,GO:0002009,morphogenesis of an epithelium,19_GO:0032502 developmental process,-2,6.8,3.9,30198,447,30,3,10,5.5,2253|2295|3845,FGF8|FOXF2|KRAS,-0.6,SVM-RFE
+WikiPathways,27,WP4216,Chromosomal and microsatellite instability in colorectal cancer,,-12,95,26,30198,74,30,7,23,7.7,208|1499|4089|4436|4616|5595|5966,AKT2|CTNNB1|SMAD4|MSH2|GADD45B|MAPK3|REL,-8,mRMR-SVM
+KEGG Pathway,24,hsa05224,Breast cancer,,-12,55,21,30198,147,30,8,27,8.1,208|1499|3815|4040|4616|5595|6464|8817,AKT2|CTNNB1|KIT|LRP6|GADD45B|MAPK3|SHC1|FGF18,-8,mRMR-SVM
+KEGG Pathway,24,hsa05226,Gastric cancer,,-12,54,20,30198,149,30,8,27,8.1,208|1499|4040|4089|4616|5595|6464|8817,AKT2|CTNNB1|LRP6|SMAD4|GADD45B|MAPK3|SHC1|FGF18,-8,mRMR-SVM
+WikiPathways,27,WP4262,Breast cancer pathway,,-12,51,20,30198,157,30,8,27,8.1,208|1499|3815|4040|4616|5595|6464|8817,AKT2|CTNNB1|KIT|LRP6|GADD45B|MAPK3|SHC1|FGF18,-8,mRMR-SVM
+KEGG Pathway,24,hsa05225,Hepatocellular carcinoma,,-11,48,19,30198,168,30,8,27,8.1,208|1499|4040|4089|4616|5595|6464|6599,AKT2|CTNNB1|LRP6|SMAD4|GADD45B|MAPK3|SHC1|SMARCC1,-7.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,,-11,23,15,30198,433,30,10,33,8.6,208|1385|1499|1523|3815|4040|4089|5595|6464|8817,AKT2|CREB1|CTNNB1|CUX1|KIT|LRP6|SMAD4|MAPK3|SHC1|FGF18,-7.7,mRMR-SVM
+KEGG Pathway,24,hsa05200,Pathways in cancer,,-10,19,13,30198,531,30,10,33,8.6,208|1284|1499|3815|4040|4089|4436|4616|5595|8817,AKT2|COL4A2|CTNNB1|KIT|LRP6|SMAD4|MSH2|GADD45B|MAPK3|FGF18,-6.9,mRMR-SVM
+WikiPathways,27,WP4239,Epithelial to mesenchymal transition in colorectal cancer,,-9.6,43,17,30198,165,30,7,23,7.7,208|1284|1499|4040|4089|5595|6464,AKT2|COL4A2|CTNNB1|LRP6|SMAD4|MAPK3|SHC1,-6.3,mRMR-SVM
+KEGG Pathway,24,hsa05210,Colorectal cancer,,-9.6,70,20,30198,86,30,6,20,7.3,208|1499|4089|4436|4616|5595,AKT2|CTNNB1|SMAD4|MSH2|GADD45B|MAPK3,-6.3,mRMR-SVM
+WikiPathways,27,WP5087,Malignant pleural mesothelioma,,-9.5,20,13,30198,447,30,9,30,8.4,208|1284|1385|1499|3815|4040|5595|6464|8817,AKT2|COL4A2|CREB1|CTNNB1|KIT|LRP6|MAPK3|SHC1|FGF18,-6.2,mRMR-SVM
+GO Biological Processes,19,GO:0006351,"transcription, DNA-templated",19_GO:0008152 metabolic process,-8.4,20,12,30198,403,30,8,27,8.1,905|1284|1385|2972|4089|4800|5595|286826,CCNT2|COL4A2|CREB1|BRF1|SMAD4|NFYA|MAPK3|LIN9,-5.3,mRMR-SVM
+GO Biological Processes,19,GO:0097659,nucleic acid-templated transcription,19_GO:0008152 metabolic process,-8.4,20,12,30198,405,30,8,27,8.1,905|1284|1385|2972|4089|4800|5595|286826,CCNT2|COL4A2|CREB1|BRF1|SMAD4|NFYA|MAPK3|LIN9,-5.3,mRMR-SVM
+GO Biological Processes,19,GO:0007167,enzyme-linked receptor protein signaling pathway,19_GO:0023052 signaling,-8.3,15,11,30198,606,30,9,30,8.4,208|1284|1311|3815|4089|5595|6464|6599|8817,AKT2|COL4A2|COMP|KIT|SMAD4|MAPK3|SHC1|SMARCC1|FGF18,-5.2,mRMR-SVM
+GO Biological Processes,19,GO:0032774,RNA biosynthetic process,19_GO:0008152 metabolic process,-8.3,19,12,30198,415,30,8,27,8.1,905|1284|1385|2972|4089|4800|5595|286826,CCNT2|COL4A2|CREB1|BRF1|SMAD4|NFYA|MAPK3|LIN9,-5.2,mRMR-SVM
+WikiPathways,27,WP4685,Melanoma,,-8.2,74,19,30198,68,30,5,17,6.8,208|1385|3815|4616|5595,AKT2|CREB1|KIT|GADD45B|MAPK3,-5.1,mRMR-SVM
+KEGG Pathway,24,hsa05220,Chronic myeloid leukemia,,-7.9,66,18,30198,76,30,5,17,6.8,208|4089|4616|5595|6464,AKT2|SMAD4|GADD45B|MAPK3|SHC1,-4.9,mRMR-SVM
+GO Biological Processes,19,GO:0071363,cellular response to growth factor stimulus,19_GO:0050896 response to stimulus,-7.9,17,11,30198,468,30,8,27,8.1,1284|1311|1385|1499|4089|5595|6464|8817,COL4A2|COMP|CREB1|CTNNB1|SMAD4|MAPK3|SHC1|FGF18,-4.9,mRMR-SVM
+WikiPathways,27,WP3932,Focal adhesion: PI3K-Akt-mTOR-signaling pathway,,-7.7,23,12,30198,309,30,7,23,7.7,208|1284|1311|1385|3815|5595|8817,AKT2|COL4A2|COMP|CREB1|KIT|MAPK3|FGF18,-4.8,mRMR-SVM
+GO Biological Processes,19,GO:0070848,response to growth factor,19_GO:0050896 response to stimulus,-7.7,16,11,30198,498,30,8,27,8.1,1284|1311|1385|1499|4089|5595|6464|8817,COL4A2|COMP|CREB1|CTNNB1|SMAD4|MAPK3|SHC1|FGF18,-4.7,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9006934,Signaling by Receptor Tyrosine Kinases,,-7.5,15,10,30198,521,30,8,27,8.1,208|1284|1385|1499|3815|5595|6464|8817,AKT2|COL4A2|CREB1|CTNNB1|KIT|MAPK3|SHC1|FGF18,-4.6,mRMR-SVM
+WikiPathways,27,WP4172,PI3K-Akt signaling pathway,,-7.4,20,11,30198,345,30,7,23,7.7,208|1284|1311|1385|3815|5595|8817,AKT2|COL4A2|COMP|CREB1|KIT|MAPK3|FGF18,-4.6,mRMR-SVM
+KEGG Pathway,24,hsa04510,Focal adhesion,,-7.4,30,13,30198,201,30,6,20,7.3,208|1284|1311|1499|5595|6464,AKT2|COL4A2|COMP|CTNNB1|MAPK3|SHC1,-4.5,mRMR-SVM
+WikiPathways,27,WP306,Focal adhesion,,-7.4,30,13,30198,202,30,6,20,7.3,208|1284|1311|1499|5595|6464,AKT2|COL4A2|COMP|CTNNB1|MAPK3|SHC1,-4.5,mRMR-SVM
+KEGG Pathway,24,hsa04151,PI3K-Akt signaling pathway,,-7.3,20,11,30198,354,30,7,23,7.7,208|1284|1311|1385|3815|5595|8817,AKT2|COL4A2|COMP|CREB1|KIT|MAPK3|FGF18,-4.5,mRMR-SVM
+WikiPathways,27,WP4659,Gastrin signaling pathway,,-7,44,15,30198,114,30,5,17,6.8,1385|1499|3815|5595|6464,CREB1|CTNNB1|KIT|MAPK3|SHC1,-4.3,mRMR-SVM
+KEGG Pathway,24,hsa04014,Ras signaling pathway,,-7,26,12,30198,232,30,6,20,7.3,208|3815|5595|5966|6464|8817,AKT2|KIT|MAPK3|REL|SHC1|FGF18,-4.2,mRMR-SVM
+WikiPathways,27,WP3931,Embryonic stem cell pluripotency pathways,,-6.9,42,14,30198,119,30,5,17,6.8,208|1499|4040|4089|8817,AKT2|CTNNB1|LRP6|SMAD4|FGF18,-4.2,mRMR-SVM
+WikiPathways,27,WP4787,Osteoblast differentiation and related diseases,,-6.9,42,14,30198,120,30,5,17,6.8,1499|4040|4089|5595|8817,CTNNB1|LRP6|SMAD4|MAPK3|FGF18,-4.2,mRMR-SVM
+KEGG Pathway,24,hsa04926,Relaxin signaling pathway,,-6.8,39,14,30198,129,30,5,17,6.8,208|1284|1385|5595|6464,AKT2|COL4A2|CREB1|MAPK3|SHC1,-4,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-74751,Insulin receptor signalling cascade,,-6.6,75,17,30198,54,30,4,13,6.2,208|5595|6464|8817,AKT2|MAPK3|SHC1|FGF18,-3.9,mRMR-SVM
+WikiPathways,27,WP5144,NRP1-triggered signaling pathways in pancreatic cancer,,-6.6,73,17,30198,55,30,4,13,6.2,208|4089|5595|5966,AKT2|SMAD4|MAPK3|REL,-3.9,mRMR-SVM
+GO Biological Processes,19,GO:0043408,regulation of MAPK cascade,19_GO:0023052 signaling,-6.6,12,9,30198,688,30,8,27,8.1,1499|3489|3815|4089|4616|5595|6464|8817,CTNNB1|IGFBP6|KIT|SMAD4|GADD45B|MAPK3|SHC1|FGF18,-3.9,mRMR-SVM
+KEGG Pathway,24,hsa05213,Endometrial cancer,,-6.5,69,16,30198,58,30,4,13,6.2,208|1499|4616|5595,AKT2|CTNNB1|GADD45B|MAPK3,-3.9,mRMR-SVM
+GO Biological Processes,19,GO:0043410,positive regulation of MAPK cascade,19_GO:0023052 signaling,-6.4,14,9.4,30198,492,30,7,23,7.7,1499|3489|3815|4616|5595|6464|8817,CTNNB1|IGFBP6|KIT|GADD45B|MAPK3|SHC1|FGF18,-3.8,mRMR-SVM
+WikiPathways,27,WP4155,Endometrial cancer,,-6.3,64,16,30198,63,30,4,13,6.2,208|1499|4616|5595,AKT2|CTNNB1|GADD45B|MAPK3,-3.7,mRMR-SVM
+GO Biological Processes,19,GO:0048863,stem cell differentiation,19_GO:0032502 developmental process,-6.3,32,12,30198,158,30,5,17,6.8,1499|3815|4040|4089|5595,CTNNB1|KIT|LRP6|SMAD4|MAPK3,-3.7,mRMR-SVM
+Canonical Pathways,11,M12771,SA PTEN PATHWAY,,-6.2,1.8e+02,23,30198,17,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-3.7,mRMR-SVM
+GO Biological Processes,19,GO:0034654,nucleobase-containing compound biosynthetic process,19_GO:0008152 metabolic process,-6.1,10,8.3,30198,787,30,8,27,8.1,905|1284|1385|2972|4089|4800|5595|286826,CCNT2|COL4A2|CREB1|BRF1|SMAD4|NFYA|MAPK3|LIN9,-3.6,mRMR-SVM
+KEGG Pathway,24,hsa05218,Melanoma,,-6.1,56,15,30198,72,30,4,13,6.2,208|4616|5595|8817,AKT2|GADD45B|MAPK3|FGF18,-3.6,mRMR-SVM
+KEGG Pathway,24,hsa05165,Human papillomavirus infection,,-6.1,18,9.9,30198,331,30,6,20,7.3,208|1284|1311|1385|1499|5595,AKT2|COL4A2|COMP|CREB1|CTNNB1|MAPK3,-3.6,mRMR-SVM
+KEGG Pathway,24,hsa05214,Glioma,,-6,54,14,30198,75,30,4,13,6.2,208|4616|5595|6464,AKT2|GADD45B|MAPK3|SHC1,-3.5,mRMR-SVM
+WikiPathways,27,WP2034,Leptin signaling pathway,,-6,53,14,30198,76,30,4,13,6.2,1385|5595|5966|6464,CREB1|MAPK3|REL|SHC1,-3.5,mRMR-SVM
+KEGG Pathway,24,hsa05212,Pancreatic cancer,,-6,53,14,30198,76,30,4,13,6.2,208|4089|4616|5595,AKT2|SMAD4|GADD45B|MAPK3,-3.5,mRMR-SVM
+WikiPathways,27,WP4674,Head and neck squamous cell carcinoma,,-6,53,14,30198,76,30,4,13,6.2,208|1499|4089|5966,AKT2|CTNNB1|SMAD4|REL,-3.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9009391,Extra-nuclear estrogen signaling,,-6,52,14,30198,77,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-3.5,mRMR-SVM
+WikiPathways,27,WP4223,Ras signaling,,-6,27,11,30198,185,30,5,17,6.8,208|3815|5595|5966|6464,AKT2|KIT|MAPK3|REL|SHC1,-3.5,mRMR-SVM
+GO Biological Processes,19,GO:0031056,regulation of histone modification,19_GO:0008152 metabolic process,-6,27,11,30198,185,30,5,17,6.8,1499|4089|4800|5595|26009,CTNNB1|SMAD4|NFYA|MAPK3|ZZZ3,-3.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-74752,Signaling by Insulin receptor,,-6,52,14,30198,78,30,4,13,6.2,208|5595|6464|8817,AKT2|MAPK3|SHC1|FGF18,-3.5,mRMR-SVM
+Canonical Pathways,11,M48,PID MET PATHWAY,,-5.9,51,14,30198,79,30,4,13,6.2,208|1499|5595|6464,AKT2|CTNNB1|MAPK3|SHC1,-3.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9634638,Estrogen-dependent nuclear events downstream of ESR-membrane signaling,,-5.8,1.3e+02,19,30198,24,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-3.3,mRMR-SVM
+WikiPathways,27,WP4263,Pancreatic adenocarcinoma pathway,,-5.7,45,13,30198,89,30,4,13,6.2,208|4089|4616|5595,AKT2|SMAD4|GADD45B|MAPK3,-3.3,mRMR-SVM
+KEGG Pathway,24,hsa04015,Rap1 signaling pathway,,-5.7,24,11,30198,210,30,5,17,6.8,208|1499|3815|5595|8817,AKT2|CTNNB1|KIT|MAPK3|FGF18,-3.3,mRMR-SVM
+WikiPathways,27,WP69,T-cell receptor signaling pathway,,-5.7,44,13,30198,91,30,4,13,6.2,1385|5595|5966|6464,CREB1|MAPK3|REL|SHC1,-3.3,mRMR-SVM
+WikiPathways,27,WP3668,Hypothesized pathways in pathogenesis of cardiovascular disease,,-5.7,1.2e+02,19,30198,25,30,3,10,5.5,4089|5595|6464,SMAD4|MAPK3|SHC1,-3.3,mRMR-SVM
+Canonical Pathways,11,M274,PID LYMPH ANGIOGENESIS PATHWAY,,-5.7,1.2e+02,19,30198,25,30,3,10,5.5,1385|5595|6464,CREB1|MAPK3|SHC1,-3.3,mRMR-SVM
+GO Biological Processes,19,GO:0007169,transmembrane receptor protein tyrosine kinase signaling pathway,19_GO:0023052 signaling,-5.6,15,8.9,30198,405,30,6,20,7.3,208|1284|3815|6464|6599|8817,AKT2|COL4A2|KIT|SHC1|SMARCC1|FGF18,-3.3,mRMR-SVM
+Canonical Pathways,11,M1718,SIG IL4RECEPTOR IN B LYPHOCYTES,,-5.6,1.1e+02,18,30198,27,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-3.3,mRMR-SVM
+KEGG Pathway,24,hsa05215,Prostate cancer,,-5.6,42,13,30198,97,30,4,13,6.2,208|1385|1499|5595,AKT2|CREB1|CTNNB1|MAPK3,-3.3,mRMR-SVM
+KEGG Pathway,24,hsa04933,AGE-RAGE signaling pathway in diabetic complications,,-5.5,40,12,30198,100,30,4,13,6.2,208|1284|4089|5595,AKT2|COL4A2|SMAD4|MAPK3,-3.2,mRMR-SVM
+WikiPathways,27,WP1544,MicroRNAs in cardiomyocyte hypertrophy,,-5.5,40,12,30198,101,30,4,13,6.2,208|1499|4040|5595,AKT2|CTNNB1|LRP6|MAPK3,-3.2,mRMR-SVM
+KEGG Pathway,24,hsa04916,Melanogenesis,,-5.5,40,12,30198,101,30,4,13,6.2,1385|1499|3815|5595,CREB1|CTNNB1|KIT|MAPK3,-3.2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-2219528,PI3K/AKT Signaling in Cancer,,-5.5,39,12,30198,104,30,4,13,6.2,208|1385|3815|8817,AKT2|CREB1|KIT|FGF18,-3.2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-2173796,SMAD2/SMAD3:SMAD4 heterotrimer regulates transcription,,-5.4,94,17,30198,32,30,3,10,5.5,905|4089|5595,CCNT2|SMAD4|MAPK3,-3.1,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-199418,Negative regulation of the PI3K/AKT network,,-5.3,36,12,30198,113,30,4,13,6.2,208|3815|5595|8817,AKT2|KIT|MAPK3|FGF18,-3.1,mRMR-SVM
+WikiPathways,27,WP710,DNA damage response (only ATM dependent),,-5.3,35,12,30198,115,30,4,13,6.2,208|1499|4089|6464,AKT2|CTNNB1|SMAD4|SHC1,-3.1,mRMR-SVM
+KEGG Pathway,24,hsa04935,"Growth hormone synthesis, secretion and action",,-5.2,34,11,30198,119,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-3,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-1257604,PIP3 activates AKT signaling,,-5.2,19,9.2,30198,267,30,5,17,6.8,208|1385|3815|5595|8817,AKT2|CREB1|KIT|MAPK3|FGF18,-3,mRMR-SVM
+WikiPathways,27,WP4331,Neovascularisation processes,,-5.2,82,15,30198,37,30,3,10,5.5,3815|5595|5966,KIT|MAPK3|REL,-3,mRMR-SVM
+KEGG Pathway,24,hsa05216,Thyroid cancer,,-5.2,82,15,30198,37,30,3,10,5.5,1499|4616|5595,CTNNB1|GADD45B|MAPK3,-3,mRMR-SVM
+Canonical Pathways,11,M82,PID RET PATHWAY,,-5.1,77,15,30198,39,30,3,10,5.5,1385|5595|6464,CREB1|MAPK3|SHC1,-2.9,mRMR-SVM
+KEGG Pathway,24,hsa04068,FoxO signaling pathway,,-5.1,31,11,30198,131,30,4,13,6.2,208|4089|4616|5595,AKT2|SMAD4|GADD45B|MAPK3,-2.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5654741,Signaling by FGFR3,,-5.1,75,15,30198,40,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-2.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5654743,Signaling by FGFR4,,-5,74,15,30198,41,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-2.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-2262752,Cellular responses to stress,,-5,9,7.1,30198,784,30,7,23,7.7,208|571|1385|3043|4800|5595|6464,AKT2|BACH1|CREB1|HBB|NFYA|MAPK3|SHC1,-2.9,mRMR-SVM
+KEGG Pathway,24,hsa04010,MAPK signaling pathway,,-5,17,8.8,30198,294,30,5,17,6.8,208|3815|4616|5595|8817,AKT2|KIT|GADD45B|MAPK3|FGF18,-2.9,mRMR-SVM
+WikiPathways,27,WP2036,TNF-related weak inducer of apoptosis (TWEAK) signaling pathway,,-5,72,14,30198,42,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-2.9,mRMR-SVM
+KEGG Pathway,24,hsa04915,Estrogen signaling pathway,,-5,29,10,30198,138,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-2.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-8953897,Cellular responses to stimuli,,-5,8.8,7.1,30198,798,30,7,23,7.7,208|571|1385|3043|4800|5595|6464,AKT2|BACH1|CREB1|HBB|NFYA|MAPK3|SHC1,-2.9,mRMR-SVM
+KEGG Pathway,24,hsa04550,Signaling pathways regulating pluripotency of stem cells,,-4.9,28,10,30198,143,30,4,13,6.2,208|1499|4089|5595,AKT2|CTNNB1|SMAD4|MAPK3,-2.8,mRMR-SVM
+WikiPathways,27,WP2380,Brain-derived neurotrophic factor (BDNF) signaling pathway,,-4.9,28,10,30198,144,30,4,13,6.2,1385|1499|5595|6464,CREB1|CTNNB1|MAPK3|SHC1,-2.8,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9006925,Intracellular signaling by second messengers,,-4.9,16,8.5,30198,309,30,5,17,6.8,208|1385|3815|5595|8817,AKT2|CREB1|KIT|MAPK3|FGF18,-2.8,mRMR-SVM
+GO Biological Processes,19,GO:0098609,cell-cell adhesion,19_GO:0009987 cellular process,-4.9,11,7.6,30198,537,30,6,20,7.3,1311|1499|3043|3815|4040|6464,COMP|CTNNB1|HBB|KIT|LRP6|SHC1,-2.8,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-2173793,Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer,,-4.9,66,14,30198,46,30,3,10,5.5,905|4089|5595,CCNT2|SMAD4|MAPK3,-2.8,mRMR-SVM
+Canonical Pathways,11,M8626,SIG BCR SIGNALING PATHWAY,,-4.9,66,14,30198,46,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.8,mRMR-SVM
+Canonical Pathways,11,M70,PID PS1 PATHWAY,,-4.9,66,14,30198,46,30,3,10,5.5,1499|4040|5595,CTNNB1|LRP6|MAPK3,-2.8,mRMR-SVM
+KEGG Pathway,24,hsa04072,Phospholipase D signaling pathway,,-4.9,27,10,30198,148,30,4,13,6.2,208|3815|5595|6464,AKT2|KIT|MAPK3|SHC1,-2.8,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9707616,Heme signaling,,-4.9,64,14,30198,47,30,3,10,5.5,571|1385|3043,BACH1|CREB1|HBB,-2.8,mRMR-SVM
+WikiPathways,27,WP4666,Hepatitis B infection,,-4.8,26,9.9,30198,154,30,4,13,6.2,208|1385|4089|5595,AKT2|CREB1|SMAD4|MAPK3,-2.7,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5654736,Signaling by FGFR1,,-4.8,60,13,30198,50,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-2.7,mRMR-SVM
+WikiPathways,27,WP3646,Hepatitis C and hepatocellular carcinoma,,-4.8,60,13,30198,50,30,3,10,5.5,1284|4089|5595,COL4A2|SMAD4|MAPK3,-2.7,mRMR-SVM
+KEGG Pathway,24,hsa04218,Cellular senescence,,-4.8,26,9.8,30198,156,30,4,13,6.2,208|4616|5595|286826,AKT2|GADD45B|MAPK3|LIN9,-2.7,mRMR-SVM
+Canonical Pathways,11,M7955,SIG INSULIN RECEPTOR PATHWAY IN CARDIAC MYOCYTES,,-4.7,59,13,30198,51,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.7,mRMR-SVM
+GO Biological Processes,19,GO:0046661,male sex differentiation,19_GO:0022414 reproductive process,-4.7,25,9.7,30198,160,30,4,13,6.2,1499|3815|4089|4436,CTNNB1|KIT|SMAD4|MSH2,-2.7,mRMR-SVM
+Canonical Pathways,11,M231,PID KIT PATHWAY,,-4.7,58,13,30198,52,30,3,10,5.5,3815|5595|6464,KIT|MAPK3|SHC1,-2.7,mRMR-SVM
+KEGG Pathway,24,hsa05161,Hepatitis B,,-4.7,25,9.6,30198,162,30,4,13,6.2,208|1385|4089|5595,AKT2|CREB1|SMAD4|MAPK3,-2.7,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-2428924,IGF1R signaling cascade,,-4.7,57,13,30198,53,30,3,10,5.5,208|6464|8817,AKT2|SHC1|FGF18,-2.7,mRMR-SVM
+Canonical Pathways,11,M286,PID TGFBR PATHWAY,,-4.7,56,13,30198,54,30,3,10,5.5,1499|4089|6464,CTNNB1|SMAD4|SHC1,-2.7,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-2404192,Signaling by Type 1 Insulin-like Growth Factor 1 Receptor (IGF1R),,-4.7,56,13,30198,54,30,3,10,5.5,208|6464|8817,AKT2|SHC1|FGF18,-2.7,mRMR-SVM
+Canonical Pathways,11,M276,PID FGF PATHWAY,,-4.6,55,13,30198,55,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-2.6,mRMR-SVM
+GO Biological Processes,19,GO:0048762,mesenchymal cell differentiation,19_GO:0032502 developmental process,-4.6,24,9.4,30198,168,30,4,13,6.2,1499|4040|4089|5595,CTNNB1|LRP6|SMAD4|MAPK3,-2.6,mRMR-SVM
+GO Biological Processes,19,GO:0043434,response to peptide hormone,19_GO:0050896 response to stimulus,-4.6,14,7.9,30198,354,30,5,17,6.8,208|1385|4040|6464|6599,AKT2|CREB1|LRP6|SHC1|SMARCC1,-2.6,mRMR-SVM
+GO Biological Processes,19,GO:0030324,lung development,19_GO:0032502 developmental process,-4.6,23,9.2,30198,174,30,4,13,6.2,1385|1499|5595|8817,CREB1|CTNNB1|MAPK3|FGF18,-2.6,mRMR-SVM
+WikiPathways,27,WP560,TGF-beta receptor signaling,,-4.6,52,12,30198,58,30,3,10,5.5,1499|4089|5595,CTNNB1|SMAD4|MAPK3,-2.6,mRMR-SVM
+GO Biological Processes,19,GO:0030323,respiratory tube development,19_GO:0032502 developmental process,-4.5,23,9.1,30198,178,30,4,13,6.2,1385|1499|5595|8817,CREB1|CTNNB1|MAPK3|FGF18,-2.6,mRMR-SVM
+GO Biological Processes,19,GO:0008286,insulin receptor signaling pathway,19_GO:0023052 signaling,-4.5,50,12,30198,60,30,3,10,5.5,208|6464|6599,AKT2|SHC1|SMARCC1,-2.6,mRMR-SVM
+WikiPathways,27,WP304,Kit receptor signaling pathway,,-4.5,50,12,30198,60,30,3,10,5.5,3815|5595|6464,KIT|MAPK3|SHC1,-2.6,mRMR-SVM
+KEGG Pathway,24,hsa05152,Tuberculosis,,-4.5,22,9.1,30198,180,30,4,13,6.2,208|1385|4800|5595,AKT2|CREB1|NFYA|MAPK3,-2.6,mRMR-SVM
+WikiPathways,27,WP4816,TGF-beta receptor signaling in skeletal dysplasias,,-4.5,49,12,30198,62,30,3,10,5.5,1499|4089|5595,CTNNB1|SMAD4|MAPK3,-2.5,mRMR-SVM
+Canonical Pathways,11,M254,PID MYC REPRESS PATHWAY,,-4.5,48,12,30198,63,30,3,10,5.5,1385|4089|4800,CREB1|SMAD4|NFYA,-2.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-375165,NCAM signaling for neurite out-growth,,-4.5,48,12,30198,63,30,3,10,5.5,1284|1385|5595,COL4A2|CREB1|MAPK3,-2.5,mRMR-SVM
+GO Biological Processes,19,GO:0001775,cell activation,19_GO:0009987 cellular process,-4.4,9.3,6.8,30198,647,30,6,20,7.3,1311|1499|3043|3815|4089|4436,COMP|CTNNB1|HBB|KIT|SMAD4|MSH2,-2.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9614085,FOXO-mediated transcription,,-4.4,46,12,30198,65,30,3,10,5.5,208|4089|4800,AKT2|SMAD4|NFYA,-2.5,mRMR-SVM
+WikiPathways,27,WP2374,Oncostatin M signaling pathway,,-4.4,46,11,30198,66,30,3,10,5.5,1385|5595|6464,CREB1|MAPK3|SHC1,-2.5,mRMR-SVM
+KEGG Pathway,24,hsa05167,Kaposi sarcoma-associated herpesvirus infection,,-4.4,21,8.7,30198,194,30,4,13,6.2,208|1385|1499|5595,AKT2|CREB1|CTNNB1|MAPK3,-2.5,mRMR-SVM
+GO Biological Processes,19,GO:0045859,regulation of protein kinase activity,19_GO:0008152 metabolic process,-4.4,9.2,6.7,30198,660,30,6,20,7.3,905|3815|4040|4616|6464|8817,CCNT2|KIT|LRP6|GADD45B|SHC1|FGF18,-2.5,mRMR-SVM
+Canonical Pathways,11,M295,SIG PIP3 SIGNALING IN CARDIAC MYOCTES,,-4.4,45,11,30198,67,30,3,10,5.5,208|1385|6464,AKT2|CREB1|SHC1,-2.5,mRMR-SVM
+KEGG Pathway,24,hsa05221,Acute myeloid leukemia,,-4.4,45,11,30198,67,30,3,10,5.5,208|3815|5595,AKT2|KIT|MAPK3,-2.5,mRMR-SVM
+GO Biological Processes,19,GO:0035239,tube morphogenesis,19_GO:0032502 developmental process,-4.4,9.1,6.7,30198,663,30,6,20,7.3,1284|1311|1499|4089|6464|8817,COL4A2|COMP|CTNNB1|SMAD4|SHC1|FGF18,-2.5,mRMR-SVM
+GO Biological Processes,19,GO:0035065,regulation of histone acetylation,19_GO:0008152 metabolic process,-4.4,44,11,30198,68,30,3,10,5.5,4089|4800|5595,SMAD4|NFYA|MAPK3,-2.5,mRMR-SVM
+GO Biological Processes,19,GO:0060541,respiratory system development,19_GO:0032502 developmental process,-4.4,20,8.6,30198,198,30,4,13,6.2,1385|1499|5595|8817,CREB1|CTNNB1|MAPK3|FGF18,-2.5,mRMR-SVM
+GO Biological Processes,19,GO:0048732,gland development,19_GO:0032502 developmental process,-4.4,13,7.3,30198,402,30,5,17,6.8,208|1385|1499|4089|5595,AKT2|CREB1|CTNNB1|SMAD4|MAPK3,-2.4,mRMR-SVM
+WikiPathways,27,WP3303,RAC1/PAK1/p38/MMP2 pathway,,-4.4,44,11,30198,69,30,3,10,5.5,1499|4436|5595,CTNNB1|MSH2|MAPK3,-2.4,mRMR-SVM
+KEGG Pathway,24,hsa05230,Central carbon metabolism in cancer,,-4.3,43,11,30198,70,30,3,10,5.5,208|3815|5595,AKT2|KIT|MAPK3,-2.4,mRMR-SVM
+KEGG Pathway,24,hsa04917,Prolactin signaling pathway,,-4.3,43,11,30198,70,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.4,mRMR-SVM
+KEGG Pathway,24,hsa04520,Adherens junction,,-4.3,43,11,30198,71,30,3,10,5.5,1499|4089|5595,CTNNB1|SMAD4|MAPK3,-2.4,mRMR-SVM
+WikiPathways,27,WP4255,Non-small cell lung cancer,,-4.3,42,11,30198,72,30,3,10,5.5,208|4616|5595,AKT2|GADD45B|MAPK3,-2.4,mRMR-SVM
+KEGG Pathway,24,hsa05223,Non-small cell lung cancer,,-4.3,42,11,30198,72,30,3,10,5.5,208|4616|5595,AKT2|GADD45B|MAPK3,-2.4,mRMR-SVM
+KEGG Pathway,24,hsa01524,Platinum drug resistance,,-4.3,41,11,30198,73,30,3,10,5.5,208|4436|5595,AKT2|MSH2|MAPK3,-2.4,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5654738,Signaling by FGFR2,,-4.3,41,11,30198,73,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-2.4,mRMR-SVM
+GO Biological Processes,19,GO:0007492,endoderm development,19_GO:0032502 developmental process,-4.3,41,11,30198,74,30,3,10,5.5,1284|1499|4089,COL4A2|CTNNB1|SMAD4,-2.4,mRMR-SVM
+GO Biological Processes,19,GO:0048514,blood vessel morphogenesis,19_GO:0032502 developmental process,-4.3,12,7.1,30198,421,30,5,17,6.8,1284|1311|1499|6464|8817,COL4A2|COMP|CTNNB1|SHC1|FGF18,-2.4,mRMR-SVM
+KEGG Pathway,24,hsa05207,Chemical carcinogenesis - receptor activation,,-4.3,19,8.3,30198,212,30,4,13,6.2,208|1385|5595|8817,AKT2|CREB1|MAPK3|FGF18,-2.4,mRMR-SVM
+GO Biological Processes,19,GO:2000756,regulation of peptidyl-lysine acetylation,19_GO:0008152 metabolic process,-4.2,39,11,30198,77,30,3,10,5.5,4089|4800|5595,SMAD4|NFYA|MAPK3,-2.3,mRMR-SVM
+GO Biological Processes,19,GO:0001837,epithelial to mesenchymal transition,19_GO:0032502 developmental process,-4.2,39,11,30198,78,30,3,10,5.5,1499|4040|4089,CTNNB1|LRP6|SMAD4,-2.3,mRMR-SVM
+KEGG Pathway,24,hsa01521,EGFR tyrosine kinase inhibitor resistance,,-4.2,38,10,30198,79,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.3,mRMR-SVM
+KEGG Pathway,24,hsa05166,Human T-cell leukemia virus 1 infection,,-4.2,18,8.1,30198,222,30,4,13,6.2,208|1385|4089|5595,AKT2|CREB1|SMAD4|MAPK3,-2.3,mRMR-SVM
+GO Biological Processes,19,GO:0080135,regulation of cellular response to stress,19_GO:0050896 response to stimulus,-4.2,8.4,6.3,30198,723,30,6,20,7.3,1499|3489|4616|5595|6599|9774,CTNNB1|IGFBP6|GADD45B|MAPK3|SMARCC1|BCLAF1,-2.3,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-8939211,ESR-mediated signaling,,-4.2,18,8.1,30198,223,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-2.3,mRMR-SVM
+GO Biological Processes,19,GO:1901652,response to peptide,19_GO:0050896 response to stimulus,-4.2,11,6.9,30198,441,30,5,17,6.8,208|1385|4040|6464|6599,AKT2|CREB1|LRP6|SHC1|SMARCC1,-2.3,mRMR-SVM
+KEGG Pathway,24,hsa05163,Human cytomegalovirus infection,,-4.2,18,8,30198,225,30,4,13,6.2,208|1385|1499|5595,AKT2|CREB1|CTNNB1|MAPK3,-2.3,mRMR-SVM
+Canonical Pathways,11,M115,PID REG GR PATHWAY,,-4.1,37,10,30198,82,30,3,10,5.5,1385|5595|6599,CREB1|MAPK3|SMARCC1,-2.3,mRMR-SVM
+GO Biological Processes,19,GO:0030509,BMP signaling pathway,19_GO:0023052 signaling,-4.1,37,10,30198,82,30,3,10,5.5,1311|4089|5595,COMP|SMAD4|MAPK3,-2.3,mRMR-SVM
+GO Biological Processes,19,GO:0001934,positive regulation of protein phosphorylation,19_GO:0048518 positive regulation of biological process,-4.1,8.2,6.2,30198,741,30,6,20,7.3,208|905|3815|4089|5595|8817,AKT2|CCNT2|KIT|SMAD4|MAPK3|FGF18,-2.3,mRMR-SVM
+GO Biological Processes,19,GO:0060485,mesenchyme development,19_GO:0032502 developmental process,-4.1,17,7.9,30198,231,30,4,13,6.2,1499|4040|4089|5595,CTNNB1|LRP6|SMAD4|MAPK3,-2.3,mRMR-SVM
+WikiPathways,27,WP4806,EGFR tyrosine kinase inhibitor resistance,,-4.1,36,10,30198,84,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.3,mRMR-SVM
+KEGG Pathway,24,hsa04012,ErbB signaling pathway,,-4.1,36,10,30198,85,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:0009725,response to hormone,19_GO:0050896 response to stimulus,-4.1,8,6.2,30198,753,30,6,20,7.3,208|1385|3815|4040|6464|6599,AKT2|CREB1|KIT|LRP6|SHC1|SMARCC1,-2.2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-190236,Signaling by FGFR,,-4.1,35,9.9,30198,87,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-2.2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-170834,Signaling by TGF-beta Receptor Complex,,-4,34,9.8,30198,89,30,3,10,5.5,905|4089|5595,CCNT2|SMAD4|MAPK3,-2.2,mRMR-SVM
+WikiPathways,27,WP2840,Hair follicle development: cytodifferentiation - part 3 of 3,,-4,34,9.8,30198,89,30,3,10,5.5,1499|1523|4089,CTNNB1|CUX1|SMAD4,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:0043549,regulation of kinase activity,19_GO:0008152 metabolic process,-4,7.8,6,30198,778,30,6,20,7.3,905|3815|4040|4616|6464|8817,CCNT2|KIT|LRP6|GADD45B|SHC1|FGF18,-2.2,mRMR-SVM
+WikiPathways,27,WP138,Androgen receptor signaling pathway,,-4,33,9.7,30198,91,30,3,10,5.5,1385|1499|4089,CREB1|CTNNB1|SMAD4,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:1901983,regulation of protein acetylation,19_GO:0008152 metabolic process,-4,33,9.7,30198,91,30,3,10,5.5,4089|4800|5595,SMAD4|NFYA|MAPK3,-2.2,mRMR-SVM
+WikiPathways,27,WP673,ErbB signaling pathway,,-4,33,9.7,30198,91,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.2,mRMR-SVM
+KEGG Pathway,24,hsa05222,Small cell lung cancer,,-4,33,9.6,30198,92,30,3,10,5.5,208|1284|4616,AKT2|COL4A2|GADD45B,-2.2,mRMR-SVM
+WikiPathways,27,WP2355,Corticotropin-releasing hormone signaling pathway,,-4,32,9.6,30198,93,30,3,10,5.5,1385|1499|5595,CREB1|CTNNB1|MAPK3,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:0014033,neural crest cell differentiation,19_GO:0032502 developmental process,-4,32,9.6,30198,93,30,3,10,5.5,4040|4089|5595,LRP6|SMAD4|MAPK3,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:0008283,cell population proliferation,19_GO:0009987 cellular process,-3.9,10,6.5,30198,492,30,5,17,6.8,1311|1499|3815|4040|4089,COMP|CTNNB1|KIT|LRP6|SMAD4,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:0097306,cellular response to alcohol,19_GO:0050896 response to stimulus,-3.9,32,9.5,30198,95,30,3,10,5.5,1385|1499|4040,CREB1|CTNNB1|LRP6,-2.2,mRMR-SVM
+GO Biological Processes,19,GO:0071773,cellular response to BMP stimulus,19_GO:0050896 response to stimulus,-3.9,31,9.4,30198,97,30,3,10,5.5,1311|4089|5595,COMP|SMAD4|MAPK3,-2.1,mRMR-SVM
+GO Biological Processes,19,GO:0071772,response to BMP,19_GO:0050896 response to stimulus,-3.9,31,9.4,30198,97,30,3,10,5.5,1311|4089|5595,COMP|SMAD4|MAPK3,-2.1,mRMR-SVM
+WikiPathways,27,WP23,B cell receptor signaling pathway,,-3.9,31,9.3,30198,98,30,3,10,5.5,1385|5966|6464,CREB1|REL|SHC1,-2.1,mRMR-SVM
+KEGG Pathway,24,hsa01522,Endocrine resistance,,-3.9,31,9.3,30198,98,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-2.1,mRMR-SVM
+WikiPathways,27,WP4658,Small cell lung cancer,,-3.9,31,9.3,30198,98,30,3,10,5.5,208|1284|4616,AKT2|COL4A2|GADD45B,-2.1,mRMR-SVM
+GO Biological Processes,19,GO:0001501,skeletal system development,19_GO:0032502 developmental process,-3.9,10,6.4,30198,505,30,5,17,6.8,1311|1499|3815|5595|8817,COMP|CTNNB1|KIT|MAPK3|FGF18,-2.1,mRMR-SVM
+GO Biological Processes,19,GO:0001568,blood vessel development,19_GO:0032502 developmental process,-3.9,10,6.4,30198,505,30,5,17,6.8,1284|1311|1499|6464|8817,COL4A2|COMP|CTNNB1|SHC1|FGF18,-2.1,mRMR-SVM
+WikiPathways,27,WP5124,Alzheimer's disease,,-3.9,15,7.3,30198,267,30,4,13,6.2,208|1499|4040|5595,AKT2|CTNNB1|LRP6|MAPK3,-2.1,mRMR-SVM
+GO Biological Processes,19,GO:0001503,ossification,19_GO:0032501 multicellular organismal process,-3.8,15,7.2,30198,273,30,4,13,6.2,1311|1499|4089|8817,COMP|CTNNB1|SMAD4|FGF18,-2.1,mRMR-SVM
+GO Biological Processes,19,GO:0007548,sex differentiation,19_GO:0022414 reproductive process,-3.8,15,7.2,30198,276,30,4,13,6.2,1499|3815|4089|4436,CTNNB1|KIT|SMAD4|MSH2,-2.1,mRMR-SVM
+GO Biological Processes,19,GO:0001944,vasculature development,19_GO:0032502 developmental process,-3.8,9.6,6.3,30198,526,30,5,17,6.8,1284|1311|1499|6464|8817,COL4A2|COMP|CTNNB1|SHC1|FGF18,-2.1,mRMR-SVM
+KEGG Pathway,24,hsa04928,"Parathyroid hormone synthesis, secretion and action",,-3.8,28,8.9,30198,106,30,3,10,5.5,1385|4040|5595,CREB1|LRP6|MAPK3,-2.1,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling",,-3.8,28,8.9,30198,106,30,3,10,5.5,3815|5595|8817,KIT|MAPK3|FGF18,-2.1,mRMR-SVM
+WikiPathways,27,WP399,Wnt signaling pathway and pluripotency,,-3.8,28,8.9,30198,107,30,3,10,5.5,1499|4040|4800,CTNNB1|LRP6|NFYA,-2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5673001,RAF/MAP kinase cascade,,-3.8,14,7.1,30198,280,30,4,13,6.2,3815|5595|6464|8817,KIT|MAPK3|SHC1|FGF18,-2,mRMR-SVM
+GO Biological Processes,19,GO:0031058,positive regulation of histone modification,19_GO:0048518 positive regulation of biological process,-3.8,27,8.8,30198,110,30,3,10,5.5,1499|4089|5595,CTNNB1|SMAD4|MAPK3,-2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5684996,MAPK1/MAPK3 signaling,,-3.8,14,7,30198,286,30,4,13,6.2,3815|5595|6464|8817,KIT|MAPK3|SHC1|FGF18,-2,mRMR-SVM
+KEGG Pathway,24,hsa04668,TNF signaling pathway,,-3.7,27,8.7,30198,112,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-2,mRMR-SVM
+KEGG Pathway,24,hsa04725,Cholinergic synapse,,-3.7,27,8.6,30198,113,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-187037,Signaling by NTRK1 (TRKA),,-3.7,26,8.6,30198,115,30,3,10,5.5,1385|5595|6464,CREB1|MAPK3|SHC1,-2,mRMR-SVM
+GO Biological Processes,19,GO:0051054,positive regulation of DNA metabolic process,19_GO:0048518 positive regulation of biological process,-3.7,14,6.8,30198,298,30,4,13,6.2,1499|4436|5595|6599,CTNNB1|MSH2|MAPK3|SMARCC1,-2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9006931,Signaling by Nuclear Receptors,,-3.7,13,6.8,30198,299,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9006936,Signaling by TGFB family members,,-3.7,26,8.4,30198,118,30,3,10,5.5,905|4089|5595,CCNT2|SMAD4|MAPK3,-1.9,mRMR-SVM
+KEGG Pathway,24,hsa04722,Neurotrophin signaling pathway,,-3.6,25,8.4,30198,119,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-1.9,mRMR-SVM
+KEGG Pathway,24,hsa04919,Thyroid hormone signaling pathway,,-3.6,25,8.3,30198,121,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-8878166,Transcriptional regulation by RUNX2,,-3.6,25,8.3,30198,121,30,3,10,5.5,208|4089|5595,AKT2|SMAD4|MAPK3,-1.9,mRMR-SVM
+GO Biological Processes,19,GO:0051347,positive regulation of transferase activity,19_GO:0065007 biological regulation,-3.6,8.8,5.9,30198,575,30,5,17,6.8,905|1499|3815|5595|8817,CCNT2|CTNNB1|KIT|MAPK3|FGF18,-1.9,mRMR-SVM
+GO Biological Processes,19,GO:0071417,cellular response to organonitrogen compound,19_GO:0050896 response to stimulus,-3.6,8.7,5.9,30198,580,30,5,17,6.8,208|1499|5595|6464|6599,AKT2|CTNNB1|MAPK3|SHC1|SMARCC1,-1.9,mRMR-SVM
+GO Biological Processes,19,GO:0070372,regulation of ERK1 and ERK2 cascade,19_GO:0023052 signaling,-3.6,13,6.7,30198,312,30,4,13,6.2,4089|5595|6464|8817,SMAD4|MAPK3|SHC1|FGF18,-1.9,mRMR-SVM
+GO Biological Processes,19,GO:0035270,endocrine system development,19_GO:0032502 developmental process,-3.6,24,8.2,30198,124,30,3,10,5.5,1385|4089|5595,CREB1|SMAD4|MAPK3,-1.9,mRMR-SVM
+KEGG Pathway,24,hsa04380,Osteoclast differentiation,,-3.6,24,8.1,30198,128,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-1.9,mRMR-SVM
+GO Biological Processes,19,GO:0001525,angiogenesis,19_GO:0032502 developmental process,-3.5,12,6.5,30198,323,30,4,13,6.2,1284|1499|6464|8817,COL4A2|CTNNB1|SHC1|FGF18,-1.9,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5683057,MAPK family signaling cascades,,-3.5,12,6.5,30198,325,30,4,13,6.2,3815|5595|6464|8817,KIT|MAPK3|SHC1|FGF18,-1.9,mRMR-SVM
+WikiPathways,27,WP236,Adipogenesis,,-3.5,23,8,30198,131,30,3,10,5.5,1385|1499|4616,CREB1|CTNNB1|GADD45B,-1.8,mRMR-SVM
+GO Biological Processes,19,GO:0010942,positive regulation of cell death,19_GO:0048518 positive regulation of biological process,-3.5,8.3,5.7,30198,605,30,5,17,6.8,1499|3043|4089|4616|9774,CTNNB1|HBB|SMAD4|GADD45B|BCLAF1,-1.8,mRMR-SVM
+WikiPathways,27,WP3915,Angiopoietin-like protein 8 regulatory pathway,,-3.5,23,7.9,30198,132,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-1.8,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-166520,Signaling by NTRKs,,-3.5,23,7.9,30198,134,30,3,10,5.5,1385|5595|6464,CREB1|MAPK3|SHC1,-1.8,mRMR-SVM
+GO Biological Processes,19,GO:0008584,male gonad development,19_GO:0022414 reproductive process,-3.5,22,7.8,30198,136,30,3,10,5.5,3815|4089|4436,KIT|SMAD4|MSH2,-1.8,mRMR-SVM
+KEGG Pathway,24,hsa04210,Apoptosis,,-3.5,22,7.8,30198,136,30,3,10,5.5,208|4616|5595,AKT2|GADD45B|MAPK3,-1.8,mRMR-SVM
+WikiPathways,27,WP2059,Alzheimer's disease and miRNA effects,,-3.5,12,6.4,30198,337,30,4,13,6.2,208|1499|4040|5595,AKT2|CTNNB1|LRP6|MAPK3,-1.8,mRMR-SVM
+GO Biological Processes,19,GO:0046546,development of primary male sexual characteristics,19_GO:0022414 reproductive process,-3.5,22,7.8,30198,137,30,3,10,5.5,3815|4089|4436,KIT|SMAD4|MSH2,-1.8,mRMR-SVM
+KEGG Pathway,24,hsa04910,Insulin signaling pathway,,-3.5,22,7.8,30198,137,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-1.8,mRMR-SVM
+KEGG Pathway,24,hsa04371,Apelin signaling pathway,,-3.5,22,7.7,30198,139,30,3,10,5.5,208|4089|5595,AKT2|SMAD4|MAPK3,-1.8,mRMR-SVM
+GO Biological Processes,19,GO:1901699,cellular response to nitrogen compound,19_GO:0050896 response to stimulus,-3.4,7.9,5.5,30198,640,30,5,17,6.8,208|1499|5595|6464|6599,AKT2|CTNNB1|MAPK3|SHC1|SMARCC1,-1.8,mRMR-SVM
+WikiPathways,27,WP5083,Neuroinflammation and glutamatergic signaling,,-3.4,21,7.6,30198,144,30,3,10,5.5,1385|4089|5595,CREB1|SMAD4|MAPK3,-1.8,mRMR-SVM
+GO Biological Processes,19,GO:0032869,cellular response to insulin stimulus,19_GO:0050896 response to stimulus,-3.4,20,7.4,30198,149,30,3,10,5.5,208|6464|6599,AKT2|SHC1|SMARCC1,-1.7,mRMR-SVM
+KEGG Pathway,24,hsa04261,Adrenergic signaling in cardiomyocytes,,-3.4,20,7.4,30198,150,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-1.7,mRMR-SVM
+KEGG Pathway,24,hsa04934,Cushing syndrome,,-3.3,19,7.3,30198,155,30,3,10,5.5,1385|1499|5595,CREB1|CTNNB1|MAPK3,-1.7,mRMR-SVM
+KEGG Pathway,24,hsa04150,mTOR signaling pathway,,-3.3,19,7.2,30198,156,30,3,10,5.5,208|4040|5595,AKT2|LRP6|MAPK3,-1.7,mRMR-SVM
+GO Biological Processes,19,GO:0045834,positive regulation of lipid metabolic process,19_GO:0048518 positive regulation of biological process,-3.3,19,7.2,30198,156,30,3,10,5.5,208|1385|3815,AKT2|CREB1|KIT,-1.7,mRMR-SVM
+GO Biological Processes,19,GO:0051216,cartilage development,19_GO:0032502 developmental process,-3.3,19,7.2,30198,157,30,3,10,5.5,1311|5595|8817,COMP|MAPK3|FGF18,-1.7,mRMR-SVM
+KEGG Pathway,24,hsa05160,Hepatitis C,,-3.3,19,7.2,30198,157,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.7,mRMR-SVM
+KEGG Pathway,24,hsa05010,Alzheimer disease,,-3.3,10,5.9,30198,384,30,4,13,6.2,208|1499|4040|5595,AKT2|CTNNB1|LRP6|MAPK3,-1.6,mRMR-SVM
+WikiPathways,27,WP481,Insulin signaling,,-3.3,19,7.1,30198,161,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-1.6,mRMR-SVM
+GO Biological Processes,19,GO:0007369,gastrulation,19_GO:0032502 developmental process,-3.3,19,7.1,30198,161,30,3,10,5.5,1284|1499|4089,COL4A2|CTNNB1|SMAD4,-1.6,mRMR-SVM
+WikiPathways,27,WP706,Sudden infant death syndrome (SIDS) susceptibility pathways,,-3.3,19,7.1,30198,162,30,3,10,5.5,1385|1499|4800,CREB1|CTNNB1|NFYA,-1.6,mRMR-SVM
+GO Biological Processes,19,GO:0071900,regulation of protein serine/threonine kinase activity,19_GO:0008152 metabolic process,-3.2,10,5.9,30198,388,30,4,13,6.2,905|3815|4040|8817,CCNT2|KIT|LRP6|FGF18,-1.6,mRMR-SVM
+WikiPathways,27,WP3929,Chemokine signaling pathway,,-3.2,18,7,30198,165,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-1.6,mRMR-SVM
+GO Biological Processes,19,GO:0007568,aging,19_GO:0032502 developmental process,-3.2,18,7,30198,165,30,3,10,5.5,1284|1311|4089,COL4A2|COMP|SMAD4,-1.6,mRMR-SVM
+KEGG Pathway,24,hsa04022,cGMP-PKG signaling pathway,,-3.2,18,7,30198,167,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-1.6,mRMR-SVM
+KEGG Pathway,24,hsa04310,Wnt signaling pathway,,-3.2,18,7,30198,167,30,3,10,5.5,1499|4040|4089,CTNNB1|LRP6|SMAD4,-1.6,mRMR-SVM
+GO Biological Processes,19,GO:0010001,glial cell differentiation,19_GO:0032502 developmental process,-3.2,18,7,30198,167,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.6,mRMR-SVM
+GO Biological Processes,19,GO:0071345,cellular response to cytokine stimulus,19_GO:0050896 response to stimulus,-3.2,7.1,5.2,30198,710,30,5,17,6.8,1385|3815|4089|5595|9774,CREB1|KIT|SMAD4|MAPK3|BCLAF1,-1.6,mRMR-SVM
+GO Biological Processes,19,GO:0060173,limb development,19_GO:0032502 developmental process,-3.1,17,6.8,30198,177,30,3,10,5.5,1311|1499|4089,COMP|CTNNB1|SMAD4,-1.5,mRMR-SVM
+GO Biological Processes,19,GO:0048736,appendage development,19_GO:0032502 developmental process,-3.1,17,6.8,30198,177,30,3,10,5.5,1311|1499|4089,COMP|CTNNB1|SMAD4,-1.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-109581,Apoptosis,,-3.1,17,6.7,30198,180,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.5,mRMR-SVM
+GO Biological Processes,19,GO:0048608,reproductive structure development,19_GO:0022414 reproductive process,-3.1,9.5,5.6,30198,423,30,4,13,6.2,1499|3815|4089|4436,CTNNB1|KIT|SMAD4|MSH2,-1.5,mRMR-SVM
+GO Biological Processes,19,GO:0061458,reproductive system development,19_GO:0032502 developmental process,-3.1,9.5,5.5,30198,426,30,4,13,6.2,1499|3815|4089|4436,CTNNB1|KIT|SMAD4|MSH2,-1.5,mRMR-SVM
+KEGG Pathway,24,hsa05034,Alcoholism,,-3.1,16,6.6,30198,187,30,3,10,5.5,1385|5595|6464,CREB1|MAPK3|SHC1,-1.5,mRMR-SVM
+GO Biological Processes,19,GO:0007178,transmembrane receptor protein serine/threonine kinase signaling pathway,19_GO:0023052 signaling,-3.1,16,6.5,30198,189,30,3,10,5.5,1311|4089|5595,COMP|SMAD4|MAPK3,-1.5,mRMR-SVM
+WikiPathways,27,WP3888,VEGFA-VEGFR2 signaling pathway,,-3,9.2,5.4,30198,439,30,4,13,6.2,1385|1499|5595|6464,CREB1|CTNNB1|MAPK3|SHC1,-1.5,mRMR-SVM
+KEGG Pathway,24,hsa04062,Chemokine signaling pathway,,-3,16,6.5,30198,192,30,3,10,5.5,208|5595|6464,AKT2|MAPK3|SHC1,-1.5,mRMR-SVM
+KEGG Pathway,24,hsa05202,Transcriptional misregulation in cancer,,-3,16,6.4,30198,193,30,3,10,5.5,905|4616|5966,CCNT2|GADD45B|REL,-1.5,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9711123,Cellular response to chemical stress,,-3,16,6.4,30198,194,30,3,10,5.5,208|571|3043,AKT2|BACH1|HBB,-1.5,mRMR-SVM
+GO Biological Processes,19,GO:0032872,regulation of stress-activated MAPK cascade,19_GO:0023052 signaling,-3,15,6.3,30198,198,30,3,10,5.5,3489|4616|5595,IGFBP6|GADD45B|MAPK3,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0051090,regulation of DNA-binding transcription factor activity,19_GO:0008152 metabolic process,-3,8.9,5.3,30198,452,30,4,13,6.2,1499|3815|4040|5595,CTNNB1|KIT|LRP6|MAPK3,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0070302,regulation of stress-activated protein kinase signaling cascade,19_GO:0023052 signaling,-3,15,6.3,30198,201,30,3,10,5.5,3489|4616|5595,IGFBP6|GADD45B|MAPK3,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0009612,response to mechanical stimulus,19_GO:0050896 response to stimulus,-3,15,6.3,30198,203,30,3,10,5.5,1499|3815|5595,CTNNB1|KIT|MAPK3,-1.4,mRMR-SVM
+KEGG Pathway,24,hsa05203,Viral carcinogenesis,,-3,15,6.2,30198,204,30,3,10,5.5,1385|5595|5966,CREB1|MAPK3|REL,-1.4,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-112314,Neurotransmitter receptors and postsynaptic signal transmission,,-3,15,6.2,30198,205,30,3,10,5.5,1385|3773|5595,CREB1|KCNJ16|MAPK3,-1.4,mRMR-SVM
+KEGG Pathway,24,hsa05205,Proteoglycans in cancer,,-3,15,6.2,30198,205,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0032868,response to insulin,19_GO:0050896 response to stimulus,-2.9,15,6.2,30198,207,30,3,10,5.5,208|6464|6599,AKT2|SHC1|SMARCC1,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0060348,bone development,19_GO:0032502 developmental process,-2.9,14,6.2,30198,209,30,3,10,5.5,1311|3815|8817,COMP|KIT|FGF18,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0009952,anterior/posterior pattern specification,19_GO:0032502 developmental process,-2.9,14,6.1,30198,210,30,3,10,5.5,1499|4040|4089,CTNNB1|LRP6|SMAD4,-1.4,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5357801,Programmed Cell Death,,-2.9,14,6.1,30198,210,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0061448,connective tissue development,19_GO:0032502 developmental process,-2.9,14,6.1,30198,211,30,3,10,5.5,1311|5595|8817,COMP|MAPK3|FGF18,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0042063,gliogenesis,19_GO:0032502 developmental process,-2.9,14,6.1,30198,213,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0032870,cellular response to hormone stimulus,19_GO:0050896 response to stimulus,-2.9,8.4,5.1,30198,481,30,4,13,6.2,208|3815|6464|6599,AKT2|KIT|SHC1|SMARCC1,-1.4,mRMR-SVM
+GO Biological Processes,19,GO:0061061,muscle structure development,19_GO:0032502 developmental process,-2.9,8.3,5.1,30198,484,30,4,13,6.2,905|1311|1499|4089,CCNT2|COMP|CTNNB1|SMAD4,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0008406,gonad development,19_GO:0022414 reproductive process,-2.9,14,6,30198,220,30,3,10,5.5,3815|4089|4436,KIT|SMAD4|MSH2,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0070374,positive regulation of ERK1 and ERK2 cascade,19_GO:0023052 signaling,-2.9,14,6,30198,221,30,3,10,5.5,5595|6464|8817,MAPK3|SHC1|FGF18,-1.3,mRMR-SVM
+KEGG Pathway,24,hsa04024,cAMP signaling pathway,,-2.9,14,6,30198,221,30,3,10,5.5,208|1385|5595,AKT2|CREB1|MAPK3,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0050769,positive regulation of neurogenesis,19_GO:0032502 developmental process,-2.9,14,5.9,30198,222,30,3,10,5.5,1499|1523|3815,CTNNB1|CUX1|KIT,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0071902,positive regulation of protein serine/threonine kinase activity,19_GO:0048518 positive regulation of biological process,-2.9,13,5.9,30198,224,30,3,10,5.5,905|3815|8817,CCNT2|KIT|FGF18,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0048705,skeletal system morphogenesis,19_GO:0032502 developmental process,-2.8,13,5.9,30198,225,30,3,10,5.5,1311|1499|8817,COMP|CTNNB1|FGF18,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0045137,development of primary sexual characteristics,19_GO:0022414 reproductive process,-2.8,13,5.9,30198,225,30,3,10,5.5,3815|4089|4436,KIT|SMAD4|MSH2,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0060284,regulation of cell development,19_GO:0032502 developmental process,-2.8,8,5,30198,501,30,4,13,6.2,1499|1523|3815|4089,CTNNB1|CUX1|KIT|SMAD4,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0071407,cellular response to organic cyclic compound,19_GO:0050896 response to stimulus,-2.8,8,5,30198,505,30,4,13,6.2,1385|1499|4040|5595,CREB1|CTNNB1|LRP6|MAPK3,-1.3,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-201681,TCF dependent signaling in response to WNT,,-2.8,13,5.8,30198,233,30,3,10,5.5,208|1499|4040,AKT2|CTNNB1|LRP6,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0001894,tissue homeostasis,19_GO:0032501 multicellular organismal process,-2.8,13,5.8,30198,235,30,3,10,5.5,1311|1499|115861,COMP|CTNNB1|NXNL1,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0071375,cellular response to peptide hormone stimulus,19_GO:0050896 response to stimulus,-2.8,13,5.7,30198,238,30,3,10,5.5,208|6464|6599,AKT2|SHC1|SMARCC1,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0010035,response to inorganic substance,19_GO:0050896 response to stimulus,-2.8,7.7,4.9,30198,521,30,4,13,6.2,1385|3043|3815|5595,CREB1|HBB|KIT|MAPK3,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0097305,response to alcohol,19_GO:0050896 response to stimulus,-2.8,13,5.7,30198,239,30,3,10,5.5,1385|1499|4040,CREB1|CTNNB1|LRP6,-1.3,mRMR-SVM
+GO Biological Processes,19,GO:0043065,positive regulation of apoptotic process,19_GO:0048518 positive regulation of biological process,-2.8,7.6,4.8,30198,529,30,4,13,6.2,1499|4089|4616|9774,CTNNB1|SMAD4|GADD45B|BCLAF1,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0006366,transcription by RNA polymerase II,19_GO:0008152 metabolic process,-2.7,12,5.6,30198,244,30,3,10,5.5,905|1385|4800,CCNT2|CREB1|NFYA,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0051052,regulation of DNA metabolic process,19_GO:0008152 metabolic process,-2.7,7.5,4.8,30198,537,30,4,13,6.2,1499|4436|5595|6599,CTNNB1|MSH2|MAPK3|SMARCC1,-1.2,mRMR-SVM
+KEGG Pathway,24,hsa05132,Salmonella infection,,-2.7,12,5.6,30198,249,30,3,10,5.5,208|1499|5595,AKT2|CTNNB1|MAPK3,-1.2,mRMR-SVM
+WikiPathways,27,WP382,MAPK signaling pathway,,-2.7,12,5.6,30198,249,30,3,10,5.5,208|5595|8817,AKT2|MAPK3|FGF18,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0007507,heart development,19_GO:0032502 developmental process,-2.7,7.4,4.8,30198,541,30,4,13,6.2,1499|4089|5595|6464,CTNNB1|SMAD4|MAPK3|SHC1,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0033044,regulation of chromosome organization,19_GO:0050789 regulation of biological process,-2.7,12,5.5,30198,250,30,3,10,5.5,1499|5595|6599,CTNNB1|MAPK3|SMARCC1,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0043068,positive regulation of programmed cell death,19_GO:0048518 positive regulation of biological process,-2.7,7.4,4.8,30198,543,30,4,13,6.2,1499|4089|4616|9774,CTNNB1|SMAD4|GADD45B|BCLAF1,-1.2,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-422475,Axon guidance,,-2.7,7.3,4.7,30198,552,30,4,13,6.2,1284|1385|5595|6464,COL4A2|CREB1|MAPK3|SHC1,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0030098,lymphocyte differentiation,19_GO:0002376 immune system process,-2.7,12,5.5,30198,257,30,3,10,5.5,1499|3815|4436,CTNNB1|KIT|MSH2,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0043588,skin development,19_GO:0032502 developmental process,-2.7,12,5.4,30198,259,30,3,10,5.5,1311|1499|4089,COMP|CTNNB1|SMAD4,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0030335,positive regulation of cell migration,19_GO:0040011 locomotion,-2.7,7.2,4.7,30198,560,30,4,13,6.2,208|3815|5595|8817,AKT2|KIT|MAPK3|FGF18,-1.2,mRMR-SVM
+GO Biological Processes,19,GO:0051091,positive regulation of DNA-binding transcription factor activity,19_GO:0008152 metabolic process,-2.6,11,5.4,30198,265,30,3,10,5.5,1499|3815|4040,CTNNB1|KIT|LRP6,-1.1,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-112315,Transmission across Chemical Synapses,,-2.6,11,5.3,30198,270,30,3,10,5.5,1385|3773|5595,CREB1|KCNJ16|MAPK3,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0051962,positive regulation of nervous system development,19_GO:0032502 developmental process,-2.6,11,5.3,30198,270,30,3,10,5.5,1499|1523|3815,CTNNB1|CUX1|KIT,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0048598,embryonic morphogenesis,19_GO:0032502 developmental process,-2.6,7,4.6,30198,576,30,4,13,6.2,1284|1499|4089|5595,COL4A2|CTNNB1|SMAD4|MAPK3,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0030855,epithelial cell differentiation,19_GO:0032502 developmental process,-2.6,7,4.6,30198,576,30,4,13,6.2,208|1385|1499|4089,AKT2|CREB1|CTNNB1|SMAD4,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0030198,extracellular matrix organization,19_GO:0009987 cellular process,-2.6,11,5.3,30198,271,30,3,10,5.5,1284|1311|4320,COL4A2|COMP|MMP11,-1.1,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-9675108,Nervous system development,,-2.6,7,4.6,30198,577,30,4,13,6.2,1284|1385|5595|6464,COL4A2|CREB1|MAPK3|SHC1,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0043062,extracellular structure organization,19_GO:0009987 cellular process,-2.6,11,5.3,30198,272,30,3,10,5.5,1284|1311|4320,COL4A2|COMP|MMP11,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0045229,external encapsulating structure organization,19_GO:0009987 cellular process,-2.6,11,5.3,30198,274,30,3,10,5.5,1284|1311|4320,COL4A2|COMP|MMP11,-1.1,mRMR-SVM
+Canonical Pathways,11,M5884,NABA CORE MATRISOME,,-2.6,11,5.2,30198,275,30,3,10,5.5,1284|1311|3489,COL4A2|COMP|IGFBP6,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:2000147,positive regulation of cell motility,19_GO:0040011 locomotion,-2.6,6.9,4.5,30198,584,30,4,13,6.2,208|3815|5595|8817,AKT2|KIT|MAPK3|FGF18,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0060249,anatomical structure homeostasis,19_GO:0065007 biological regulation,-2.6,11,5.2,30198,279,30,3,10,5.5,1311|1499|115861,COMP|CTNNB1|NXNL1,-1.1,mRMR-SVM
+WikiPathways,27,WP4754,IL-18 signaling pathway,,-2.6,11,5.2,30198,279,30,3,10,5.5,1499|5595|5966,CTNNB1|MAPK3|REL,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0051272,positive regulation of cellular component movement,19_GO:0051179 localization,-2.6,6.7,4.5,30198,597,30,4,13,6.2,208|3815|5595|8817,AKT2|KIT|MAPK3|FGF18,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:0040017,positive regulation of locomotion,19_GO:0040011 locomotion,-2.6,6.7,4.5,30198,599,30,4,13,6.2,208|3815|5595|8817,AKT2|KIT|MAPK3|FGF18,-1.1,mRMR-SVM
+GO Biological Processes,19,GO:1903131,mononuclear cell differentiation,19_GO:0002376 immune system process,-2.5,10,5,30198,295,30,3,10,5.5,1499|3815|4436,CTNNB1|KIT|MSH2,-1,mRMR-SVM
+GO Biological Processes,19,GO:0007281,germ cell development,19_GO:0022414 reproductive process,-2.5,10,5,30198,296,30,3,10,5.5,1499|3815|4436,CTNNB1|KIT|MSH2,-1,mRMR-SVM
+GO Biological Processes,19,GO:0010720,positive regulation of cell development,19_GO:0032502 developmental process,-2.5,10,5,30198,297,30,3,10,5.5,1499|1523|3815,CTNNB1|CUX1|KIT,-1,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-1474244,Extracellular matrix organization,,-2.5,10,5,30198,301,30,3,10,5.5,1284|1311|4320,COL4A2|COMP|MMP11,-1,mRMR-SVM
+GO Biological Processes,19,GO:0043009,chordate embryonic development,19_GO:0032502 developmental process,-2.5,6.4,4.3,30198,632,30,4,13,6.2,1499|4040|4089|4436,CTNNB1|LRP6|SMAD4|MSH2,-1,mRMR-SVM
+GO Biological Processes,19,GO:1901653,cellular response to peptide,19_GO:0050896 response to stimulus,-2.5,9.9,4.9,30198,305,30,3,10,5.5,208|6464|6599,AKT2|SHC1|SMARCC1,-1,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-388396,GPCR downstream signalling,,-2.5,6.4,4.3,30198,633,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-1,mRMR-SVM
+GO Biological Processes,19,GO:1902105,regulation of leukocyte differentiation,19_GO:0002376 immune system process,-2.5,9.9,4.9,30198,306,30,3,10,5.5,1385|1499|6599,CREB1|CTNNB1|SMARCC1,-1,mRMR-SVM
+GO Biological Processes,19,GO:0009416,response to light stimulus,19_GO:0050896 response to stimulus,-2.5,9.8,4.9,30198,308,30,3,10,5.5,208|3815|4436,AKT2|KIT|MSH2,-0.99,mRMR-SVM
+GO Biological Processes,19,GO:0009792,embryo development ending in birth or egg hatching,19_GO:0032502 developmental process,-2.4,6.2,4.2,30198,653,30,4,13,6.2,1499|4040|4089|4436,CTNNB1|LRP6|SMAD4|MSH2,-0.96,mRMR-SVM
+GO Biological Processes,19,GO:0048534,hematopoietic or lymphoid organ development,19_GO:0002376 immune system process,-2.4,6.1,4.2,30198,655,30,4,13,6.2,1499|3815|4436|5595,CTNNB1|KIT|MSH2|MAPK3,-0.95,mRMR-SVM
+GO Biological Processes,19,GO:0042060,wound healing,19_GO:0050896 response to stimulus,-2.4,9.2,4.7,30198,330,30,3,10,5.5,1311|3043|4089,COMP|HBB|SMAD4,-0.92,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-5653656,Vesicle-mediated transport,,-2.4,6,4.1,30198,673,30,4,13,6.2,208|1284|1523|3043,AKT2|COL4A2|CUX1|HBB,-0.92,mRMR-SVM
+GO Biological Processes,19,GO:0090287,regulation of cellular response to growth factor stimulus,19_GO:0050896 response to stimulus,-2.4,9.1,4.7,30198,331,30,3,10,5.5,1499|4089|8817,CTNNB1|SMAD4|FGF18,-0.92,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-195721,Signaling by WNT,,-2.4,9.1,4.7,30198,332,30,3,10,5.5,208|1499|4040,AKT2|CTNNB1|LRP6,-0.91,mRMR-SVM
+GO Biological Processes,19,GO:0003002,regionalization,19_GO:0032502 developmental process,-2.4,9,4.7,30198,335,30,3,10,5.5,1499|4040|4089,CTNNB1|LRP6|SMAD4,-0.9,mRMR-SVM
+GO Biological Processes,19,GO:0019216,regulation of lipid metabolic process,19_GO:0008152 metabolic process,-2.3,8.9,4.6,30198,341,30,3,10,5.5,208|1385|3815,AKT2|CREB1|KIT,-0.88,mRMR-SVM
+GO Biological Processes,19,GO:0002520,immune system development,19_GO:0002376 immune system process,-2.3,5.8,4,30198,699,30,4,13,6.2,1499|3815|4436|5595,CTNNB1|KIT|MSH2|MAPK3,-0.87,mRMR-SVM
+GO Biological Processes,19,GO:0045596,negative regulation of cell differentiation,19_GO:0032502 developmental process,-2.3,5.8,4,30198,699,30,4,13,6.2,1499|4089|4320|6599,CTNNB1|SMAD4|MMP11|SMARCC1,-0.87,mRMR-SVM
+GO Biological Processes,19,GO:0045765,regulation of angiogenesis,19_GO:0032502 developmental process,-2.3,8.7,4.6,30198,347,30,3,10,5.5,1284|1499|8817,COL4A2|CTNNB1|FGF18,-0.87,mRMR-SVM
+GO Biological Processes,19,GO:0006468,protein phosphorylation,19_GO:0008152 metabolic process,-2.3,5.7,4,30198,704,30,4,13,6.2,208|1385|3815|5595,AKT2|CREB1|KIT|MAPK3,-0.86,mRMR-SVM
+GO Biological Processes,19,GO:0010038,response to metal ion,19_GO:0050896 response to stimulus,-2.3,8.6,4.5,30198,351,30,3,10,5.5,1385|3815|5595,CREB1|KIT|MAPK3,-0.86,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-372790,Signaling by GPCR,,-2.3,5.7,4,30198,708,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-0.85,mRMR-SVM
+GO Biological Processes,19,GO:1901342,regulation of vasculature development,19_GO:0032502 developmental process,-2.3,8.6,4.5,30198,353,30,3,10,5.5,1284|1499|8817,COL4A2|CTNNB1|FGF18,-0.85,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-1280215,Cytokine Signaling in Immune system,,-2.3,5.6,4,30198,715,30,4,13,6.2,208|1385|5595|6464,AKT2|CREB1|MAPK3|SHC1,-0.84,mRMR-SVM
+GO Biological Processes,19,GO:0002521,leukocyte differentiation,19_GO:0002376 immune system process,-2.3,8.4,4.5,30198,358,30,3,10,5.5,1499|3815|4436,CTNNB1|KIT|MSH2,-0.84,mRMR-SVM
+GO Biological Processes,19,GO:0019221,cytokine-mediated signaling pathway,19_GO:0023052 signaling,-2.3,8.4,4.4,30198,360,30,3,10,5.5,3815|4089|5595,KIT|SMAD4|MAPK3,-0.83,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-3700989,Transcriptional Regulation by TP53,,-2.3,8.3,4.4,30198,362,30,3,10,5.5,208|905|4436,AKT2|CCNT2|MSH2,-0.82,mRMR-SVM
+GO Biological Processes,19,GO:0048871,multicellular organismal homeostasis,19_GO:0032501 multicellular organismal process,-2.3,8.3,4.4,30198,363,30,3,10,5.5,1311|1499|115861,COMP|CTNNB1|NXNL1,-0.82,mRMR-SVM
+GO Biological Processes,19,GO:0050767,regulation of neurogenesis,19_GO:0032502 developmental process,-2.3,8.3,4.4,30198,364,30,3,10,5.5,1499|1523|3815,CTNNB1|CUX1|KIT,-0.82,mRMR-SVM
+GO Biological Processes,19,GO:0051098,regulation of binding,19_GO:0065007 biological regulation,-2.2,8.2,4.4,30198,367,30,3,10,5.5,1499|4089|5595,CTNNB1|SMAD4|MAPK3,-0.81,mRMR-SVM
+GO Biological Processes,19,GO:0050878,regulation of body fluid levels,19_GO:0065007 biological regulation,-2.2,8.1,4.4,30198,371,30,3,10,5.5,1311|1385|3043,COMP|CREB1|HBB,-0.8,mRMR-SVM
+GO Biological Processes,19,GO:0007276,gamete generation,19_GO:0022414 reproductive process,-2.2,5.4,3.9,30198,739,30,4,13,6.2,1499|3815|4089|4436,CTNNB1|KIT|SMAD4|MSH2,-0.8,mRMR-SVM
+GO Biological Processes,19,GO:0040007,growth,19_GO:0040007 growth,-2.2,8.1,4.3,30198,373,30,3,10,5.5,1311|1499|4089,COMP|CTNNB1|SMAD4,-0.79,mRMR-SVM
+GO Biological Processes,19,GO:0048589,developmental growth,19_GO:0040007 growth,-2.2,8.1,4.3,30198,373,30,3,10,5.5,1311|1499|4089,COMP|CTNNB1|SMAD4,-0.79,mRMR-SVM
+GO Biological Processes,19,GO:0001701,in utero embryonic development,19_GO:0032502 developmental process,-2.2,7.9,4.3,30198,382,30,3,10,5.5,1499|4089|4436,CTNNB1|SMAD4|MSH2,-0.77,mRMR-SVM
+GO Biological Processes,19,GO:0006091,generation of precursor metabolites and energy,19_GO:0008152 metabolic process,-2.2,7.7,4.2,30198,394,30,3,10,5.5,208|4436|8659,AKT2|MSH2|ALDH4A1,-0.73,mRMR-SVM
+GO Biological Processes,19,GO:1903706,regulation of hemopoiesis,19_GO:0002376 immune system process,-2.1,7.5,4.2,30198,400,30,3,10,5.5,1385|1499|6599,CREB1|CTNNB1|SMARCC1,-0.72,mRMR-SVM
+GO Biological Processes,19,GO:0022412,cellular process involved in reproduction in multicellular organism,19_GO:0022414 reproductive process,-2.1,7.5,4.1,30198,402,30,3,10,5.5,1499|3815|4436,CTNNB1|KIT|MSH2,-0.71,mRMR-SVM
+GO Biological Processes,19,GO:0060322,head development,19_GO:0032502 developmental process,-2.1,5.1,3.7,30198,789,30,4,13,6.2,1385|1499|4040|5595,CREB1|CTNNB1|LRP6|MAPK3,-0.71,mRMR-SVM
+GO Biological Processes,19,GO:0045860,positive regulation of protein kinase activity,19_GO:0048518 positive regulation of biological process,-2.1,7.4,4.1,30198,409,30,3,10,5.5,905|3815|8817,CCNT2|KIT|FGF18,-0.69,mRMR-SVM
+Reactome Gene Sets,6,R-HSA-112316,Neuronal System,,-2.1,7.4,4.1,30198,410,30,3,10,5.5,1385|3773|5595,CREB1|KCNJ16|MAPK3,-0.69,mRMR-SVM
+GO Biological Processes,19,GO:0046649,lymphocyte activation,19_GO:0002376 immune system process,-2.1,7.2,4,30198,417,30,3,10,5.5,1499|3815|4436,CTNNB1|KIT|MSH2,-0.67,mRMR-SVM
+GO Biological Processes,19,GO:0009611,response to wounding,19_GO:0050896 response to stimulus,-2,6.9,3.9,30198,435,30,3,10,5.5,1311|3043|4089,COMP|HBB|SMAD4,-0.63,mRMR-SVM
+GO Biological Processes,19,GO:0009314,response to radiation,19_GO:0050896 response to stimulus,-2,6.9,3.9,30198,435,30,3,10,5.5,208|3815|4436,AKT2|KIT|MSH2,-0.63,mRMR-SVM
+GO Biological Processes,19,GO:0051960,regulation of nervous system development,19_GO:0032502 developmental process,-2,6.8,3.9,30198,443,30,3,10,5.5,1499|1523|3815,CTNNB1|CUX1|KIT,-0.61,mRMR-SVM
+GO Biological Processes,19,GO:0048568,embryonic organ development,19_GO:0032502 developmental process,-2,6.8,3.9,30198,445,30,3,10,5.5,1499|3815|5595,CTNNB1|KIT|MAPK3,-0.6,mRMR-SVM
+GO Biological Processes,19,GO:0007389,pattern specification process,19_GO:0032502 developmental process,-2,6.8,3.9,30198,447,30,3,10,5.5,1499|4040|4089,CTNNB1|LRP6|SMAD4,-0.6,mRMR-SVM
