@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<graph label="SVM-RFE" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cy="http://www.cytoscape.org" xmlns="http://www.cs.rpi.edu/XGMML" >
+  <att name="documentVersion" value="1.1"/>
+  <att name="networkMetadata">
+    <rdf:RDF>
+      <rdf:Description rdf:about="http://www.cytoscape.org/">
+        <dc:type>Protein-Protein Interaction</dc:type>
+        <dc:description>N/A</dc:description>
+        <dc:identifier>N/A</dc:identifier>
+        <dc:date>2022-07-03 07:15:43</dc:date>
+        <dc:title>Cytoscape Network</dc:title>
+        <dc:source>http://www.cytoscape.org/</dc:source>
+        <dc:format>Cytoscape-XGMML</dc:format>
+      </rdf:Description>
+    </rdf:RDF>
+  </att>
+  <att type="string" name="backgroundColor" value="#ffffff"/>
+  <att type="real" name="GRAPH_VIEW_ZOOM" value="1.0"/>
+  <att type="real" name="GRAPH_VIEW_CENTER_X" value="300.0"/>
+  <att type="real" name="GRAPH_VIEW_CENTER_Y" value="300.0"/>
+  <node label="FGF8" id="1">
+    <att type="string" name="canonicalName" value="FGF8"/>
+    <att type="string" name="Gene" value="2253"/>
+    <att type="string" name="Symbol" value="FGF8"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="362.80222786613115" y="252.93708215011821"/>
+  </node>
+  <node label="CXCL2" id="2">
+    <att type="string" name="canonicalName" value="CXCL2"/>
+    <att type="string" name="Gene" value="2920"/>
+    <att type="string" name="Symbol" value="CXCL2"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="411.1609468344952" y="290.75292256006287"/>
+  </node>
+  <node label="KRAS" id="3">
+    <att type="string" name="canonicalName" value="KRAS"/>
+    <att type="string" name="Gene" value="3845"/>
+    <att type="string" name="Symbol" value="KRAS"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="342.61355202769244" y="200.50077884328658"/>
+  </node>
+  <node label="CEACAM6" id="4">
+    <att type="string" name="canonicalName" value="CEACAM6"/>
+    <att type="string" name="Gene" value="4680"/>
+    <att type="string" name="Symbol" value="CEACAM6"/>
+    <att type="integer" name="DEGREE" value="2"/>
+    <graphics type="CIRCLE" x="219.27825308019152" y="355.41416507355757"/>
+  </node>
+  <node label="PENK" id="5">
+    <att type="string" name="canonicalName" value="PENK"/>
+    <att type="string" name="Gene" value="5179"/>
+    <att type="string" name="Symbol" value="PENK"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="423.01006223281024" y="333.1764113963883"/>
+  </node>
+  <node label="PITX1" id="6">
+    <att type="string" name="canonicalName" value="PITX1"/>
+    <att type="string" name="Gene" value="5307"/>
+    <att type="string" name="Symbol" value="PITX1"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="390.5229477737755" y="150.2491638631131"/>
+  </node>
+  <node label="TNXB" id="7">
+    <att type="string" name="canonicalName" value="TNXB"/>
+    <att type="string" name="Gene" value="7148"/>
+    <att type="string" name="Symbol" value="TNXB"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="193.38197149897763" y="384.24681876450984"/>
+  </node>
+  <edge label="2253 (pp) 3845" source="1" target="3">
+    <att type="string" name="canonicalName" value="2253 (pp) 3845"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="901"/>
+    <att type="string" name="support" value="{&quot;StringDB&quot;: &quot;physical&quot;, &quot;StringEvidence&quot;: &quot;database:0.896,textmining:0.140,experiments:0.018&quot;, &quot;InWeb_IM&quot;: &quot;inference&quot;, &quot;String_Score_Physical&quot;: 901, &quot;String_Score_Combined&quot;: 915}"/>
+  </edge>
+  <edge label="2920 (pp) 5179" source="2" target="5">
+    <att type="string" name="canonicalName" value="2920 (pp) 5179"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="294"/>
+    <att type="string" name="support" value="{&quot;InWeb_IM&quot;: &quot;inference&quot;}"/>
+  </edge>
+  <edge label="4680 (pp) 5307" source="4" target="6">
+    <att type="string" name="canonicalName" value="4680 (pp) 5307"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="208"/>
+    <att type="string" name="support" value="{&quot;BioGrid&quot;: &quot;physical&quot;, &quot;BioGrid_PubMed&quot;: &quot;32296183&quot;, &quot;BioGrid_Type&quot;: &quot;Two-hybrid&quot;}"/>
+  </edge>
+  <edge label="4680 (pp) 7148" source="4" target="7">
+    <att type="string" name="canonicalName" value="4680 (pp) 7148"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="208"/>
+    <att type="string" name="support" value="{&quot;BioGrid&quot;: &quot;physical&quot;, &quot;BioGrid_PubMed&quot;: &quot;32296183&quot;, &quot;BioGrid_Type&quot;: &quot;Two-hybrid&quot;}"/>
+  </edge>
+</graph>

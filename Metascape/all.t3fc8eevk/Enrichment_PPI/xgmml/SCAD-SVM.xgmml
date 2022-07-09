@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<graph label="SCAD-SVM" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cy="http://www.cytoscape.org" xmlns="http://www.cs.rpi.edu/XGMML" >
+  <att name="documentVersion" value="1.1"/>
+  <att name="networkMetadata">
+    <rdf:RDF>
+      <rdf:Description rdf:about="http://www.cytoscape.org/">
+        <dc:type>Protein-Protein Interaction</dc:type>
+        <dc:description>N/A</dc:description>
+        <dc:identifier>N/A</dc:identifier>
+        <dc:date>2022-07-03 07:15:43</dc:date>
+        <dc:title>Cytoscape Network</dc:title>
+        <dc:source>http://www.cytoscape.org/</dc:source>
+        <dc:format>Cytoscape-XGMML</dc:format>
+      </rdf:Description>
+    </rdf:RDF>
+  </att>
+  <att type="string" name="backgroundColor" value="#ffffff"/>
+  <att type="real" name="GRAPH_VIEW_ZOOM" value="1.0"/>
+  <att type="real" name="GRAPH_VIEW_CENTER_X" value="300.0"/>
+  <att type="real" name="GRAPH_VIEW_CENTER_Y" value="300.0"/>
+  <node label="FGF1" id="1">
+    <att type="string" name="canonicalName" value="FGF1"/>
+    <att type="string" name="Gene" value="2246"/>
+    <att type="string" name="Symbol" value="FGF1"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="247.40864720693685" y="153.53289227696453"/>
+  </node>
+  <node label="CXCL2" id="2">
+    <att type="string" name="canonicalName" value="CXCL2"/>
+    <att type="string" name="Gene" value="2920"/>
+    <att type="string" name="Symbol" value="CXCL2"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="408.59993185312635" y="164.41566041303568"/>
+  </node>
+  <node label="KRAS" id="3">
+    <att type="string" name="canonicalName" value="KRAS"/>
+    <att type="string" name="Gene" value="3845"/>
+    <att type="string" name="Symbol" value="KRAS"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="354.7866579225291" y="237.92095124285424"/>
+  </node>
+  <node label="PENK" id="4">
+    <att type="string" name="canonicalName" value="PENK"/>
+    <att type="string" name="Gene" value="5179"/>
+    <att type="string" name="Symbol" value="PENK"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="337.4528015527367" y="150.82720239219256"/>
+  </node>
+  <edge label="2246 (pp) 3845" source="1" target="3">
+    <att type="string" name="canonicalName" value="2246 (pp) 3845"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="901"/>
+    <att type="string" name="support" value="{&quot;StringDB&quot;: &quot;physical&quot;, &quot;StringEvidence&quot;: &quot;database:0.896,textmining:0.234,experiments:0.018&quot;, &quot;InWeb_IM&quot;: &quot;inference&quot;, &quot;String_Score_Physical&quot;: 901, &quot;String_Score_Combined&quot;: 924}"/>
+  </edge>
+  <edge label="2920 (pp) 5179" source="2" target="4">
+    <att type="string" name="canonicalName" value="2920 (pp) 5179"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="294"/>
+    <att type="string" name="support" value="{&quot;InWeb_IM&quot;: &quot;inference&quot;}"/>
+  </edge>
+</graph>

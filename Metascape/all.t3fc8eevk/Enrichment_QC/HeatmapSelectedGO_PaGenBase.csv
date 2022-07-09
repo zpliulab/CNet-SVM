@@ -1,0 +1,6 @@
+GO,Description,_LogP_CNet-SVM,_LogP_Enet-SVM,_LogP_L2SCAD-SVM,_LogP_Lasso-SVM,_LogP_SCAD-SVM,_LogP_SGLasso-SVM,_LogP_SVM-RFE,_LogP_mRMR-SVM
+PGB:00072,Tissue-specific: uterus,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-4.113279589345695
+PGB:00045,Tissue-specific: placenta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-2.4744845881256574
+PGB:00014,Cell-specific: DRG,0.0,0.0,0.0,0.0,0.0,-2.074863964210601,0.0,0.0
+PGB:00079,Tissue-specific: Caudate nucleus,-4.9503883125902775,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PGB:00057,Tissue-specific: ovary,-2.65275586366844,0.0,0.0,0.0,0.0,0.0,-2.734509051883113,0.0

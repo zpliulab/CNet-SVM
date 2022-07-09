@@ -1,0 +1,17 @@
+Network,Annotation
+CNet-SVM,WP3931|Embryonic stem cell pluripotency pathways|-11.0;hsa05224|Breast cancer|-10.5;WP4262|Breast cancer pathway|-10.3
+CNet-SVM_MCODE_ALL,hsa05224|Breast cancer|-9.3;WP4262|Breast cancer pathway|-9.2;R-HSA-5654704|SHC-mediated cascade:FGFR3|-9.1
+CNet-SVM_SUB1_MCODE_1,hsa05224|Breast cancer|-9.3;WP4262|Breast cancer pathway|-9.2;R-HSA-5654704|SHC-mediated cascade:FGFR3|-9.1
+SCAD-SVM,R-HSA-388396|GPCR downstream signalling|-4.4;R-HSA-372790|Signaling by GPCR|-4.3
+SGLasso-SVM,GO:0007088|regulation of mitotic nuclear division|-9.0;GO:0051301|cell division|-8.9;GO:1903047|mitotic cell cycle process|-8.9
+SGLasso-SVM_MCODE_ALL,GO:0071174|mitotic spindle checkpoint signaling|-9.1;GO:0071173|spindle assembly checkpoint signaling|-9.1;GO:0007094|mitotic spindle assembly checkpoint signaling|-9.1
+SGLasso-SVM_SUB1_MCODE_1,GO:0007094|mitotic spindle assembly checkpoint signaling|-9.1;GO:0071174|mitotic spindle checkpoint signaling|-9.1;GO:0071173|spindle assembly checkpoint signaling|-9.1
+SVM-RFE,WP3932|Focal adhesion: PI3K-Akt-mTOR-signaling pathway|-4.4;WP4172|PI3K-Akt signaling pathway|-4.3;hsa04151|PI3K-Akt signaling pathway|-4.3
+_FINAL,hsa05224|Breast cancer|-24.4;WP4262|Breast cancer pathway|-23.9;hsa05200|Pathways in cancer|-19.0
+_FINAL_MCODE_ALL,hsa05224|Breast cancer|-25.6;WP4262|Breast cancer pathway|-25.3;hsa05226|Gastric cancer|-19.1
+_FINAL_SUB1_MCODE_1,hsa05224|Breast cancer|-18.6;WP4262|Breast cancer pathway|-18.4;R-HSA-5654741|Signaling by FGFR3|-16.0
+_FINAL_SUB1_MCODE_2,WP3658|Wnt/beta-catenin signaling pathway in leukemia|-9.2;WP363|Wnt signaling pathway|-8.3;GO:0001837|epithelial to mesenchymal transition|-7.8
+mRMR-SVM,R-HSA-5663202|Diseases of signal transduction by growth factor receptors and second messengers|-13.0;hsa05224|Breast cancer|-12.5;hsa05226|Gastric cancer|-12.4
+mRMR-SVM_MCODE_ALL,hsa05226|Gastric cancer|-13.9;WP4787|Osteoblast differentiation and related diseases|-11.3;R-HSA-5663202|Diseases of signal transduction by growth factor receptors and second messengers|-11.1
+mRMR-SVM_SUB1_MCODE_1,GO:0001837|epithelial to mesenchymal transition|-7.8;WP3931|Embryonic stem cell pluripotency pathways|-7.2;WP4787|Osteoblast differentiation and related diseases|-7.2
+mRMR-SVM_SUB1_MCODE_2,R-HSA-5654741|Signaling by FGFR3|-8.7;R-HSA-5654743|Signaling by FGFR4|-8.6;R-HSA-5654736|Signaling by FGFR1|-8.4
