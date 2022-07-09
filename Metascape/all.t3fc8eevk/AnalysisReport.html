@@ -1,0 +1,2234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body ng-app="app">
+<div class="container">
+        <h2>Metascape Gene List Analysis Report</h2><p/>  <a href="http://metascape.org">metascape.org</a><sup>1</sup><p/>
+
+              <h3>Heatmap Summary</h3>
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 1. Heatmap of enriched terms across input gene lists, colored by p-values.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_heatmap/HeatmapSelectedGO.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_heatmap/HeatmapSelectedGO.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    
+                <tr><td>Metascape only visualizes the top 20 clusters. Up to 100 enriched clusters can be viewed here.<br>
+                <a href="./Enrichment_heatmap/HeatmapSelectedGOTop100.png"><img src="./Enrichment_heatmap/HeatmapSelectedGOTop100.png" style="height:auto; width:auto; max-height:100px;"></a>
+                <a href='./Enrichment_heatmap/HeatmapSelectedGOTop100.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a></td></tr>
+                
+                <tr><td>The top-level Gene Ontology biological processes can be viewed here.<br>
+                <a href="./Enrichment_heatmap/HeatmapSelectedGOParent.png"><img src="./Enrichment_heatmap/HeatmapSelectedGOParent.png" style="height:auto; width:auto; max-height:100px;"></a>
+                <a href='./Enrichment_heatmap/HeatmapSelectedGOParent.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a></td></tr>
+                
+                </table>
+                </div>
+              </div><p/>The heatmap can be interactively viewed using <a href="http://jtreeview.sourceforge.net">JTreeView</a><sup>2</sup> (.cdt, .gtr and .atr files can be found in the Zip package).<p/>
+      <h3>Gene Lists</h3>
+      User-provided gene identifiers are first converted into their corresponding H. sapiens Entrez gene IDs using the latest version of the database (last updated on 2022-04-22).  If multiple identifiers correspond to the same Entrez gene ID, they will be considered as a single Entrez gene ID in downstream analyses.   Each gene list is assigned a unique color, which is used throughout the analysis.   The gene lists are summarized in Table 1.<p/>
+          <div class="panel panel-info">
+            <div class="panel-heading">Table 1. Statistics of input gene lists.</div>
+            <div class="panel-body"><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Name</TH>
+      <TH class="info">Total</TH>
+      <TH class="info">Unique</TH>
+      <TH class="info">Color Code</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>CNet-SVM</TD>
+      <TD>32</TD>
+      <TD>32</TD>
+      <TD><div style="background-color:#E41A1C !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>Enet-SVM</TD>
+      <TD>7</TD>
+      <TD>7</TD>
+      <TD><div style="background-color:#377EB8 !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>L2SCAD-SVM</TD>
+      <TD>20</TD>
+      <TD>20</TD>
+      <TD><div style="background-color:#4DAF4A !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>Lasso-SVM</TD>
+      <TD>9</TD>
+      <TD>9</TD>
+      <TD><div style="background-color:#984EA3 !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>SCAD-SVM</TD>
+      <TD>12</TD>
+      <TD>12</TD>
+      <TD><div style="background-color:#FF7F00 !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>SGLasso-SVM</TD>
+      <TD>28</TD>
+      <TD>28</TD>
+      <TD><div style="background-color:#FFFF33 !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>SVM-RFE</TD>
+      <TD>30</TD>
+      <TD>30</TD>
+      <TD><div style="background-color:#A65628 !important;width:80px;height:20px;"></div></TD>
+    </TR>
+    <TR>
+      <TD>mRMR-SVM</TD>
+      <TD>30</TD>
+      <TD>30</TD>
+      <TD><div style="background-color:#F781BF !important;width:80px;height:20px;"></div></TD>
+    </TR>
+  </TBODY>
+</TABLE></div>
+          </div>
+ The overlaps between these lists are shown in a <a href="http://circos.ca">Circos</a><sup>3</sup> plot (Figure 2.a).  Another useful representation is to overlap genes based on their functions or shared pathways.  The overlaps between gene lists can be significantly improved by considering overlaps between genes sharing the same enriched ontology term(s) (Figure 2.b).  Only ontology terms that contain less than 100 genes are used to calculate functional overlaps to avoid linking genes using very general annotation. (We do not want to link all genes, only genes that belong to specific biological processes.)
+                      <div class="panel panel-info">
+                        <div class="panel-heading">Figure 2. Overlap between gene lists: (a) only at the gene level, where purple curves link identical genes; (b) including the shared term level, where blue curves link genes that belong to the same enriched ontology term.  The inner circle represents gene lists, where hits are arranged along the arc.  Genes that hit multiple lists are colored in dark orange, and genes unique to a list are shown in light orange.  The publication-quality version of the figures is included in the Zip package as a .svg file under the Overlap_circos folder (readable by popular web browsers and Adobe Illustrator).</div>
+                        <div class="panel-body">
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="./Overlap_circos/CircosOverlapByGene.png" style="width:500px;">
+                                </td>
+                                <td>
+                                    <img src="./Overlap_circos/CircosOverlapByGO.png" style="width:500px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center'>
+                                    
+                                <a href='./Overlap_circos/CircosOverlapByGene.svg' title='download SVG file'>
+                                    <img class='link' src='icon/SVG48.png' height="48" width="48" >
+                                </a>
+                                </td>
+                                <td align='center'>
+                                    
+                                    <a href='./Overlap_circos/CircosOverlapByGO.svg' title='download SVG file'>
+                                        <img class='link' src='icon/SVG48.png' height="48" width="48" >
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                      </div><p/>
+
+              <h3>Gene Annotation</h3>
+              The following are the list of annotations retrieved from the latest version of the database (last updated on 2022-04-22) (Table 2).<p/>
+              <div class="panel panel-info">
+                <div class="panel-heading">Table 2. Gene annotations extracted</div>
+                <div class="panel-body"><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Name</TH>
+      <TH class="info">Type</TH>
+      <TH class="info">Description</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>Gene Symbol</TD>
+      <TD>Description</TD>
+      <TD>Primary HUGO gene symbol.</TD>
+    </TR>
+    <TR>
+      <TD>Description</TD>
+      <TD>Description</TD>
+      <TD>Short description.</TD>
+    </TR>
+    <TR>
+      <TD>Biological Process (GO)</TD>
+      <TD>Function/Location</TD>
+      <TD>Descriptions summarized based on gene ontology database, where up to three most informative GO terms are kept.</TD>
+    </TR>
+    <TR>
+      <TD>Kinase Class (UniProt)</TD>
+      <TD>Function/Location</TD>
+      <TD>Detailed kinase classes.</TD>
+    </TR>
+    <TR>
+      <TD>Protein Function (Protein Atlas)</TD>
+      <TD>Function/Location</TD>
+      <TD>Protein Function (Protein Atlas)</TD>
+    </TR>
+    <TR>
+      <TD>Subcellular Location (Protein Atlas)</TD>
+      <TD>Function/Location</TD>
+      <TD>Sucellular Location (Protein Atlas)</TD>
+    </TR>
+    <TR>
+      <TD>Drug (DrugBank)</TD>
+      <TD>Genotype/Phenotype/Disease</TD>
+      <TD>Drug information for the given gene as target.</TD>
+    </TR>
+    <TR>
+      <TD>Canonical Pathways
+</TD>
+      <TD>Ontology</TD>
+      <TD>Canonical Pathways
+</TD>
+    </TR>
+    <TR>
+      <TD>Hallmark Gene Sets
+</TD>
+      <TD>Ontology</TD>
+      <TD>Hallmark Gene Sets
+</TD>
+    </TR>
+  </TBODY>
+</TABLE></div>
+              </div><p/>
+
+
+              <h3>Pathway and Process Enrichment Analysis</h3>
+              For each given gene list, pathway and process enrichment analysis has been carried out with the following ontology sources: KEGG Pathway, GO Biological Processes, Reactome Gene Sets, Canonical Pathways, Cell Type Signatures, CORUM, TRRUST, DisGeNET, PaGenBase, Transcription Factor Targets, WikiPathways, PANTHER Pathway and COVID.  All genes in the genome have been used as the enrichment background. Terms with a p-value &lt; 0.01, a minimum count of 3, and an enrichment factor &gt; 1.5 (the enrichment factor is the ratio between the observed counts and the counts expected by chance) are collected and grouped into clusters based on their membership similarities.  More specifically, p-values are calculated based on the cumulative hypergeometric distribution<sup>4</sup>, and q-values are calculated using the Benjamini-Hochberg procedure to account for multiple testings<sup>5</sup>.  Kappa scores<sup>6</sup> are used as the similarity metric when performing hierarchical clustering on the enriched terms, and sub-trees with a similarity of > 0.3 are considered a cluster.  The most statistically significant term within a cluster is chosen to represent the cluster.<p/>
+              When multiple gene lists are provided, all lists are merged into one list called "_FINAL".  A term may be found enriched in several individual gene lists and/or in the _FINAL gene list, and the best p-value among them is chosen as the final p-value.  The pathway/process clusters that are found to be of interest (either shared or unique based on specific list enrichment) are used to prioritize the genes that fall into those clusters (membership is presented as 1/0 binary columns in the Excel spreadsheet).  Note that individual gene lists containing more than 3000 genes are ignored during the enrichment analysis to avoid superficial terms; this is because long gene lists are often not random and generally trigger too many terms that are not of direct relevance to the biology under study.<p/>
+          <div class="panel panel-info">
+          <div class="panel-heading">Table 3. Top 20 clusters with their representative enriched terms (one per cluster).  "Count" is the number of genes in the user-provided lists with membership in the given ontology term. "%" is the percentage of all of the user-provided genes that are found in the given ontology term (only input genes with at least one ontology term annotation are included in the calculation).  "Log10(P)" is the p-value in log base 10.  "Log10(q)" is the multi-test adjusted p-value in log base 10.  __PATTERN__ shows the color code used for the gene lists where the term is found statistically significant, i.e., multiple colors indicate a pathway/process that is shared across multiple lists.</div>
+                <div class="panel-body"><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Category</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FF7F00 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>hsa05224</TD>
+      <TD>KEGG Pathway</TD>
+      <TD>Breast cancer</TD>
+      <TD>18</TD>
+      <TD>16.51</TD>
+      <TD>-22.04</TD>
+      <TD>-17.69</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>hsa05226</TD>
+      <TD>KEGG Pathway</TD>
+      <TD>Gastric cancer</TD>
+      <TD>14</TD>
+      <TD>12.84</TD>
+      <TD>-15.54</TD>
+      <TD>-11.72</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>WP4216</TD>
+      <TD>WikiPathways</TD>
+      <TD>Chromosomal and microsatellite instability in colorectal cancer</TD>
+      <TD>10</TD>
+      <TD>9.17</TD>
+      <TD>-12.84</TD>
+      <TD>-9.33</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>WP4787</TD>
+      <TD>WikiPathways</TD>
+      <TD>Osteoblast differentiation and related diseases</TD>
+      <TD>11</TD>
+      <TD>10.09</TD>
+      <TD>-12.17</TD>
+      <TD>-8.73</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0061061</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>muscle structure development</TD>
+      <TD>16</TD>
+      <TD>14.68</TD>
+      <TD>-10.65</TD>
+      <TD>-7.47</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:1903047</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>mitotic cell cycle process</TD>
+      <TD>9</TD>
+      <TD>32.14</TD>
+      <TD>-9.24</TD>
+      <TD>-6.04</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0006351</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>transcription, DNA-templated</TD>
+      <TD>8</TD>
+      <TD>26.67</TD>
+      <TD>-8.37</TD>
+      <TD>-5.26</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0007167</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>enzyme-linked receptor protein signaling pathway</TD>
+      <TD>9</TD>
+      <TD>30.00</TD>
+      <TD>-8.31</TD>
+      <TD>-5.24</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>M70</TD>
+      <TD>Canonical Pathways</TD>
+      <TD>PID PS1 PATHWAY</TD>
+      <TD>6</TD>
+      <TD>5.50</TD>
+      <TD>-7.80</TD>
+      <TD>-5.17</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>M5883</TD>
+      <TD>Canonical Pathways</TD>
+      <TD>NABA SECRETED FACTORS</TD>
+      <TD>7</TD>
+      <TD>21.88</TD>
+      <TD>-7.22</TD>
+      <TD>-4.41</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0048534</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>hematopoietic or lymphoid organ development</TD>
+      <TD>14</TD>
+      <TD>12.84</TD>
+      <TD>-6.97</TD>
+      <TD>-4.54</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0008283</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>cell population proliferation</TD>
+      <TD>12</TD>
+      <TD>11.01</TD>
+      <TD>-6.64</TD>
+      <TD>-4.26</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>M5884</TD>
+      <TD>Canonical Pathways</TD>
+      <TD>NABA CORE MATRISOME</TD>
+      <TD>6</TD>
+      <TD>20.00</TD>
+      <TD>-6.57</TD>
+      <TD>-3.92</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:2000142</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>regulation of DNA-templated transcription, initiation</TD>
+      <TD>6</TD>
+      <TD>5.50</TD>
+      <TD>-6.47</TD>
+      <TD>-4.13</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0001934</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>positive regulation of protein phosphorylation</TD>
+      <TD>14</TD>
+      <TD>12.84</TD>
+      <TD>-6.32</TD>
+      <TD>-4.01</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>WP236</TD>
+      <TD>WikiPathways</TD>
+      <TD>Adipogenesis</TD>
+      <TD>7</TD>
+      <TD>6.42</TD>
+      <TD>-6.29</TD>
+      <TD>-3.99</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0030335</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>positive regulation of cell migration</TD>
+      <TD>12</TD>
+      <TD>11.01</TD>
+      <TD>-6.05</TD>
+      <TD>-3.80</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FF7F00 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>R-HSA-372790</TD>
+      <TD>Reactome Gene Sets</TD>
+      <TD>Signaling by GPCR</TD>
+      <TD>13</TD>
+      <TD>11.93</TD>
+      <TD>-5.76</TD>
+      <TD>-3.59</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0001501</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>skeletal system development</TD>
+      <TD>11</TD>
+      <TD>10.09</TD>
+      <TD>-5.65</TD>
+      <TD>-3.51</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>GO:0071407</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>cellular response to organic cyclic compound</TD>
+      <TD>11</TD>
+      <TD>10.09</TD>
+      <TD>-5.65</TD>
+      <TD>-3.51</TD>
+    </TR>
+  </TBODY>
+</TABLE></div>
+              </div><p/>
+                  To further capture the relationships between the terms, a subset of enriched terms have been selected and rendered as a network plot, where terms with a similarity &gt; 0.3 are connected by edges.  We select the terms with the best p-values from each of the 20 clusters, with the constraint that there are no more than 15 terms per cluster and no more than 250 terms in total.  The network is visualized using <a href="http://www.cytoscape.org">Cytoscape</a><sup>7</sup>, where each node represents an enriched term and is colored first by its cluster ID (Figure 3.a) and then by its p-value (Figure 3.b).  These networks can be interactively viewed in Cytoscape through the .cys files (contained in the Zip package, which also contains a publication-quality version as a PDF) or within a browser by clicking on the web icon.  For clarity, term labels are only shown for one term per cluster, so it is recommended to use Cytoscape or a browser to visualize the network in order to inspect all node labels.  We can also export the network into a PDF file within Cytoscape, and then edit the labels using Adobe Illustrator for publication purposes.  To switch off all labels, delete the "Label" mapping under the "Style" tab within Cytoscape, and then export the network view.<p/>
+                  <div class="panel panel-info">
+                    <div class="panel-heading">Figure 3. Network of enriched terms: (a) colored by cluster ID, where nodes that share the same cluster ID are typically close to each other; (b) colored by p-value, where terms containing more genes tend to have a more significant p-value.</div>
+                    <div class="panel-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="./Enrichment_GO/ColorByCluster.png" style="width:500px;">
+                            </td>
+                            <td>
+                                <img src="./Enrichment_GO/ColorByPValue.png" style="width:500px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align='center'>
+                                <a href='./Enrichment_GO/ColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_GO/GONetwork.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_GO/GONetwork.html?Network=GONetwork&Style=ColorByCluster' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    
+                            </td>
+                            <td align='center'>
+                                <a href='./Enrichment_GO/ColorByPValue.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_GO/GONetwork.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_GO/GONetwork.html?Network=GONetwork&Style=ColorByPValue' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+
+                  </div><p/>
+               In the case of when multiple gene lists are provided, the nodes are represented as pie charts, where the size of a pie is proportional to the total number of hits that fall into that specific term.  The pie charts are color-coded based on the gene list identities, where the size of a slice represents the percentage of genes under the term that originated from the corresponding gene list.  This plot is particularly useful for visualizing whether the terms are shared by multiple lists or unique to a specific list, as well as for understanding how these terms associate with each other within the biological context of the meta study (Figure 4).<p/>
+                      <div class="panel panel-info">
+                        <div class="panel-heading">Figure 4. Network of enriched terms represented as pie charts, where pies are color-coded based on the identities of the gene lists.</div>
+                        <div class="panel-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="./Enrichment_GO/ColorByCounts.png" style="width:1000px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center'>
+                                    <a href='./Enrichment_GO/ColorByCounts.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_GO/GONetwork.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_GO/GONetwork.html?Network=GONetwork&Style=ColorByCounts' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                      </div><p/>
+<h3>Protein-protein Interaction Enrichment Analysis</h3>
+For each given gene list, protein-protein interaction enrichment analysis has been carried out with the following databases: STRING<sup>8</sup>, BioGrid<sup>9</sup>, OmniPath<sup>10</sup>, InWeb_IM<sup>11</sup>.Only physical interactions in STRING (physical score &gt 0.132) and BioGrid are used (<a href="http://metascape.org/blog/?p=219">details</a>).  The resultant network contains the subset of proteins that form physical interactions with at least one other member in the list.  If the network contains between 3 and 500 proteins, the Molecular Complex Detection (MCODE) algorithm<sup>12</sup> has been applied to identify densely connected network components.  The MCODE networks identified for individual gene lists have been gathered and are shown in Figure 5.<p/>
+
+                    Pathway and process enrichment analysis has been applied to each MCODE component independently, and the three best-scoring terms by p-value have been retained as the functional description of the corresponding components, shown in the tables underneath corresponding network plots within Figure 5.<p/>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">Figure 5. Protein-protein interaction network and MCODE components identified in the gene lists.</div>
+        <div class="panel-body">
+        
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/CNet-SVM_PPIColorByCluster.png" style="width:500px;"></td><td width="10px"></td><td><img src="./Enrichment_PPI/CNet-SVM_MCODE_ALL_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/CNet-SVM_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=CNet-SVM_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td><td width="10px"></td><td align="center"><a href='./Enrichment_PPI/CNet-SVM_MCODE_ALL_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=CNet-SVM_MCODE_ALL_PPIColorByCluster&Style=PPIColorByCluster&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>CNet-SVM (Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>WP3931</TD>
+      <TD>Embryonic stem cell pluripotency pathways</TD>
+      <TD>-11.0</TD>
+    </TR>
+    <TR>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-10.5</TD>
+    </TR>
+    <TR>
+      <TD>WP4262</TD>
+      <TD>Breast cancer pathway</TD>
+      <TD>-10.3</TD>
+    </TR>
+  </TBODY>
+</TABLE></td><td width="10px"></td><td align="center" valign="top"><h4>CNet-SVM (Keep MCODE Nodes Only) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Color</TH>
+      <TH class="info">MCODE</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-9.3</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>WP4262</TD>
+      <TD>Breast cancer pathway</TD>
+      <TD>-9.2</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>R-HSA-5654704</TD>
+      <TD>SHC-mediated cascade:FGFR3</TD>
+      <TD>-9.1</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/L2SCAD-SVM_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/L2SCAD-SVM_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=L2SCAD-SVM_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>L2SCAD-SVM (Full Connection) </h4></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/SCAD-SVM_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/SCAD-SVM_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=SCAD-SVM_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>SCAD-SVM (Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>R-HSA-388396</TD>
+      <TD>GPCR downstream signalling</TD>
+      <TD>-4.4</TD>
+    </TR>
+    <TR>
+      <TD>R-HSA-372790</TD>
+      <TD>Signaling by GPCR</TD>
+      <TD>-4.3</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/SGLasso-SVM_PPIColorByCluster.png" style="width:500px;"></td><td width="10px"></td><td><img src="./Enrichment_PPI/SGLasso-SVM_MCODE_ALL_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/SGLasso-SVM_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=SGLasso-SVM_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td><td width="10px"></td><td align="center"><a href='./Enrichment_PPI/SGLasso-SVM_MCODE_ALL_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=SGLasso-SVM_MCODE_ALL_PPIColorByCluster&Style=PPIColorByCluster&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>SGLasso-SVM (Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>GO:0007088</TD>
+      <TD>regulation of mitotic nuclear division</TD>
+      <TD>-9.0</TD>
+    </TR>
+    <TR>
+      <TD>GO:0051301</TD>
+      <TD>cell division</TD>
+      <TD>-8.9</TD>
+    </TR>
+    <TR>
+      <TD>GO:1903047</TD>
+      <TD>mitotic cell cycle process</TD>
+      <TD>-8.9</TD>
+    </TR>
+  </TBODY>
+</TABLE></td><td width="10px"></td><td align="center" valign="top"><h4>SGLasso-SVM (Keep MCODE Nodes Only) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Color</TH>
+      <TH class="info">MCODE</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>GO:0007094</TD>
+      <TD>mitotic spindle assembly checkpoint signaling</TD>
+      <TD>-9.1</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>GO:0071174</TD>
+      <TD>mitotic spindle checkpoint signaling</TD>
+      <TD>-9.1</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>GO:0071173</TD>
+      <TD>spindle assembly checkpoint signaling</TD>
+      <TD>-9.1</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/SVM-RFE_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/SVM-RFE_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=SVM-RFE_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>SVM-RFE (Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>WP3932</TD>
+      <TD>Focal adhesion: PI3K-Akt-mTOR-signaling pathway</TD>
+      <TD>-4.4</TD>
+    </TR>
+    <TR>
+      <TD>WP4172</TD>
+      <TD>PI3K-Akt signaling pathway</TD>
+      <TD>-4.3</TD>
+    </TR>
+    <TR>
+      <TD>hsa04151</TD>
+      <TD>PI3K-Akt signaling pathway</TD>
+      <TD>-4.3</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/mRMR-SVM_PPIColorByCluster.png" style="width:500px;"></td><td width="10px"></td><td><img src="./Enrichment_PPI/mRMR-SVM_MCODE_ALL_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/mRMR-SVM_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=mRMR-SVM_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td><td width="10px"></td><td align="center"><a href='./Enrichment_PPI/mRMR-SVM_MCODE_ALL_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=mRMR-SVM_MCODE_ALL_PPIColorByCluster&Style=PPIColorByCluster&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>mRMR-SVM (Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>R-HSA-5663202</TD>
+      <TD>Diseases of signal transduction by growth factor receptors and second messengers</TD>
+      <TD>-13.0</TD>
+    </TR>
+    <TR>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-12.5</TD>
+    </TR>
+    <TR>
+      <TD>hsa05226</TD>
+      <TD>Gastric cancer</TD>
+      <TD>-12.4</TD>
+    </TR>
+  </TBODY>
+</TABLE></td><td width="10px"></td><td align="center" valign="top"><h4>mRMR-SVM (Keep MCODE Nodes Only) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Color</TH>
+      <TH class="info">MCODE</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>GO:0001837</TD>
+      <TD>epithelial to mesenchymal transition</TD>
+      <TD>-7.8</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>WP3931</TD>
+      <TD>Embryonic stem cell pluripotency pathways</TD>
+      <TD>-7.2</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>WP4787</TD>
+      <TD>Osteoblast differentiation and related diseases</TD>
+      <TD>-7.2</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>R-HSA-5654741</TD>
+      <TD>Signaling by FGFR3</TD>
+      <TD>-8.7</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>R-HSA-5654743</TD>
+      <TD>Signaling by FGFR4</TD>
+      <TD>-8.6</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>R-HSA-5654736</TD>
+      <TD>Signaling by FGFR1</TD>
+      <TD>-8.4</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/_FINAL_PPIColorByCounts.png" style="width:500px;"></td><td width="10px"></td><td><img src="./Enrichment_PPI/_FINAL_MCODE_ALL_PPIColorByCounts.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/_FINAL_PPIColorByCounts.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=_FINAL_PPIColorByCluster&Style=PPIColorByCountsNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td><td width="10px"></td><td align="center"><a href='./Enrichment_PPI/_FINAL_MCODE_ALL_PPIColorByCounts.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=_FINAL_MCODE_ALL_PPIColorByCluster&Style=PPIColorByCounts&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>All lists merged  Colored by Counts(Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-24.4</TD>
+    </TR>
+    <TR>
+      <TD>WP4262</TD>
+      <TD>Breast cancer pathway</TD>
+      <TD>-23.9</TD>
+    </TR>
+    <TR>
+      <TD>hsa05200</TD>
+      <TD>Pathways in cancer</TD>
+      <TD>-19.0</TD>
+    </TR>
+  </TBODY>
+</TABLE></td><td width="10px"></td><td align="center" valign="top"><h4>All lists merged  Colored by Counts(Keep MCODE Nodes Only) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Color</TH>
+      <TH class="info">MCODE</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-18.6</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>WP4262</TD>
+      <TD>Breast cancer pathway</TD>
+      <TD>-18.4</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>R-HSA-5654741</TD>
+      <TD>Signaling by FGFR3</TD>
+      <TD>-16.0</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>WP3658</TD>
+      <TD>Wnt/beta-catenin signaling pathway in leukemia</TD>
+      <TD>-9.2</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>WP363</TD>
+      <TD>Wnt signaling pathway</TD>
+      <TD>-8.3</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>GO:0001837</TD>
+      <TD>epithelial to mesenchymal transition</TD>
+      <TD>-7.8</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/_FINAL_PPIColorByCluster.png" style="width:500px;"></td><td width="10px"></td><td><img src="./Enrichment_PPI/_FINAL_MCODE_ALL_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/_FINAL_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=_FINAL_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td><td width="10px"></td><td align="center"><a href='./Enrichment_PPI/_FINAL_MCODE_ALL_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=_FINAL_MCODE_ALL_PPIColorByCluster&Style=PPIColorByCluster&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"><h4>All lists merged  Colored by Cluster(Full Connection) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-24.4</TD>
+    </TR>
+    <TR>
+      <TD>WP4262</TD>
+      <TD>Breast cancer pathway</TD>
+      <TD>-23.9</TD>
+    </TR>
+    <TR>
+      <TD>hsa05200</TD>
+      <TD>Pathways in cancer</TD>
+      <TD>-19.0</TD>
+    </TR>
+  </TBODY>
+</TABLE></td><td width="10px"></td><td align="center" valign="top"><h4>All lists merged  Colored by Cluster(Keep MCODE Nodes Only) </h4><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Color</TH>
+      <TH class="info">MCODE</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Log10(P)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>hsa05224</TD>
+      <TD>Breast cancer</TD>
+      <TD>-18.6</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>WP4262</TD>
+      <TD>Breast cancer pathway</TD>
+      <TD>-18.4</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_1</TD>
+      <TD>R-HSA-5654741</TD>
+      <TD>Signaling by FGFR3</TD>
+      <TD>-16.0</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>WP3658</TD>
+      <TD>Wnt/beta-catenin signaling pathway in leukemia</TD>
+      <TD>-9.2</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>WP363</TD>
+      <TD>Wnt signaling pathway</TD>
+      <TD>-8.3</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#377EB8 !important;width:40px;height:20px;"></div></TD>
+      <TD>MCODE_2</TD>
+      <TD>GO:0001837</TD>
+      <TD>epithelial to mesenchymal transition</TD>
+      <TD>-7.8</TD>
+    </TR>
+  </TBODY>
+</TABLE></td></tr>
+                </table>
+        </div>
+      </div><p/>
+
+<h3>Quality Control and Association Analysis</h3>
+
+<p>Gene list enrichments are identified in the following ontology categories: COVID, TRRUST, Transcription_Factor_Targets, Cell_Type_Signatures, DisGeNET, PaGenBase. All genes in the genome have been used as the enrichment background. Terms with a p-value &lt; 0.01, a minimum count of 3, and an enrichment factor &gt; 1.5 (the enrichment factor is the ratio between the observed counts and the counts expected by chance) are collected and grouped into clusters based on their membership similarities.  The top few enriched clusters (one term per cluster) are shown in the Figure 6-11.  The algorithm used here is the same as that is used for pathway and process enrichment analysis.<p/>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 6. Summary of enrichment analysis in COVID<sup>13</sup>.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_QC/HeatmapSelectedGO_COVID.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_QC/HeatmapSelectedGO_COVID.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID054" target="_TERM">COVID054</a></TD>
+      <TD>RNA_Xiong_PBMC_Up</TD>
+      <TD>6</TD>
+      <TD>21.00</TD>
+      <TD>-6.50</TD>
+      <TD>-3.40</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID042" target="_TERM">COVID042</a></TD>
+      <TD>RNA_Sun_Calu-3_7h_Up</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-6.20</TD>
+      <TD>-3.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID217" target="_TERM">COVID217</a></TD>
+      <TD>Proteome_Shen_Serum-nonsevere-vs-healthy_Down</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-5.80</TD>
+      <TD>-2.90</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID213" target="_TERM">COVID213</a></TD>
+      <TD>Proteome_Shen_Serum-severe-vs-healthy_Down</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-4.60</TD>
+      <TD>-2.10</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID046" target="_TERM">COVID046</a></TD>
+      <TD>RNA_Wyler_Caco-2_24h_Up</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-3.90</TD>
+      <TD>-1.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID134" target="_TERM">COVID134</a></TD>
+      <TD>Proteome_Stukalov_A549-ACE2_24h_Down</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-3.80</TD>
+      <TD>-1.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID049" target="_TERM">COVID049</a></TD>
+      <TD>RNA_Wyler_Calu-3_24h_Down</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-3.80</TD>
+      <TD>-1.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID048" target="_TERM">COVID048</a></TD>
+      <TD>RNA_Wyler_Calu-3_12h_Up</TD>
+      <TD>3</TD>
+      <TD>11.00</TD>
+      <TD>-2.60</TD>
+      <TD>-0.83</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID057" target="_TERM">COVID057</a></TD>
+      <TD>Phosphoproteome_Bouhaddou_Vero_E6_12h_Down</TD>
+      <TD>3</TD>
+      <TD>11.00</TD>
+      <TD>-2.60</TD>
+      <TD>-0.83</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID059" target="_TERM">COVID059</a></TD>
+      <TD>Phosphoproteome_Bouhaddou_Vero_E6_24h_Down</TD>
+      <TD>3</TD>
+      <TD>11.00</TD>
+      <TD>-2.60</TD>
+      <TD>-0.83</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID010" target="_TERM">COVID010</a></TD>
+      <TD>RNA_Blanco-Melo_A549-ACE2_Up</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-2.50</TD>
+      <TD>-0.76</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID038" target="_TERM">COVID038</a></TD>
+      <TD>RNA_Sun_Calu-3_12h_Up</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-2.50</TD>
+      <TD>-0.76</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID193" target="_TERM">COVID193</a></TD>
+      <TD>RNA_Stukalov_A549-ACE2_30h_Up</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-2.50</TD>
+      <TD>-0.76</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID016" target="_TERM">COVID016</a></TD>
+      <TD>RNA_Blanco-Melo_Calu-3_Up</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-2.40</TD>
+      <TD>-0.71</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID036" target="_TERM">COVID036</a></TD>
+      <TD>RNA_Sun_Calu-3_0h_Up</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-2.40</TD>
+      <TD>-0.71</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID040" target="_TERM">COVID040</a></TD>
+      <TD>RNA_Sun_Calu-3_24h_Up</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-2.40</TD>
+      <TD>-0.71</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID050" target="_TERM">COVID050</a></TD>
+      <TD>RNA_Wyler_Calu-3_24h_Up</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-2.40</TD>
+      <TD>-0.71</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://metascape.org/COVID#200_COVID243" target="_TERM">COVID243</a></TD>
+      <TD>RNA_Riva_Vero-E6_24h_Up</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-2.40</TD>
+      <TD>-0.71</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+                        </td>
+                    </tr>
+                </table>
+
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 7. Summary of enrichment analysis in TRRUST.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_QC/HeatmapSelectedGO_TRRUST.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_QC/HeatmapSelectedGO_TRRUST.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>TRR01256</TD>
+      <TD>Regulated by: SP1</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-3.80</TD>
+      <TD>-1.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>TRR00645</TD>
+      <TD>Regulated by: JUN</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-3.10</TD>
+      <TD>-1.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>TRR01158</TD>
+      <TD>Regulated by: RELA</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-2.40</TD>
+      <TD>-0.67</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>TRR00875</TD>
+      <TD>Regulated by: NFKB1</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-2.30</TD>
+      <TD>-0.59</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+                        </td>
+                    </tr>
+                </table>
+
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 8. Summary of enrichment analysis in Transcription Factor Targets<sup>14</sup>.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_QC/HeatmapSelectedGO_Transcription_Factor_Targets.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_QC/HeatmapSelectedGO_Transcription_Factor_Targets.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M14649" target="_TERM">M14649</a></TD>
+      <TD>FREAC4 01</TD>
+      <TD>5</TD>
+      <TD>16.00</TD>
+      <TD>-6.20</TD>
+      <TD>-3.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M30019" target="_TERM">M30019</a></TD>
+      <TD>HSD17B8 TARGET GENES</TD>
+      <TD>7</TD>
+      <TD>25.00</TD>
+      <TD>-5.70</TD>
+      <TD>-2.90</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M14012" target="_TERM">M14012</a></TD>
+      <TD>GATA1 04</TD>
+      <TD>5</TD>
+      <TD>16.00</TD>
+      <TD>-5.20</TD>
+      <TD>-2.50</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M14357" target="_TERM">M14357</a></TD>
+      <TD>TATA C</TD>
+      <TD>4</TD>
+      <TD>20.00</TD>
+      <TD>-4.50</TD>
+      <TD>-2.00</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#984EA3 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M9949" target="_TERM">M9949</a></TD>
+      <TD>NFKAPPAB 01</TD>
+      <TD>3</TD>
+      <TD>33.00</TD>
+      <TD>-4.30</TD>
+      <TD>-1.90</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#984EA3 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M11921" target="_TERM">M11921</a></TD>
+      <TD>NFKB Q6</TD>
+      <TD>3</TD>
+      <TD>33.00</TD>
+      <TD>-4.30</TD>
+      <TD>-1.90</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M30404" target="_TERM">M30404</a></TD>
+      <TD>ZSCAN23 TARGET GENES</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-4.10</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M11934" target="_TERM">M11934</a></TD>
+      <TD>SRF Q5 01</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-4.00</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M5479" target="_TERM">M5479</a></TD>
+      <TD>SRF Q4</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-4.00</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M560" target="_TERM">M560</a></TD>
+      <TD>CP2 02</TD>
+      <TD>4</TD>
+      <TD>13.00</TD>
+      <TD>-4.00</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M10143" target="_TERM">M10143</a></TD>
+      <TD>CREL 01</TD>
+      <TD>4</TD>
+      <TD>13.00</TD>
+      <TD>-3.90</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M14186" target="_TERM">M14186</a></TD>
+      <TD>GATA1 03</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-3.90</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M15183" target="_TERM">M15183</a></TD>
+      <TD>E12 Q6</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-3.80</TD>
+      <TD>-1.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M18920" target="_TERM">M18920</a></TD>
+      <TD>GATA C</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-3.70</TD>
+      <TD>-1.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M30190" target="_TERM">M30190</a></TD>
+      <TD>TAF9B TARGET GENES</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-3.70</TD>
+      <TD>-1.50</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M30054" target="_TERM">M30054</a></TD>
+      <TD>MAML1 TARGET GENES</TD>
+      <TD>4</TD>
+      <TD>13.00</TD>
+      <TD>-3.60</TD>
+      <TD>-1.50</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M13849" target="_TERM">M13849</a></TD>
+      <TD>TGACATY UNKNOWN</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-3.30</TD>
+      <TD>-1.30</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M29986" target="_TERM">M29986</a></TD>
+      <TD>GUCY1B1 TARGET GENES</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-3.30</TD>
+      <TD>-1.30</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M3150" target="_TERM">M3150</a></TD>
+      <TD>TATA 01</TD>
+      <TD>3</TD>
+      <TD>15.00</TD>
+      <TD>-3.20</TD>
+      <TD>-1.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M16291" target="_TERM">M16291</a></TD>
+      <TD>YNGTTNNNATT UNKNOWN</TD>
+      <TD>4</TD>
+      <TD>12.00</TD>
+      <TD>-3.20</TD>
+      <TD>-1.20</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+                        </td>
+                    </tr>
+                </table>
+
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 9. Summary of enrichment analysis in Cell Type Signatures.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_QC/HeatmapSelectedGO_Cell_Type_Signatures.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_QC/HeatmapSelectedGO_Cell_Type_Signatures.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39096" target="_TERM">M39096</a></TD>
+      <TD>ZHONG PFC C1 OPC</TD>
+      <TD>9</TD>
+      <TD>32.00</TD>
+      <TD>-12.00</TD>
+      <TD>-7.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39041" target="_TERM">M39041</a></TD>
+      <TD>FAN EMBRYONIC CTX MICROGLIA 1</TD>
+      <TD>8</TD>
+      <TD>29.00</TD>
+      <TD>-12.00</TD>
+      <TD>-7.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39165" target="_TERM">M39165</a></TD>
+      <TD>GAO LARGE INTESTINE ADULT CH MKI67HIGH CELLS</TD>
+      <TD>7</TD>
+      <TD>25.00</TD>
+      <TD>-11.00</TD>
+      <TD>-7.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39036" target="_TERM">M39036</a></TD>
+      <TD>FAN EMBRYONIC CTX NSC 2</TD>
+      <TD>8</TD>
+      <TD>29.00</TD>
+      <TD>-11.00</TD>
+      <TD>-6.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39059" target="_TERM">M39059</a></TD>
+      <TD>MANNO MIDBRAIN NEUROTYPES HPROGBP</TD>
+      <TD>7</TD>
+      <TD>25.00</TD>
+      <TD>-8.10</TD>
+      <TD>-4.30</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39060" target="_TERM">M39060</a></TD>
+      <TD>MANNO MIDBRAIN NEUROTYPES HPROGFPL</TD>
+      <TD>7</TD>
+      <TD>25.00</TD>
+      <TD>-7.80</TD>
+      <TD>-4.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39061" target="_TERM">M39061</a></TD>
+      <TD>MANNO MIDBRAIN NEUROTYPES HPROGFPM</TD>
+      <TD>7</TD>
+      <TD>25.00</TD>
+      <TD>-7.50</TD>
+      <TD>-4.10</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39083" target="_TERM">M39083</a></TD>
+      <TD>ZHONG PFC C3 UNKNOWN INP</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-7.40</TD>
+      <TD>-4.00</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39103" target="_TERM">M39103</a></TD>
+      <TD>ZHONG PFC C1 MICROGLIA</TD>
+      <TD>6</TD>
+      <TD>21.00</TD>
+      <TD>-6.90</TD>
+      <TD>-3.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39078" target="_TERM">M39078</a></TD>
+      <TD>ZHONG PFC MAJOR TYPES NPCS</TD>
+      <TD>5</TD>
+      <TD>18.00</TD>
+      <TD>-6.70</TD>
+      <TD>-3.50</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39081" target="_TERM">M39081</a></TD>
+      <TD>ZHONG PFC C8 ORG PROLIFERATING</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-6.50</TD>
+      <TD>-3.40</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39087" target="_TERM">M39087</a></TD>
+      <TD>ZHONG PFC C2 UNKNOWN NPC</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-6.10</TD>
+      <TD>-3.10</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39062" target="_TERM">M39062</a></TD>
+      <TD>MANNO MIDBRAIN NEUROTYPES HNPROG</TD>
+      <TD>5</TD>
+      <TD>18.00</TD>
+      <TD>-5.70</TD>
+      <TD>-2.80</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39153" target="_TERM">M39153</a></TD>
+      <TD>GAO LARGE INTESTINE 24W C2 MKI67POS PROGENITOR</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-5.40</TD>
+      <TD>-2.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M41687" target="_TERM">M41687</a></TD>
+      <TD>TRAVAGLINI LUNG PROLIFERATING NK T CELL</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-5.20</TD>
+      <TD>-2.50</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39058" target="_TERM">M39058</a></TD>
+      <TD>MANNO MIDBRAIN NEUROTYPES HPROGM</TD>
+      <TD>5</TD>
+      <TD>18.00</TD>
+      <TD>-5.10</TD>
+      <TD>-2.40</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FF7F00 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39302" target="_TERM">M39302</a></TD>
+      <TD>CUI DEVELOPING HEART C5 VALVAR CELL</TD>
+      <TD>4</TD>
+      <TD>13.00</TD>
+      <TD>-4.30</TD>
+      <TD>-1.90</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#377EB8 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FF7F00 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39050" target="_TERM">M39050</a></TD>
+      <TD>MANNO MIDBRAIN NEUROTYPES HPERIC</TD>
+      <TD>6</TD>
+      <TD>20.00</TD>
+      <TD>-3.90</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39263" target="_TERM">M39263</a></TD>
+      <TD>HU FETAL RETINA BLOOD</TD>
+      <TD>4</TD>
+      <TD>14.00</TD>
+      <TD>-3.90</TD>
+      <TD>-1.70</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#984EA3 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="https://www.gsea-msigdb.org/gsea/msigdb/geneset_page.jsp?systematicName=M39209" target="_TERM">M39209</a></TD>
+      <TD>HAY BONE MARROW STROMAL</TD>
+      <TD>6</TD>
+      <TD>19.00</TD>
+      <TD>-3.90</TD>
+      <TD>-1.70</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+                        </td>
+                    </tr>
+                </table>
+
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 10. Summary of enrichment analysis in DisGeNET<sup>15</sup>.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_QC/HeatmapSelectedGO_DisGeNET.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_QC/HeatmapSelectedGO_DisGeNET.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C1257915/" target="_TERM">C1257915</a></TD>
+      <TD>Intestinal Polyposis</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-8.90</TD>
+      <TD>-5.10</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0040100/" target="_TERM">C0040100</a></TD>
+      <TD>Thymoma</TD>
+      <TD>7</TD>
+      <TD>23.00</TD>
+      <TD>-7.90</TD>
+      <TD>-4.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C4551686/" target="_TERM">C4551686</a></TD>
+      <TD>Malignant neoplasm of soft tissue</TD>
+      <TD>9</TD>
+      <TD>30.00</TD>
+      <TD>-7.80</TD>
+      <TD>-4.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0262584/" target="_TERM">C0262584</a></TD>
+      <TD>Carcinoma, Small Cell</TD>
+      <TD>6</TD>
+      <TD>20.00</TD>
+      <TD>-7.60</TD>
+      <TD>-4.10</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C1319315/" target="_TERM">C1319315</a></TD>
+      <TD>Adenocarcinoma of large intestine</TD>
+      <TD>8</TD>
+      <TD>27.00</TD>
+      <TD>-7.40</TD>
+      <TD>-4.00</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0042133/" target="_TERM">C0042133</a></TD>
+      <TD>Uterine Fibroids</TD>
+      <TD>8</TD>
+      <TD>27.00</TD>
+      <TD>-7.20</TD>
+      <TD>-3.80</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FF7F00 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0153690/" target="_TERM">C0153690</a></TD>
+      <TD>Secondary malignant neoplasm of bone</TD>
+      <TD>7</TD>
+      <TD>35.00</TD>
+      <TD>-6.90</TD>
+      <TD>-3.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0334299/" target="_TERM">C0334299</a></TD>
+      <TD>Carcinoid tumor no ICD-O subtype</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-6.90</TD>
+      <TD>-3.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0345967/" target="_TERM">C0345967</a></TD>
+      <TD>Malignant mesothelioma</TD>
+      <TD>7</TD>
+      <TD>23.00</TD>
+      <TD>-6.80</TD>
+      <TD>-3.60</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C3811653/" target="_TERM">C3811653</a></TD>
+      <TD>Experimental Organism Basal Cell Carcinoma</TD>
+      <TD>7</TD>
+      <TD>23.00</TD>
+      <TD>-6.70</TD>
+      <TD>-3.50</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0037579/" target="_TERM">C0037579</a></TD>
+      <TD>Soft Tissue Neoplasms</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-6.50</TD>
+      <TD>-3.40</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0032927/" target="_TERM">C0032927</a></TD>
+      <TD>Precancerous Conditions</TD>
+      <TD>7</TD>
+      <TD>23.00</TD>
+      <TD>-6.50</TD>
+      <TD>-3.40</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0555198/" target="_TERM">C0555198</a></TD>
+      <TD>Malignant Glioma</TD>
+      <TD>8</TD>
+      <TD>27.00</TD>
+      <TD>-6.40</TD>
+      <TD>-3.30</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0152171/" target="_TERM">C0152171</a></TD>
+      <TD>Idiopathic pulmonary hypertension</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-6.30</TD>
+      <TD>-3.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0027831/" target="_TERM">C0027831</a></TD>
+      <TD>Neurofibromatosis 1</TD>
+      <TD>6</TD>
+      <TD>20.00</TD>
+      <TD>-6.30</TD>
+      <TD>-3.20</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0346191/" target="_TERM">C0346191</a></TD>
+      <TD>Carcinoma in situ of endometrium</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-6.10</TD>
+      <TD>-3.10</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0017185/" target="_TERM">C0017185</a></TD>
+      <TD>Gastrointestinal Neoplasms</TD>
+      <TD>5</TD>
+      <TD>17.00</TD>
+      <TD>-6.00</TD>
+      <TD>-3.00</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0007112/" target="_TERM">C0007112</a></TD>
+      <TD>Adenocarcinoma of prostate</TD>
+      <TD>6</TD>
+      <TD>20.00</TD>
+      <TD>-6.00</TD>
+      <TD>-3.00</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#4DAF4A !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C4721806/" target="_TERM">C4721806</a></TD>
+      <TD>Carcinoma, Basal Cell</TD>
+      <TD>7</TD>
+      <TD>23.00</TD>
+      <TD>-6.00</TD>
+      <TD>-3.00</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD><a href="http://www.disgenet.org/browser/0/1/2/C0334108/" target="_TERM">C0334108</a></TD>
+      <TD>Multiple polyps</TD>
+      <TD>4</TD>
+      <TD>13.00</TD>
+      <TD>-6.00</TD>
+      <TD>-3.00</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+                        </td>
+                    </tr>
+                </table>
+
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 11. Summary of enrichment analysis in PaGenBase<sup>16</sup>.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_QC/HeatmapSelectedGO_PaGenBase.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_QC/HeatmapSelectedGO_PaGenBase.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">_PATTERN_</TH>
+      <TH class="info">GO</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>PGB:00079</TD>
+      <TD>Tissue-specific: Caudate nucleus</TD>
+      <TD>3</TD>
+      <TD>9.40</TD>
+      <TD>-5.00</TD>
+      <TD>-2.30</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>PGB:00072</TD>
+      <TD>Tissue-specific: uterus</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-4.10</TD>
+      <TD>-1.80</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#E41A1C !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#A65628 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>PGB:00057</TD>
+      <TD>Tissue-specific: ovary</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-2.70</TD>
+      <TD>-0.92</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#F781BF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>PGB:00045</TD>
+      <TD>Tissue-specific: placenta</TD>
+      <TD>3</TD>
+      <TD>10.00</TD>
+      <TD>-2.50</TD>
+      <TD>-0.75</TD>
+    </TR>
+    <TR>
+      <TD><div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFF33 !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div> <div style="background-color:#FFFFFF !important;width:20px;height:20px;float:left;"></div></TD>
+      <TD>PGB:00014</TD>
+      <TD>Cell-specific: DRG</TD>
+      <TD>3</TD>
+      <TD>11.00</TD>
+      <TD>-2.10</TD>
+      <TD>-0.44</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+                        </td>
+                    </tr>
+                </table>
+
+                </div>
+              </div>
+    <h3>Reference</h3></p>
+    <ol style="list-style: decimal inside;">
+      <li>Zhou et al., Metascape provides a biologist-oriented resource for the analysis of systems-level datasets. Nature Communications (2019) 10(1):1523.</li>
+      <li>Saldanha AJ. Java Treeview - extensible visualization of microarray data. Bioinformatics (2004) 20:3246-3248</li>
+      <li>Krzywinski M. et al. Circos: an Information Aesthetic for Comparative Genomics. Genome Res (2009) 19:1639-1645</li>
+      <li>Zar, J.H. Biostatistical Analysis 1999 4th edn., NJ Prentice Hall, pp. 523</li>
+      <li>Hochberg Y., Benjamini Y. More powerful procedures for multiple significance testing. Statistics in Medicine (1990) 9:811-818.</li>
+      <li>Cohen, J. A coefficient of agreement for nominal scales. Educ. Psychol. Meas. (1960) 20:27-46.</li>
+      <li>Shannon P. et al., Cytoscape: a software environment for integrated models of biomolecular interaction networks. Genome Res (2003) 11:2498-2504.</li>
+      <li>Szklarczyk D. et al. STRING v11: protein-protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Res. (2019) 47:D607-613.</li>
+      <li>Stark C. et al. BioGRID: a general repository for interaction datasets. Nucleic Acids Res. (2006) 34:D535-539.</li>
+      <li>Turei D. et al. A scored human protein-protein interaction network to catalyze genomic interpretation. Nat. Methods. (2016) 13:966-967.</li>
+      <li>Li T. et al. A scored human protein-protein interaction network to catalyze genomic interpretation. Nat. Methods. (2017) 14:61-64.</li>
+      <li>Bader, G.D. et al. An automated method for finding molecular complexes in large protein interaction networks. BMC bioinformatics (2003) 4:2.</li>
+      <li>https://metascape.org/COVID.</li>
+      <li>Subramanian A, et al. Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles. Proc Natl Acad Sci U S A 102, 15545-15550 (2005).</li>
+      <li>Pinero J, et al. DisGeNET: a comprehensive platform integrating information on human disease-associated genes and variants. Nucleic acids research 45, D833-D839 (2017).</li>
+      <li>Pan JB, et al. PaGenBase: a pattern gene database for the global and dynamic understanding of gene function. PLoS One 8, e80747 (2013).</li>
+</ol>
+</div>
+
+</body></html>
