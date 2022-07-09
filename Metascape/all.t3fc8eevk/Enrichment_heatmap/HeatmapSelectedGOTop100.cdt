@@ -1,0 +1,48 @@
+GID	GENE	NAME	GWEIGHT	SVM-RFE	L2SCAD-SVM	SGLasso-SVM	Enet-SVM	SCAD-SVM	CNet-SVM	mRMR-SVM
+AID				ARRY6X	ARRY3X	ARRY5X	ARRY2X	ARRY4X	ARRY1X	ARRY7X
+EWEIGHT				1	1	1	1	1	1	1
+GENE23X	R-HSA-372790	R-HSA-372790: Signaling by GPCR	1	0.161	0.148	-0.000	-0.000	0.131	0.256	0.115
+GENE41X	hsa05224	hsa05224: Breast cancer	1	0.169	-0.000	-0.000	-0.000	0.231	0.580	0.593
+GENE8X	R-HSA-382551	R-HSA-382551: Transport of small molecules	1	-0.000	-0.000	0.118	-0.000	-0.000	-0.000	-0.000
+GENE35X	GO:1903047	GO:1903047: mitotic cell cycle process	1	-0.000	-0.000	0.462	-0.000	-0.000	-0.000	-0.000
+GENE33X	M5884	M5884: NABA CORE MATRISOME	1	0.329	0.156	0.134	-0.000	-0.000	-0.000	0.130
+GENE14X	GO:0030335	GO:0030335: positive regulation of cell migration	1	0.133	0.167	-0.000	-0.000	-0.000	-0.000	0.133
+GENE22X	GO:0001501	GO:0001501: skeletal system development	1	0.194	0.118	-0.000	-0.000	-0.000	0.136	0.194
+GENE15X	WP4216	WP4216: Chromosomal and microsatellite instability in colorectal cancer	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.606
+GENE21X	GO:0006351	GO:0006351: transcription, DNA-templated	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.419
+GENE6X	GO:0045765	GO:0045765: regulation of angiogenesis	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.116
+GENE38X	GO:0009611	GO:0009611: response to wounding	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.102
+GENE5X	hsa05202	hsa05202: Transcriptional misregulation in cancer	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.152
+GENE16X	hsa05222	hsa05222: Small cell lung cancer	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.199
+GENE13X	R-HSA-2262752	R-HSA-2262752: Cellular responses to stress	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.251
+GENE3X	hsa01524	hsa01524: Platinum drug resistance	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.214
+GENE11X	GO:0080135	GO:0080135: regulation of cellular response to stress	1	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000	0.209
+GENE36X	GO:0001934	GO:0001934: positive regulation of protein phosphorylation	1	-0.000	-0.000	0.117	-0.000	-0.000	0.106	0.206
+GENE10X	hsa05226	hsa05226: Gastric cancer	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.315	0.590
+GENE42X	WP4787	WP4787: Osteoblast differentiation and related diseases	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.339	0.346
+GENE19X	GO:0009725	GO:0009725: response to hormone	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.105	0.204
+GENE25X	GO:0007167	GO:0007167: enzyme-linked receptor protein signaling pathway	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.169	0.416
+GENE43X	GO:0048534	GO:0048534: hematopoietic or lymphoid organ development	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.212	0.121
+GENE45X	GO:0008283	GO:0008283: cell population proliferation	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.190	0.197
+GENE12X	M70	M70: PID PS1 PATHWAY	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.240	0.244
+GENE24X	WP236	WP236: Adipogenesis	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.248	0.176
+GENE40X	GO:2000142	GO:2000142: regulation of DNA-templated transcription, initiation	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.207	-0.000
+GENE30X	WP422	WP422: MAPK cascade	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.262	-0.000
+GENE27X	GO:0050886	GO:0050886: endocrine process	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.236	-0.000
+GENE18X	WP3845	WP3845: Canonical and non-canonical Notch signaling	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.275	-0.000
+GENE20X	GO:0030278	GO:0030278: regulation of ossification	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.255	-0.000
+GENE7X	GO:0071560	GO:0071560: cellular response to transforming growth factor beta stimulus	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.163	-0.000
+GENE29X	R-HSA-5617472	R-HSA-5617472: Activation of anterior HOX genes in hindbrain development during early embryogenesis	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.177	-0.000
+GENE31X	GO:0046903	GO:0046903: secretion	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.138	-0.000
+GENE37X	GO:0009410	GO:0009410: response to xenobiotic stimulus	1	-0.000	-0.000	-0.000	-0.000	-0.000	0.103	-0.000
+GENE32X	M5883	M5883: NABA SECRETED FACTORS	1	0.116	0.142	-0.000	-0.000	-0.000	0.361	-0.000
+GENE9X	GO:0042692	GO:0042692: muscle cell differentiation	1	0.133	-0.000	-0.000	-0.000	-0.000	0.190	-0.000
+GENE4X	GO:0007611	GO:0007611: learning or memory	1	0.194	-0.000	-0.000	-0.000	-0.000	0.188	-0.000
+GENE34X	GO:0060840	GO:0060840: artery development	1	0.196	-0.000	-0.000	-0.000	-0.000	0.191	-0.000
+GENE26X	GO:0061061	GO:0061061: muscle structure development	1	0.145	-0.000	-0.000	-0.000	-0.000	0.376	0.145
+GENE1X	GO:0071407	GO:0071407: cellular response to organic cyclic compound	1	0.194	-0.000	-0.000	-0.000	-0.000	0.136	0.141
+GENE28X	GO:0030855	GO:0030855: epithelial cell differentiation	1	0.131	-0.000	-0.000	-0.000	-0.000	0.174	0.131
+GENE39X	GO:0019725	GO:0019725: cellular homeostasis	1	-0.000	0.106	-0.000	-0.000	-0.000	-0.000	-0.000
+GENE2X	GO:0009636	GO:0009636: response to toxic substance	1	0.141	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000
+GENE17X	GO:0046683	GO:0046683: response to organophosphorus	1	0.257	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000
+GENE44X	GO:0003012	GO:0003012: muscle system process	1	0.255	-0.000	-0.000	-0.000	-0.000	-0.000	-0.000
