@@ -59,7 +59,7 @@ The **serial number (1), (2), ..., (4)** represents the order in which the progr
 <!--END_SECTION:news-->
 
 
-## R odes for simulating datasets (NLSR)
+## R codes for simulating datasets (NLSR)
 The **serial number (1), (2), ..., (9)** represents the order in which the program runs in our work. 
 <!--START_SECTION:news-->
 
@@ -75,7 +75,7 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
 <!--END_SECTION:news-->
 
 
-## Matlab code for simulating datasets (SVMexamplenew)
+## Matlab codes for simulating datasets (SVMexamplenew)
 <!--START_SECTION:news-->
 * (1) SVMmainexample.m -- main function.
 * (2) costFunctionSVM.m -- Objective function.
@@ -91,7 +91,7 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
 <!--END_SECTION:news-->
 
 
-## Matlab code for breast cancer dataset (SVMnew)
+## Matlab codes for breast cancer dataset (SVMnew)
 <!--START_SECTION:news-->
 <!--START_SECTION:news-->
 * (1) SVMmainUnion23.m -- main function.
