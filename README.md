@@ -34,6 +34,8 @@ Li, Lingyu, and Zhi-Ping Liu. "**Biomarker discovery from high-dimensional omics
 * [dplyr](https://cran.r-project.org/web/packages/dtplyr/index.html) (v1.0.8). To conduct regularized generalized Linear models (Elastic net penalty).
 * [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) (v1.30.1). 
 * [pasilla](https://bioconductor.org/packages/release/data/experiment/html/pasilla.html) (v1.18.1). 
+* [gglasso](https://cran.r-project.org/web/packages/gglasso/) (v1.5). 
+* [SGL](https://cran.r-project.org/web/packages/SGL/) (v1.3). 
 
 
 ## R codes for Data (RforData)
@@ -58,9 +60,11 @@ The **serial number (1), (2), ..., (16)** represents the order in which the prog
 * (14) ``svmpenalizedsvmRFE.R`` -- Feature selection function for SVM-RFE.
 * (15) ``svmRFE_once.R``  -- The SVM-RFE method for one experiment.
 * (16) ``plotFeaturesmy.R`` -- Visualize stability functions of features.
-* (17*) ``rfe_nnet_R3.R`` -- Newly add Neural Network (NNet) method to compare with CNet-SVM.
+* (17*) ``GL-HSVMonce.R`` -- Newly add GLasso-SVM method to compare with CNet-SVM.
 * (18*) ``TCGA_pro_clin_DE_R3.R`` -- It accesses the whole data of breast cancer, 1205 samples.
-* (19*) ``heatmap_R3.R`` -- Followed "TCGA_pro_clin_DE_R3.R", it is used to see the 32 biomarkers's performance on whole 1205 sample of TCGA.
+* (19*) ``SGL-SVMonce`` -- Newly add SGL-SVM method to compare with CNet-SVM.
+* (20*) ``TCGA_pro_clin_DE_R3.R`` -- It accesses the whole data of breast cancer, 1205 samples.
+* (21*) ``heatmap_R3.R`` -- Followed "TCGA_pro_clin_DE_R3.R", it is used to see the 32 biomarkers's performance on whole 1205 sample of TCGA.
 <!--END_SECTION:news-->
 
 
@@ -93,7 +97,7 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
 <!--START_SECTION:news-->
 * (1) ``SVMmainexample.m`` -- main function.
     ```ruby
-To test CNet-SVM method on simulation data, simply uses the script ‘matlab -r SVMmainexample.m’   
+    To test CNet-SVM method on simulation data, simply uses the script 'matlab -r SVMmainexample.m'.
     ```
 * (2) ``costFunctionSVM.m`` -- Objective function.
 * (3) ``cvSVM.m`` -- Cross validation to select optimal parameters.
@@ -111,8 +115,8 @@ To test CNet-SVM method on simulation data, simply uses the script ‘matlab -r 
 ## Matlab codes for breast cancer dataset (SVMnew)
 <!--START_SECTION:news-->
 * (1) ``SVMmainUnion23.m`` -- main function.
-   ```ruby
-To test CNet-SVM method on real BRCA data, simply uses the script ‘matlab -r SVMmainUnion23.m’   
+    ```ruby
+    To test CNet-SVM method on real BRCA data, simply uses the script 'matlab -r SVMmainUnion23.m'.
     ```
 * (2) ``costFunctionSVM.m`` -- Objective function.
 * (3) ``cvSVM.m`` -- Cross validation to select optimal parameters.
@@ -131,8 +135,8 @@ To test CNet-SVM method on real BRCA data, simply uses the script ‘matlab -r S
 ## Python codes
 <!--START_SECTION:news-->
 * (1*) ``rfe_rf_R3.ipynb`` -- Newly add Random Forest (RF) method to compare with CNet-SVM.
-   ```ruby
-To test RF method on whole 1205 BRCA data, simply uses the script ‘python rfe_rf_R3.ipynb’   
+    ```ruby
+    To test RF method on whole 1205 BRCA data, simply run 'python rfe_rf_R3.ipynb' use jupyter notebook.
     ```
 <!--END_SECTION:news-->
 
@@ -140,4 +144,3 @@ To test RF method on whole 1205 BRCA data, simply uses the script ‘python rfe_
 
 ## CNet (2023), Zhi-Ping Liu all rights reserved
 This program package is supported by the copyright owners and coders "as is" and without warranty of any kind, express or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. In no event shall the copyright owner or contributor be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, without limitation, procurement of substitute goods or services; loss of use, data, or profits; or business interruption), regardless of the theory of liability, whether in contract, strict liability or tort (including negligence or otherwise) for any use of the software, even if advised of the possibility of such damages.
-
