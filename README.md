@@ -9,7 +9,7 @@ In this work, a **connected network-constrained support vector machine (CNet-SVM
 <!--START_SECTION:news-->
 * **CNet**: A **connected network-constrained support vector machine (CNet-SVM) model** is proposed to perform **feature selection**. 
 * In both **synthetic simulation data** and real-world **breast cancer (BRCA) genomics data**, we validated the CNet-SVM model is efficient to identify the **connected-network-structured features** that can serve as **diagnostic biomarkers**.
-* In the comparison study, we also proved the proposed **CNet-SVM model** results in better classification performance and feature interpretability than one wrapped method named **SVM-RFE**, one filter method named **mRMR-SVM** and **four embedded regularized support vector machine (Reg-SVM)** alternatives.
+* In the comparison study, we also proved the proposed **CNet-SVM model** results in better classification performance and feature interpretability than one wrapped method named **SVM-RFE**, one filter method named **mRMR-SVM**, four embedded regularized support vector machine (Reg-SVM) alternatives: **Lasso-SVM**, **ENet-SVM**, **SCAD-SVM** and **L2DCAD-SVM** and two gtoup structural SVM methods: **GLasso-SVM** and **SGLasso-SVM**.
 * If you have any questions about **CNet-SVM**, please directly contact the corresponding author [Prof. Zhi-Ping Liu](https://scholar.google.com/citations?user=zkBXb_kAAAAJ&hl=zh-CN&oi=ao) with the E-mail: zpliu@sdu.edu.cn
 <!--END_SECTION:news-->
 
@@ -20,32 +20,47 @@ Li, Lingyu, and Zhi-Ping Liu. "**Biomarker discovery from high-dimensional omics
 
 ## Data
 <!--START_SECTION:news-->
-* In the **CNet-SVM**, **NSLR_example** and **matlab_example** files, we give all **R/Matlab/Python** codes used in our work. 
+* In the **CNet-SVM**, **NSLR_example** and **matlab_example** files, we give all **R/Matlab/Python** codes. 
 * In the **Data** file, we give some necessary input/output files by the **R/Matlab/Python** codes. 
-* Some of these input files only give the first few lines, but this does not affect the results of the work (**CNet-SVM**).
+* Some input files only give the first few lines, but this does not affect the results of the work (**CNet-SVM**).
 * In the **Supplementary file** file, we present the necessary **Additional files** contained in our work. 
 <!--END_SECTION:news-->
+
+
+## R packages
+* [glmSparseNet](https://bioconductor.org/packages/release/bioc/html/glmSparseNet.html) (v1.8.1). 
+* [curatedTCGAData](https://www.bioconductor.org/packages/release/data/experiment/html/curatedTCGAData.html) (v1.12.1). 
+* [TCGAutils](https://bioconductor.org/packages/release/bioc/html/TCGAutils.html) (v1.10.1). 
+* [dplyr](https://cran.r-project.org/web/packages/dtplyr/index.html) (v1.0.8). To conduct regularized generalized Linear models (Elastic net penalty).
+* [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) (v1.30.1). 
+* [pasilla](https://bioconductor.org/packages/release/data/experiment/html/pasilla.html) (v1.18.1). 
 
 
 ## R codes for Data (RforData)
 The **serial number (1), (2), ..., (16)** represents the order in which the program runs in our work. 
 <!--START_SECTION:news-->
-* (1) TCGA_pro_clin_DE.R  --  First process the data to get the data of all samples. Then select 112 Tumor + 112 Normal samples to get DEGs.
-* (2) thetaSelectGEDFN.R  --  Use GCWs method get top 1% genes, repeat 10 times, make union.
-* (3) malacards_GEDFN_mamaprint_KEGG.R  --  Integrate data from MalaCards, KEGG, Mamaprint, GCWS, DEGs to union gene and corresponding expression data.
-* (4) network_match_union.R  --  Get the network of union gene in RegNetwork, extract the expression data of TCGA corresponding to union gene, and scale them.
-* (5) data_splitnew.R  --  According to the random seeds of other methods, the scaled data of the union gene of TCGA is divided into training data and testing data.
-* (6) adj_union.R ---- Adjacency matrix and its eigenvalues.
-* (7) cut_union.R ---- Diameters and cut-nodes of component of DEGs in RegNetwork.
-* (8) svmpenalized.R -- Set random seed and output feature selection result of four embedded Lasso-SVM, Enet-SVM, SCAD-SVM, L2SCAD-SVM.
-* (9) penaltizedSVMtestNew.R -- use 5-fold cross-validation, embedding function svmpenalized.R.
-* (10) penaltizedSVMresultOnce.R -- results for feature selection and classification on train data and test set.
-* (11) filtermRMR.R -- Use svmpenalizedmRMR.R, a feature selection method for filter, output feature, AUV and pred.
-* (12) svmpenalizedmRMR.R -- a filter method, 5-fold cross-validation, select a specified number of features, set feature num = 30.
-* (13) svmRFE.R -- The feature selection that implements the SVM-RFE method for 20 experiments, it depends on the following two functions.
-* (14) svmpenalizedsvmRFE.R -- Feature selection function for SVM-RFE
-* (15) svmRFE_once.R  -- The feature selection that implements the SVM-RFE method for only one experiment, it depends on the following two functions.
-* (16) plotFeaturesmy.R -- Visualize stability functions of features.
+* (1) ``TCGA_pro_clin_DE.R``  --  First process the data to get the data of all samples. Then select 112 Tumor + 112 Normal samples to get DEGs.
+* (2) ``thetaSelectGEDFN.R``  --  Use GCWs method get top 1% genes, repeat 10 times, make union.
+* (3) ``malacards_GEDFN_mamaprint_KEGG.R``  --  Integrate data from MalaCards, KEGG, Mamaprint, GCWs, DEGs to union gene and corresponding expression data.
+* (4) ``network_match_union.R``  --  Get the network of union gene in RegNetwork, extract the expression data of TCGA corresponding to union gene, and scale them.
+* (5) ``data_splitnew.R``  --  According to the random seeds of other methods, the scaled data of the union gene of TCGA is divided into training data and testing data.
+* (6) ``adj_union.R`` ---- Adjacency matrix and its eigenvalues.
+* (7) ``cut_union.R`` ---- Diameters and cut-nodes of component of DEGs in RegNetwork.
+* (8) ``svmpenalized.R`` -- Set random seed and output feature selection result of four embedded Lasso-SVM, Enet-SVM, SCAD-SVM, L2SCAD-SVM.
+    ```ruby
+    To test four embedded Reg-SVM model, simply uses the script 'svmpenalized.R'.
+    ```
+* (9) ``penaltizedSVMtestNew.R`` -- use 5-fold cross-validation, embedding function svmpenalized.R.
+* (10) ``penaltizedSVMresultOnce.R`` -- results for feature selection and classification on train data and test set.
+* (11) ``filtermRMR.R`` -- Use svmpenalizedmRMR.R, a feature selection method for filter, output feature, AUV and pred.
+* (12) ``svmpenalizedmRMR.R`` -- a filter method, 5-fold cross-validation, select a specified number of features, set feature num = 30.
+* (13) ``svmRFE.R`` -- The feature selection that implements the SVM-RFE method for 20 experiments, it depends on the following two functions.
+* (14) ``svmpenalizedsvmRFE.R`` -- Feature selection function for SVM-RFE.
+* (15) ``svmRFE_once.R``  -- The feature selection that implements the SVM-RFE method for only one experiment, it depends on the following two functions.
+* (16) ``plotFeaturesmy.R`` -- Visualize stability functions of features.
+* (17*) ``rfe_nnet_R3.R`` -- Newly add Neural Network (NNet) method to compare with CNet-SVM.
+* (18*) ``TCGA_pro_clin_DE_R3.R`` -- It accesses the whole data of breast cancer, 1205 samples.
+* (19*) ``heatmap_R3.R`` -- Followed "TCGA_pro_clin_DE_R3.R", it is used to see the 32 biomarkers's performance on whole 1205 sample of TCGA.
 <!--END_SECTION:news-->
 
 
@@ -93,7 +108,6 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
 
 ## Matlab codes for breast cancer dataset (SVMnew)
 <!--START_SECTION:news-->
-<!--START_SECTION:news-->
 * (1) SVMmainUnion23.m -- main function.
 * (2) costFunctionSVM.m -- Objective function.
 * (3) cvSVM.m -- Cross validation to select optimal parameters.
@@ -104,10 +118,17 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
 * (8) getLambMaxSVM.m -- getLambMax function for cv.
 * (9) PredictSVM.m -- Predict function on test dataset.
 * (10) plotROC.m -- Roc curve function on test dataset.
-* (10) confusion.m  -- Confusion matrix. 
+* (10) confusion.m -- Confusion matrix. 
 * (11) printConMat -- Output confusion matrix.
 <!--END_SECTION:news-->
 
 
-## CNet (2022), Zhi-Ping Liu all rights reserved
+## Python codes
+<!--START_SECTION:news-->
+* (1*) rfe_rf_R3.ipynb -- Newly add Random Forest (RF) method to compare with CNet-SVM.
+<!--END_SECTION:news-->
+
+
+
+## CNet (2023), Zhi-Ping Liu all rights reserved
 This program package is supported by the copyright owners and coders "as is" and without warranty of any kind, express or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. In no event shall the copyright owner or contributor be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, without limitation, procurement of substitute goods or services; loss of use, data, or profits; or business interruption), regardless of the theory of liability, whether in contract, strict liability or tort (including negligence or otherwise) for any use of the software, even if advised of the possibility of such damages.
