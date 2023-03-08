@@ -139,10 +139,6 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
     To conduct GCWs method, simply use script 'python main_SVM.py'.
 ```
 * (2*) ``rfe_rf_R3.ipynb`` -- Newly add Random Forest (RF) method to compare with CNet-SVM.
-    ```ruby
-    To test RF method on whole 1205 BRCA data, simply run 'rfe_rf_R3.ipynb' use jupyter notebook.
-```
-
 <!--END_SECTION:news-->
 
 
