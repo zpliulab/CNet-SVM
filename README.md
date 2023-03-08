@@ -132,12 +132,16 @@ The **serial number (1), (2), ..., (9)** represents the order in which the progr
 <!--END_SECTION:news-->
 
 
-## Python codes
+## Python codes (GEDFNsvm)
 <!--START_SECTION:news-->
-* (1*) ``rfe_rf_R3.ipynb`` -- Newly add Random Forest (RF) method to compare with CNet-SVM.
+* (1) ``main_SVM.py`` -- GCWs methods for feature selection.
     ```ruby
-    To test RF method on whole 1205 BRCA data, simply run 'python rfe_rf_R3.ipynb' use jupyter notebook.
-    ```
+    To conduct GCWs method, simply use script 'python main_SVM.py'.
+```
+* (2*) ``rfe_rf_R3.ipynb`` -- Newly add Random Forest (RF) method to compare with CNet-SVM.
+    ```ruby
+    To test RF method on whole 1205 BRCA data, simply run 'rfe_rf_R3.ipynb' use jupyter notebook.
+```
 <!--END_SECTION:news-->
 
 
