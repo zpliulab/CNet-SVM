@@ -1,4 +1,4 @@
-# [CNet-SVM (Biomarker discovery from high-throughput data by connected network-constrained support vector machine)](https://github.com/zpliulab/CNet-SVM)
+# [CNet-SVM: Biomarker discovery from high-throughput data by connected network-constrained support vector machine](https://github.com/zpliulab/CNet-SVM)
 
 ![Screenshot](Data/framework.jpg)
 
